@@ -1,0 +1,8 @@
+{
+ "kicad_skills": {
+  "plugin_version": "0.2.1",
+  "tree": "1304cbcc32cc0c2aec87336988369153efbe32dcecf4df135eb52f71a7a6e071",
+  "url": "https://github.com/jvanderberg/kicad-skills"
+ },
+ "kicad": "10.0"
+}
