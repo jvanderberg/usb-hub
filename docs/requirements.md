@@ -49,9 +49,9 @@ Backfeed / wrong-cable cases (protect for these):
 ### Block diagram
 
 ```
-PD IN (USB-C, Rd sink) --> [PD sink controller, standalone, resistor-set] --> VIN (PD voltage, up to 20 V)
-                                      |                                         |
-                                      '-- PG ------------------------------> [input protection: TVS, fuse/eFuse]
+PD IN (USB-C, Rd sink) --> [TVS] --> [TPS25730 PD sink, strap-set, internal power switch] --> VIN (5 V before
+                                                                         contract, then 9-20 V)
+                                                                                |  '--> [3V3 buck, any VIN]
                                                                                 |
                                                                           [5 V buck, ~15-18 A]  (vented area)
                                                                                 |
@@ -89,13 +89,13 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 | Hub A/B | Port switches | PRTPWR (enable) / OCS (fault) | DC | Individual per port |
 | Hub A/B | Port LEDs | GPIO / LED pins | DC | |
 | Host VBUS | Hub VBUS_DET | Divider | DC | Host VBUS isolated from 5V_BUS |
-| PD sink | 5 V buck enable | PG / enable | DC | Ports stay off until a contract is made |
+| VIN | 5 V buck EN | UVLO divider 100k/15.4k | DC | Buck on at 7.5 V, off at 6.5 V: off on 5 V-only sources |
 | Crystal | Each hub IC | XTAL | 12/24 MHz (per IC) | Close to IC |
 
 ### Startup and control
 
 - Must work before the main processor runs: there is no processor. The PD sink negotiates standalone; the 5 V buck
-  starts on the PD sink's power-good; the hub ICs start from 3.3 V and enumerate when host VBUS is seen.
+  starts when VIN passes its 7.5 V EN/UVLO divider; the hub ICs start from 3.3 V and enumerate when host VBUS is seen.
 - How each is configured without it: resistor/strap configuration only.
 
 ### External connections (user-facing)
@@ -114,7 +114,7 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 | 5V_BUS | TP, top | yes | 5.0-5.2 V |
 | 3V3 | TP, top | yes | 3.3 V |
 | 1V2 (if any) | TP, top | yes | 1.2 V |
-| PD power-good | TP | | high when contract made |
+| 5V_BUS power-good (LM5148 PG) | TP | | high when 5 V in regulation |
 | Hub reset (each) | TP | | high after reset |
 | Host VBUS_DET | TP | | high with host attached |
 

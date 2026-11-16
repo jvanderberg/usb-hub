@@ -1,6 +1,6 @@
 # Power design notes
 
-Status: in progress (2026-11-16). Requirements: `docs/requirements.md` s4.
+Status: 5 V stage parts chosen (2026-11-16); PD sink + 3V3 in docs/power-design-pd-3v3.md. Requirements: `docs/requirements.md` s4.
 
 ## 5V_BUS converter: LM5148 synchronous buck controller
 
@@ -47,3 +47,41 @@ With Rsense 2.45 mOhm: peak limit 20.0 / 24.5 / 29.8 A (min/typ/max). DC output 
 100 W brick supplies, so in the typical part the brick, not the converter, trips first on a 100 W brick (whole-hub
 reset, as accepted). Inductor Isat must exceed the max peak (~30 A + propagation-delay overshoot). Overload
 behaviour: ~1.3 ms of current limiting, then off ~40 ms, then soft-start retry (hiccup).
+
+### Parts chosen (stock: LCSC global, 2026-11-16; need 6 = 5 boards + 10 %)
+
+| Function | Part | LCSC | Stock | Why |
+|---|---|---|---|---|
+| Controller | TI LM5148RGYR | C7470701 | 51,154 | WEBENCH design |
+| M1 high side | TI CSD17505Q5A | C553150 | 2,752 | WEBENCH alternate: 1.43 W, Tj 121 C at 21 V/17 A/50 C (WEBENCH's CSD17553Q5A: 0 stock; CSD17306Q5A/CSD17305Q5A: 0 global; CSD17578Q5A not offered by WEBENCH). Genuine TI only, no "-TP/-HXY/(ES)" second-source clones |
+| M2 low side | TI CSD17573Q5B | C202231 | 1,179 | WEBENCH pick |
+| L1 | Coilcraft XAL1010-152MED, 1.5 uH | C6753479 | 154 | WEBENCH pick (MEB suffix = obsolete reel code). DCR 1.60/1.76 mOhm, Isat 36.6 A (30 % drop, 25 C), Irms 31 A (20 C rise) - datasheet Doc 804-1 p1 (docs/datasheets/XAL1010.pdf, rev 09/08/15 copy) |
+| Rsense | 2.5 mOhm 1 % 3 W 2512 (Milliohm HoJLR2512-3W-2.5mR-1%) | C2904234 | 13,073 | nearest stocked to WEBENCH's 2.45 mOhm |
+| Cin | 4x 10 uF 50 V X7R 1210, Samsung CL32B106KBJNNNE | C138687 | 135,974 | as WEBENCH (4x C3225X7R1H106); RMS 8.3 A at 8.5 V, 7.4 A at 21 V shared by 4 |
+| Cout | 8x 47 uF 10 V X5R 1210, Samsung CL32A476KPJNNNE | C525654 | 6,037 | WEBENCH asks 160 uF derated; ~21 uF each at 5.1 V (est. -55 % DC bias) -> ~170 uF. 10 V rating for 2x margin over 5.1 V |
+
+Current limit with 2.5 mOhm (VCS-TH 49/60/73 mV): peak 19.6 / 24.0 / 29.2 A; DC output ~16.4 / 20.8 / 26.0 A at
+21 V (ripple 6.39 A p-p), more at lower Vin (ripple 3.3 A at 8.5 V). Inductor Isat 36.6 A > 29.2 A max peak.
+
+WEBENCH with CSD17505Q5A + CSD17573Q5B (17 A out, 50 C ambient):
+
+| Vin | Eff | Total Pd | M1 Pd / Tj | M2 Pd / Tj | L ripple | Peak | Cin RMS | Phase margin |
+|---|---|---|---|---|---|---|---|---|
+| 21 V | 96.5 % | 3.16 W | 1.43 W / 121 C | 0.77 W / 88 C | 6.39 A | 20.2 A | 7.39 A | 61.3 deg |
+| 8.5 V | 97.0 % | 2.69 W | 1.59 W / 130 C | 0.43 W / 72 C | 3.28 A | 18.6 A | 8.31 A | 61.0 deg |
+
+(8.5 V at 17 A is not reachable in practice: a 9 V PD contract is at most 3 A, ~25 W.) WEBENCH's theta-JA is its
+own board; the board-review heat model decides the real FET temperature.
+
+### EN / UVLO divider (LM5148 datasheet s8.3.3, Eq. 2-3; VEN 0.95/1.0/1.05 V, IHYS 8/10/12 uA, p6 table)
+
+Target: on at 7.5 V, off at 6.5 V (a 5 V-only source, <= 5.5 V, never enables; a 9 V contract arrives >= ~8.2 V
+after cable drop).
+- RUV1 = (VIN(on) - VIN(off)) / IHYS = 1.0 V / 10 uA = 100 k
+- RUV2 = RUV1 x VEN / (VIN(on) - VEN) = 100 k x 1 / 6.5 = 15.38 k -> **15.4 k** (E96)
+- With 100 k / 15.4 k: VIN(on) = 1.0 x (1 + 100/15.4) = 7.49 V (7.12-7.87 V over VEN tolerance);
+  VIN(off) = VIN(on) - IHYS x RUV1 = 6.49 V (hysteresis 0.8-1.2 V).
+- EN abs max 80 V: fine at 21 V.
+
+The requirements' "PD sink power-good enables the buck" is replaced by this divider: the TPS25730 has no
+power-good pin (docs/power-design-pd-3v3.md).
