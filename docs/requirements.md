@@ -142,7 +142,6 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 | VIN | PD contract, 5-20 V | per PD spec | PD brick via sink controller | - | - |
 | 5V_BUS | 5.1 V (headroom for cable/switch drop) | +/-3 % | VIN (9-20 V) | Buck, ~17 A limit, 2-phase or 2 paralleled; enabled only when VIN >= ~8 V | - |
 | 3V3 | 3.3 V | +/-5 % | VIN, tapped before the input eFuse (independent of 5V_BUS) | Small buck, >= 1 A | Hub ICs (PLL, PHY) |
-| 1V2 | 1.2 V | per hub IC | hub IC internal or LDO | TBD by hub IC | Hub core |
 
 ### Power budget
 
@@ -297,6 +296,12 @@ Defaults accepted without explicit confirmation, and anything decided without as
   TVS + TPS25730 OVP/RCB + converter limit + per-port switches (2026-11-16)
 - Hub ICs (3V3/1V2) are fed from VIN by their own small regulator, not from 5V_BUS, so a
   port-side overload or brownout never resets the hub and drops every device's data connection (2026-11-16)
+- Detailed-design defaults taken from the design notes (2026-11-16): TPS25730 operating current strap 1 A / max 5 A;
+  3V3 = TPS54202; status LEDs from the rails (green "PD OK" on 5V_BUS, red "low power" when 3V3 is up and 5V_BUS
+  is not); VIN bulk <= 22 uF (TPS25730 PPHV 100 uF limit); TPS25730 VIN_3V3 not connected; hub B on hub A port 7
+  (removable: non-removable strap only covers ports 1-3); hub B battery charging off; hub B VBUS_DET driven from
+  hub A PRTPWR7; one reset supervisor (TPS3809K33) for both hubs; no HOST activity LED; no 1V2 rail (internal);
+  one green LED per port from its switched VBUS; port current limit 3.47-4.08 A (RSET 1.87 k)
 - Backfeed on a downstream port is at most ~5.5 V (legacy A-to-C charger or self-powered device); no 9-20 V fault
   on a downstream port is designed for (2026-11-16)
 - Tool project, 5 boards fabricated, 2-5 assembled by JLCPCB, ~$100-150 total, no deadline (2026-11-16)
