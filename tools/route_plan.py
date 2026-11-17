@@ -256,7 +256,10 @@ def route_buck(r):
                    (149.0, 127.75), (149.0, 133.2), (139.7, 132.5)], prio=6, name='F_5V_SW')
     r.zone(isns, F, [(126.8, 123.1), (135.9, 123.1), (135.9, 132.5), (133.0, 132.5), (133.0, 127.95),
                      (126.8, 127.95)], prio=6, name='F_5V_ISNS')
-    r.zone(bus, F, [(123.95, 126.4), (126.2, 126.4), (126.2, 131.9), (130.6, 131.9), (130.6, 132.75),
+    # the strip between R30 and L30 (x 130.4-132.7) is 5V_BUS too: 17 A leaves R30:2 through ~8.5 mm of copper
+    # instead of 4.65 (power.py hotspot 4.6 A/mm at (130.4, 134.0) before), with a via column into L3 there
+    r.zone(bus, F, [(123.95, 126.4), (126.2, 126.4), (126.2, 131.9), (130.4, 131.9), (130.4, 128.4),
+                    (132.7, 128.4), (132.7, 132.75),
                     (140.3, 132.75), (140.3, 137.4), (120.4, 137.4), (120.4, 134.75), (123.95, 134.75)],
            prio=6, name='F_5V_BUS_OUT')
     r.zone(gnd, F, [(120.4, 137.75), (140.6, 137.75), (140.6, 140.9), (120.4, 140.9)], prio=5, name='F_GND_COUT')
@@ -284,6 +287,8 @@ def route_buck(r):
 
     # output: 5V_BUS via fields to the L3 plane (17 A), output-cap GND vias; Kelvin corridor x 127.3-129.4 kept clear
     r.via_field(bus, 130.9, 133.45, 140.0, 134.35, pitch=0.9, size=PV[0], drill=PV[1])
+    # x 131.1: clear of the L3 GND island under L30 / SW (x >= 132.3) with the via's antipad
+    r.via_field(bus, 131.1, 129.0, 131.1, 131.7, pitch=0.9, size=PV[0], drill=PV[1])
     for x0, x1 in ((120.9, 126.9), (129.6, 139.9)):
         r.via_field(bus, x0, 137.05, x1, 137.05, pitch=0.9, size=PV[0], drill=PV[1])
         # output-cap GND at 1.8 mm pitch: at 0.9 mm the L3 antipads merge into a wall across the 5V_BUS plane
