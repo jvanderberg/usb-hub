@@ -7103,7 +7103,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:USB2517-JZX"
+		(property "Footprint" "usb-hub:USB2517-JZX_ThermalVias"
 			(at 254 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -14961,7 +14961,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:USB2514B-AEZC-TR"
+		(property "Footprint" "usb-hub:USB2514B-AEZC-TR_ThermalVias"
 			(at 464.82 214.63 0)
 			(hide yes)
 			(show_name no)

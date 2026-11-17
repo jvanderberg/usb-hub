@@ -3467,7 +3467,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:LM5148RGYR"
+		(property "Footprint" "usb-hub:LM5148RGYR_ThermalVias"
 			(at 180.34 127 0)
 			(hide yes)
 			(show_name no)
@@ -3656,7 +3656,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:CSD17505Q5A"
+		(property "Footprint" "usb-hub:CSD17505Q5A_ThermalVias"
 			(at 243.84 107.95 0)
 			(hide yes)
 			(show_name no)

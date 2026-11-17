@@ -52,7 +52,21 @@ def dev(s, kind, ref, c, x, y, rot=0, value=None, **kw):
     return s.add(DEVSYM[kind], ref, value or VAL[c], x, y, rot, footprint='JLCImport:' + name, lcsc=c, fields=f, **kw)
 
 
+# Exposed pads with thermal vias built into the footprint, paste windows clear of the drills (tools/thermal_fp.py;
+# requirements s9 "Thermal vias in exposed pads"). Keyed by symbol: each of these symbols is placed once.
+FP_OVERRIDE = {
+    'TPS25730D': 'usb-hub:TPS25730DREFR_ThermalVias',
+    'ESTVS2200': 'usb-hub:ESTVS2200DRVR_ThermalVias',
+    'LM5148': 'usb-hub:LM5148RGYR_ThermalVias',
+    'CSD17505Q5A': 'usb-hub:CSD17505Q5A_ThermalVias',
+    'USB2517': 'usb-hub:USB2517-JZX_ThermalVias',
+    'USB2514B': 'usb-hub:USB2514B-AEZC-TR_ThermalVias',
+}
+
+
 def ic(s, sym, ref, value, x, y, lcsc, **kw):
+    if sym in FP_OVERRIDE:
+        kw.setdefault('footprint', FP_OVERRIDE[sym])
     return s.add('usb-hub:' + sym, ref, value, x, y, lcsc=lcsc, **kw)
 
 

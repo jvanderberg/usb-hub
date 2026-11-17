@@ -1,0 +1,295 @@
+(footprint "ESTVS2200DRVR_ThermalVias"
+	(version 20241229)
+	(generator "JLCImport")
+	(generator_version "1.0")
+	(layer "F.Cu")
+	(descr "ESTVS2200DRVR; DFN-6_L2.0-W2.0-P0.65-BL-EP1.6; ElecSuper")
+	(tags "C42400188 DFN-6_L2.0-W2.0-P0.65-BL-EP1.6 ESTVS2200DRVR ElecSuper")
+	(property "Reference" "REF**"
+		(at 0 -2.275 0)
+		(layer "F.SilkS")
+		(uuid "38db5cfa-0079-407e-9039-dc0d188bb989")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "~"
+		(at 0 2.275 0)
+		(layer "F.Fab")
+		(uuid "336f007a-ce6f-4b89-ae27-602663281da4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20210813/8C1C10F20D6048507834084705E93F3A.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9f80df28-b731-4f79-9722-39a8c0073b15")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "ESTVS2200DRVR; DFN-6_L2.0-W2.0-P0.65-BL-EP1.6; ElecSuper (derived from ESTVS2200DRVR_ThermalVias: paste windows clear of the drills)"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "15f623e6-2b3a-46fe-92e1-89bcf5452533")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C42400188"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d2f76228-090f-4e2a-8e00-a0a0271326ea")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 1.07696 1.07696)
+		(end 1.07696 -1.07696)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "92d97306-07c8-44ea-9c6f-513e713234be")
+	)
+	(fp_line
+		(start 0.97028 1.076223)
+		(end 1.07696 1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9e44e7cd-9d97-4888-b448-95dce37ed6c6")
+	)
+	(fp_line
+		(start 0.320294 1.076223)
+		(end 0.329844 1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a54247f-3367-4101-92a0-ddc2f0934add")
+	)
+	(fp_line
+		(start -0.33 1.076223)
+		(end -0.32004 1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0c289117-459e-4766-ac4b-e95a4c86db58")
+	)
+	(fp_line
+		(start -1.076198 1.076223)
+		(end -0.97028 1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2bcb5a0a-dc66-474a-be25-0aca784af8d1")
+	)
+	(fp_line
+		(start 0.97028 -1.076223)
+		(end 1.07696 -1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "02d9fbf8-67ad-4eb5-a3d6-218b1310927f")
+	)
+	(fp_line
+		(start 0.320167 -1.076223)
+		(end 0.329844 -1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6d178686-9968-4918-86f4-db5a7d5bbac1")
+	)
+	(fp_line
+		(start -0.33 -1.076223)
+		(end -0.320167 -1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ff49d20f-2142-4afa-91e2-9d42f2ffaf83")
+	)
+	(fp_line
+		(start -1.076198 -1.076223)
+		(end -0.97028 -1.076223)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a729ce4e-6b63-41a3-84f6-d6b3cdf5529f")
+	)
+	(fp_line
+		(start -1.076198 1.076223)
+		(end -1.076198 -1.076223)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6c75aadb-e722-40e5-a7f8-a6b282666aa3")
+	)
+	(fp_circle
+		(center -0.65 1.508)
+		(end -0.575 1.508)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "3a5fb781-2091-480c-aa48-97bc6d4d8972")
+	)
+	(fp_circle
+		(center -0.65 1)
+		(end -0.575 1)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Fab")
+		(uuid "1a60ec86-c7fa-4996-84d2-2a71b6a0cc81")
+	)
+	(pad "1" smd rect
+		(at -0.65 1)
+		(size 0.28 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "35171bf5-2245-43d4-a0e7-2187b7944eb0")
+	)
+	(pad "3" smd rect
+		(at 0.65 1)
+		(size 0.28 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f0258126-b2e3-4e9f-ad57-5e95a1674b20")
+	)
+	(pad "4" smd rect
+		(at 0.65 -1)
+		(size 0.28 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "584a2046-f525-416f-8533-f441cb188c0b")
+	)
+	(pad "5" smd rect
+		(at 0 -1)
+		(size 0.28 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6c9e6183-fd1f-4f6d-814a-60bdf78f0b8a")
+	)
+	(pad "6" smd rect
+		(at -0.65 -1)
+		(size 0.28 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fd145983-359d-4da6-afe6-890e47dc5d1f")
+	)
+	(pad "7" smd rect
+		(at 0.000254 0)
+		(size 1.6 1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "eedd2daa-9d22-40e4-8281-e915b280f2c8")
+	)
+	(pad "2" smd rect
+		(at 0.000254 1)
+		(size 0.28 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0a9bbdbb-6061-45e9-88c2-87a1bb6ef432")
+	)
+	(pad "7" thru_hole circle
+		(at -0.4 0)
+		(size 0.45 0.45)
+		(drill 0.2)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(uuid "931d0783-7c5d-5199-85d0-f25d06c0940a")
+	)
+	(pad "7" thru_hole circle
+		(at 0.4 0)
+		(size 0.45 0.45)
+		(drill 0.2)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(uuid "ba9d4dae-908f-5e89-8964-22d07dab6fee")
+	)
+	(pad "" smd rect
+		(at -0.5999 -0.3125)
+		(size 0.3497 0.325)
+		(layers "F.Paste")
+		(uuid "03ad5229-b462-5d6f-942b-4beebca3513c")
+	)
+	(pad "" smd rect
+		(at -0.5999 0.3125)
+		(size 0.3497 0.325)
+		(layers "F.Paste")
+		(uuid "284f6291-84ce-523c-a94a-d661e62ab019")
+	)
+	(pad "" smd rect
+		(at 0 -0.3125)
+		(size 0.75 0.325)
+		(layers "F.Paste")
+		(uuid "17fa5c38-51ad-5d3b-a08d-98247bb1bbe5")
+	)
+	(pad "" smd rect
+		(at 0 0.3125)
+		(size 0.75 0.325)
+		(layers "F.Paste")
+		(uuid "c0b4fd28-dc1d-55aa-8ec4-d0b332c4f6e2")
+	)
+	(pad "" smd rect
+		(at 0.6001 -0.3125)
+		(size 0.3503 0.325)
+		(layers "F.Paste")
+		(uuid "9d67f0a1-41dd-5f86-8efd-7a90d4c63036")
+	)
+	(pad "" smd rect
+		(at 0.6001 0.3125)
+		(size 0.3503 0.325)
+		(layers "F.Paste")
+		(uuid "db2c5d4b-fee8-571f-b9ef-c117cede60cd")
+	)
+	(model "${KIPRJMOD}/JLCImport.3dshapes/ESTVS2200DRVR.wrl"
+		(offset
+			(xyz -0.005 0 0.01)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)

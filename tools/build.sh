@@ -10,6 +10,12 @@ KICAD_CLI="${KICAD_CLI:-$(command -v kicad-cli || echo /Applications/KiCad/KiCad
 trap 'python3 "$K/kicad_locks.py" status "$HW" --clean >/dev/null || true' EXIT
 rm -f "$HW/net.xml"
 "$ROOT/tools/import_parts.sh"
+# project footprints: thermal vias in the exposed pads, paste windows clear of the drills (paste_clear.py)
+rm -f "$HW"/usb-hub.pretty/*_ThermalVias.kicad_mod
+python3 "$ROOT/tools/thermal_fp.py"
+for f in TPS25730DREFR ESTVS2200DRVR LM5148RGYR CSD17505Q5A USB2517-JZX USB2514B-AEZC-TR; do
+    test -s "$HW/usb-hub.pretty/${f}_ThermalVias.kicad_mod"
+done
 python3 "$ROOT/tools/gen_sch.py"
 "$KICAD_CLI" sch export netlist --format kicadxml -o "$HW/net.xml" "$HW/usb-hub.kicad_sch"
 test -s "$HW/net.xml"

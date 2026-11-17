@@ -85,10 +85,10 @@ def route_pd(r):
                      (164.0, 108.05)], prio=5, name='F_VBUS_R')
     r.via_field(vbus, 166.5, 108.65, 169.2, 111.0, pitch=0.9, size=PV[0], drill=PV[1])
     r.via((161.55, 112.35), vbus, *PV)
-    # D1 TVS: GND pads into the exposed pad, two vias in it; D3 GND to the same pad
+    # D1 TVS: GND pads into the exposed pad (its two thermal vias are footprint pads: tools/thermal_fp.py); D3 GND
+    # to the same pad
     for n, x in (('1', 164.35), ('2', 165.0), ('3', 165.65)):
         r.track(F, 0.28, ('D1', n), (x, 110.75))
-    r.via_field(gnd, 164.6, 110.6, 165.4, 110.6, pitch=0.8, size=SV[0], drill=SV[1], in_pad=('D1', '7'))
     r.track(F, GW, ('D3', '2'), (163.75, 110.6), ('D1', '7'))
     # GND pour for C1 / D2 / C6 / R7 / R8 GND pads
     r.zone(gnd, F, [(161.0, 115.1), (163.3, 115.1), (163.3, 113.05), (166.4, 113.05), (166.4, 113.75),
@@ -190,8 +190,7 @@ def route_pd(r):
     # LDO caps' GND
     via_at(r, ('C9', '2'), (156.3, 107.45))
     via_at(r, ('C10', '2'), (152.85, 106.4))
-    # exposed pad: 3 x 3 thermal vias in the GND pad
-    r.via_field(gnd, 153.1, 112.335, 154.9, 114.135, pitch=0.9, size=PV[0], drill=PV[1], in_pad=('U1', '39'))
+    # exposed pad: its 3 x 3 thermal vias are footprint pads (tools/thermal_fp.py)
 
     # status lines to the test pads on L4 (TP order SINK_EN / SCL / SDA / CAP_MIS / PLUG_EVENT, west to east)
     tv = {}
@@ -234,7 +233,7 @@ def route_pd(r):
         r.via((x, 120.0), vin, *PV)
     for y in (121.6, 122.5, 123.4, 124.3, 125.2):
         r.via((149.45, y), vin, *PV)
-    r.via_field(vin, 144.7, 122.2, 148.3, 124.6, pitch=1.2, size=PV[0], drill=PV[1], in_pad=('Q30', '9'))
+    # Q30 drain tab: its 4 x 3 thermal vias are footprint pads (tools/thermal_fp.py)
     # GND pour for the C12 / C8 / C34 / C35 GND pads
     r.zone(gnd, F, [(145.3, 113.35), (149.3, 113.35), (149.3, 117.6), (151.6, 117.6), (151.6, 120.6),
                     (149.3, 120.6), (149.3, 119.35), (145.2, 119.35)], prio=4, name='F_GND_PD_L')
@@ -343,7 +342,7 @@ def route_buck(r):
     r.track(F, SIG, ('U30', '24'), (156.4, 133.35))
     r.track(F, SIG, ('U30', '23'), (157.25, 133.75), ('U30', '24'))
     r.track(F, SIG, ('U30', '22'), (156.75, 133.55), (156.45, 133.55))
-    r.via_field(gnd, 154.0, 132.1, 156.0, 133.1, pitch=1.0, size=PV[0], drill=PV[1], in_pad=('U30', '25'))
+    # exposed pad: its 3 x 2 thermal vias are footprint pads (tools/thermal_fp.py)
 
     # FB divider at FB, EXTCOMP / RT / CNFG escapes (RT on L4), compensation
     r.track(F, SIG, ('U30', '6'), ('R35', '1'), ('R34', '1'))
@@ -497,9 +496,7 @@ def near(r, ref, num, prefer):
 def route_hub_power(r):
     gnd = net_of(r, 'J1', '1')
     v33 = r.net('U4', '5')
-    # exposed pads: 4 x 4 (USB2517) and 3 x 3 (USB2514B) GND vias
-    r.via_field(gnd, 126.5, 155.5, 129.5, 158.5, pitch=1.0, size=PV[0], drill=PV[1], in_pad=('U4', '65'))
-    r.via_field(gnd, 157.0, 156.0, 159.0, 158.0, pitch=1.0, size=PV[0], drill=PV[1], in_pad=('U5', '37'))
+    # exposed pads: their 4 x 4 (USB2517) and 3 x 3 (USB2514B) GND vias are footprint pads (tools/thermal_fp.py)
     r.track(F, SIG, ('U4', '13'), (125.7, 159.25))
     r.track(F, SIG, ('U4', '19'), (125.25, 160.8), (125.7, 159.3))
     # hub A 3V3 pins to their caps on L1
