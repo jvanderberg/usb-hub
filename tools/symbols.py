@@ -72,7 +72,11 @@ def build():
     # ---- TPD4E05U06DQA (Table 4-2): channels in the receptacle's row order, GND and NC on the far side
     S['TPD4E05U06'] = ic('TPD4E05U06', 6.35,
                          left=[('D2+', ['4'], PA), ('D2-', ['5'], PA), None, ('D1+', ['1'], PA), ('D1-', ['2'], PA)],
-                         right=[('GND', ['3', '8'], PI), None, None, ('NC', ['6', '7', '9', '10'], NC)],
+                         # NC pins 7/6/10/9 sit opposite D2+/D2-/D1+/D1- and carry the same net for TI's
+                         # straight-through routing ("Used for optional straight-through routing", Table 4-2 p4)
+                         right=[('NC', ['7'], PA), ('NC', ['6'], PA), None, ('NC', ['10'], PA),
+                                ('NC', ['9'], PA)],
+                         bottom=[('GND', ['3', '8'], PI)],
                          desc='4-channel 0.5 pF ESD array, USON-10', datasheet=TI % 'tpd4e05u06',
                          inherit=jlc('TPD4E05U06DQAR_C138714'))
     # ---- ESTVS2200DRVR (Rev 1.1 p2): GND 1-3 + pad, IO 4-6

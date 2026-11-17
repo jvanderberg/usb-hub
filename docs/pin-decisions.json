@@ -58,9 +58,5 @@
  "U5.22": "USB2514B SDA/NON_REM1 strap 0: 47k to GND (R69).",
  "U5.24": "USB2514B SCL/CFG_SEL0 strap 0: 47k to GND (R67), internal default config (ds p14).",
  "U5.25": "USB2514B HS_IND/CFG_SEL1 strap 0: 47k to GND (R68).",
- "U5.28": "USB2514B SUSP_IND/NON_REM0 strap 0: 47k to GND (R70).",
- "U7.10": "TPD4E05U06 NC: see U7.6, floating.",
- "U7.6": "TPD4E05U06 NC: 'Not connected; used for optional straight-through routing. Can be left floating or grounded' (ds p4) - floating.",
- "U7.7": "TPD4E05U06 NC: see U7.6, floating.",
- "U7.9": "TPD4E05U06 NC: see U7.6, floating."
+ "U5.28": "USB2514B SUSP_IND/NON_REM0 strap 0: 47k to GND (R70)."
 }

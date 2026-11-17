@@ -1156,7 +1156,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at 0 8.89 0)
+				(at 0 11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1166,7 +1166,7 @@
 				)
 			)
 			(property "Value" "TPD4E05U06"
-				(at 0 -8.89 0)
+				(at 0 -11.43 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1243,8 +1243,8 @@
 			)
 			(symbol "TPD4E05U06_0_1"
 				(rectangle
-					(start -6.35 7.62)
-					(end 6.35 -7.62)
+					(start -6.35 10.16)
+					(end 6.35 -10.16)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1256,7 +1256,7 @@
 			)
 			(symbol "TPD4E05U06_1_1"
 				(pin passive line
-					(at -8.89 5.08 0)
+					(at -8.89 7.62 0)
 					(length 2.54)
 					(name "D2+"
 						(effects
@@ -1274,7 +1274,7 @@
 					)
 				)
 				(pin passive line
-					(at -8.89 2.54 0)
+					(at -8.89 5.08 0)
 					(length 2.54)
 					(name "D2-"
 						(effects
@@ -1292,7 +1292,7 @@
 					)
 				)
 				(pin passive line
-					(at -8.89 -2.54 0)
+					(at -8.89 0 0)
 					(length 2.54)
 					(name "D1+"
 						(effects
@@ -1310,7 +1310,7 @@
 					)
 				)
 				(pin passive line
-					(at -8.89 -5.08 0)
+					(at -8.89 -2.54 0)
 					(length 2.54)
 					(name "D1-"
 						(effects
@@ -1327,8 +1327,80 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin passive line
+					(at 8.89 7.62 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 8.89 5.08 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 8.89 -2.54 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 3.81 -12.7 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1346,7 +1418,7 @@
 					)
 				)
 				(pin passive line
-					(at 8.89 5.08 180)
+					(at 3.81 -12.7 90)
 					(length 2.54)
 					(hide yes)
 					(name "GND"
@@ -1357,81 +1429,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 8.89 -2.54 180)
-					(length 2.54)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 8.89 -2.54 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 8.89 -2.54 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 8.89 -2.54 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1994,13 +1991,33 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 60.96) (xy 147.32 76.2)
+			(xy 149.86 63.5) (xy 147.32 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2248e975-d9a9-5963-a42e-c7bbaf18123c")
+		(uuid "00ff4bd8-5cbe-5dc5-a929-e99286db3bf9")
+	)
+	(wire
+		(pts
+			(xy 149.86 68.58) (xy 147.32 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f49c6126-230b-5fe5-8e6e-faeedcc9d5a7")
+	)
+	(wire
+		(pts
+			(xy 149.86 71.12) (xy 147.32 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3adb064-718b-55a2-8e99-6f7bb93d7944")
 	)
 	(wire
 		(pts
@@ -2312,6 +2329,66 @@
 		)
 		(uuid "17bf1a25-af25-52a2-a6c6-75e86168fa40")
 	)
+	(label "CC1"
+		(at 182.88 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee183ba1-6e21-5868-8d63-90031a0a2490")
+	)
+	(label "CC2"
+		(at 182.88 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "58ebf757-70ff-5b88-8f77-fb1e17bd7b2b")
+	)
+	(label "CC1"
+		(at 147.32 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a08f7d0f-e882-5054-9856-91ed391f94f8")
+	)
+	(label "CC2"
+		(at 147.32 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "809be0c7-6bc2-5fa0-bb3f-e5bd84ecb113")
+	)
+	(label "DP"
+		(at 147.32 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9d95fb36-b09b-5bf5-9e1c-3fe265aa7b95")
+	)
+	(label "DM"
+		(at 147.32 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8ebd49ac-b88a-59eb-9bf0-00ec2a079535")
+	)
 	(label "VBUS"
 		(at 142.24 45.72 90)
 		(effects
@@ -2577,7 +2654,7 @@
 	)
 	(symbol
 		(lib_id "usb-hub:TPD4E05U06")
-		(at 158.75 66.04 0)
+		(at 158.75 68.58 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -2610,7 +2687,7 @@
 			)
 		)
 		(property "Footprint" "JLCImport:TPD4E05U06DQAR_C138714"
-			(at 158.75 66.04 0)
+			(at 158.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2622,7 +2699,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf"
-			(at 158.75 66.04 0)
+			(at 158.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2634,7 +2711,7 @@
 			)
 		)
 		(property "Description" "4-channel 0.5 pF ESD array, USON-10"
-			(at 158.75 66.04 0)
+			(at 158.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2646,7 +2723,7 @@
 			)
 		)
 		(property "LCSC" "C138714"
-			(at 158.75 66.04 0)
+			(at 158.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2658,7 +2735,7 @@
 			)
 		)
 		(property "Manufacturer" "TI"
-			(at 158.75 66.04 0)
+			(at 158.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2670,7 +2747,7 @@
 			)
 		)
 		(property "Manufacturer Part" "TPD4E05U06DQAR"
-			(at 158.75 66.04 0)
+			(at 158.75 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2693,23 +2770,23 @@
 		(pin "2"
 			(uuid "69e23a81-026a-548a-be64-3eb9134906dc")
 		)
+		(pin "7"
+			(uuid "be216b0a-6757-52be-943f-4ff608dc0c92")
+		)
+		(pin "6"
+			(uuid "c1b83177-969a-5943-b53c-d72c65d7b104")
+		)
+		(pin "10"
+			(uuid "a5a9729c-bafb-58eb-8c3b-40d66ebeb67c")
+		)
+		(pin "9"
+			(uuid "4c236600-1cf7-53a5-a934-40a9f7e94c2e")
+		)
 		(pin "3"
 			(uuid "d3e14118-8d5d-5d18-addc-ceb85a013a22")
 		)
 		(pin "8"
 			(uuid "d60d1d41-8b8d-5db8-a9b3-8ef2263b3786")
-		)
-		(pin "6"
-			(uuid "c1b83177-969a-5943-b53c-d72c65d7b104")
-		)
-		(pin "7"
-			(uuid "be216b0a-6757-52be-943f-4ff608dc0c92")
-		)
-		(pin "9"
-			(uuid "4c236600-1cf7-53a5-a934-40a9f7e94c2e")
-		)
-		(pin "10"
-			(uuid "a5a9729c-bafb-58eb-8c3b-40d66ebeb67c")
 		)
 		(instances
 			(project "usb-hub"
@@ -2758,7 +2835,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 147.32 76.2 0)
+		(at 154.94 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2766,9 +2843,9 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a7e99ecd-c1ab-5e9d-a612-75eca8548096")
+		(uuid "1edc5855-098a-50d9-ac51-359286fc1d30")
 		(property "Reference" "#PWR151"
-			(at 147.32 72.39 0)
+			(at 154.94 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2779,7 +2856,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 72.39 0)
+			(at 154.94 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2790,7 +2867,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 147.32 76.2 0)
+			(at 154.94 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2801,7 +2878,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 147.32 76.2 0)
+			(at 154.94 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2812,7 +2889,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 147.32 76.2 0)
+			(at 154.94 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2823,7 +2900,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4884cdfe-e509-5280-b598-daaafb4226e6")
+			(uuid "2bed761e-44f4-5001-967b-e3668dbc3f1d")
 		)
 		(instances
 			(project "usb-hub"

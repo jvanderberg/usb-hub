@@ -174,7 +174,7 @@ brick and resets everything.
 |---|---|
 | Board outline | **85 x 85 mm** square (user, 2026-11-16; after area check: ~2,800 mm2 of parts = ~40 % of one side less hole keepouts) |
 | Area budget | Perimeter band ~10 mm deep for USB-C receptacles + port switch/ESD/Rp (3 sides) and host/PD (4th); 4 corner mounting keepouts ~8 mm dia; interior ~50 x 50 mm for PD sink, 17 A 2-phase buck (~25 x 30 mm), 3V3 regulator, 2 hub ICs + crystals |
-| Connector positions | Front: ports 1-4 (14 mm pitch). Left: ports 5-7. Right: ports 8-10 (14 mm pitch). Back: HOST and PWR IN. First/last port centre >= ~11 mm from each corner so perpendicular plugs and the mounting hole clear |
+| Connector positions | Left edge: ports 1-3 (top to bottom). Front (bottom) edge: ports 4-7 (left to right). Right edge: ports 8-10 (bottom to top). Back (top) edge: HOST (left, x=20) and PWR IN (right, x=62). Port k = schematic instance portk; hub A ports 1-6 -> 1-6, hub B -> 7-10 |
 | Mounting holes | 4 x M3 (3.2 mm) in the corners, into heat-set inserts in printed bosses |
 | Height limits | Lid ~15-20 mm above board top; tallest parts are buck inductors (~8-10 mm). Bottom: standoff height only |
 | Assembly side | Top only |

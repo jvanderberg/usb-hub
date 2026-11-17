@@ -237,14 +237,18 @@ def port_sheet(root):
     xU = xJ - 30.48
     U2 = ic(s, 'TPD4E05U06', 'U2', 'TPD4E05U06DQAR', xU - 8.89, yCC1 + 5.08, 'C138714', mirror='y',
             fields={'_ref_at': (xU - 12.7, yCC1 - 5.08), '_val_at': (xU - 12.7, yDM + 10.16)})
+    U2.y += yCC1 - U2.p('4')[1]
     assert eq(U2.p('4'), (xU, yCC1)) and eq(U2.p('1'), (xU, yDP)), (U2.p('4'), U2.p('1'))
     for a, b in (('4', 'A5'), ('5', 'B5')):
         s.wire(U2.p(a), J.p(b))
     stub_label(s, J.p('A6'), 'DP', side='L', n=2)     # same name as the sheet's hierarchical label: one net
     stub_label(s, J.p('A7'), 'DM', side='L', n=2)
-    g = U2.p('3')
-    s.wire(g, (g[0] - G, g[1]), (g[0] - G, yDM + 5.08))
-    s.power('GND', g[0] - G, yDM + 5.08)
+    a5, b5 = J.p('A5'), J.p('B5')
+    s.label('CC1', (U2.p('4')[0] + a5[0]) / 2, a5[1])   # name the CC wires so the straight-through pins join them
+    s.label('CC2', (U2.p('5')[0] + b5[0]) / 2, b5[1])
+    for pin, net in (('7', 'CC1'), ('6', 'CC2'), ('10', 'DP'), ('9', 'DM')):   # straight-through pins
+        stub_label(s, U2.p(pin), net, side='L', n=1)
+    s.power('GND', *U2.p('3'))
     yG, yS = J.p('A1B12')[1], J.p('1')[1]
     s.wire(J.p('A1B12'), (xJ - G, yG), (xJ - G, yS + 5.08))
     s.wire(J.p('1'), (xJ - G, yS))
@@ -688,21 +692,24 @@ def hubs_sheet(root):
     stub_label(s, J.p('A6'), 'USB_UP_DP', side='R', n=2)
     stub_label(s, E.p('2'), 'USB_UP_DM', side='L', n=2)
     stub_label(s, E.p('1'), 'USB_UP_DP', side='L', n=2)
+    for pin, net in (('7', 'HOST_CC1'), ('6', 'HOST_CC2'), ('10', 'USB_UP_DP'), ('9', 'USB_UP_DM')):
+        stub_label(s, E.p(pin), net, side='R', n=1)
     s.wire(J.p('B5'), E.p('5'))
     hang(s, 'R', 'R78', 'C25905', xJ + 22.86, yC2)
     yd = snap(yC2 + 15.24)
     s.wire(J.p('A5'), (xJ + 7.62, yC1), (xJ + 7.62, yd), (xU - 7.62, yd), (xU - 7.62, yC1), E.p('4'))
     hang(s, 'R', 'R77', 'C25905', xJ + 22.86, yd)
-    g = E.p('3')
-    s.wire(g, (g[0] + G, g[1]), (g[0] + G, g[1] + 5.08))
-    s.power('GND', g[0] + G, g[1] + 5.08)
+    s.label('HOST_CC1', xU - 12.7, yd)                 # named so the ESD array's straight-through pins join it
+    s.label('HOST_CC2', xU - 12.7, yC2)
+    s.power('GND', *E.p('3'), rot=180)                 # E is mirrored in x: its GND pin points up
     yG, yS = J.p('A1B12')[1], J.p('1')[1]
     s.wire(J.p('A1B12'), (xJ + G, yG), (xJ + G, yS + 5.08))
     s.wire(J.p('1'), (xJ + G, yS))
     s.power('GND', xJ + G, yS + 5.08)
     # HOST_VBUS: rail along the top: TVS, cap, VBUS_DET divider
     xr = xU + 22.86
-    s.wire(J.p('A4B9'), (xr + 45.72, yV))
+    yR = yV - 7.62                                     # rail jogs up over the ESD array (its GND pin points up)
+    s.wire(J.p('A4B9'), (xJ + 5.08, yV), (xJ + 5.08, yR), (xr - 5.08, yR), (xr - 5.08, yV), (xr + 45.72, yV))
     s.wire((xr, yV), (xr, yV - 5.08))
     s.label('HOST_VBUS', xr, yV - 5.08, 90)
     vdio(s, 'DZ', 'D40', 'C82323', xr + 12.7, yV)
