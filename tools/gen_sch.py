@@ -31,7 +31,7 @@ for _n in JLC.names():
 VAL = {  # value shown on the sheet, per LCSC part (one part per value/package)
     'C17168': '0R', 'C11702': '1k', 'C25867': '1.5k', 'C270633': '1.87k', 'C25890': '3.3k', 'C25905': '5.1k',
     'C2933105': '5.23k', 'C25744': '10k', 'C25752': '12k', 'C62740': '15.4k', 'C25768': '22k', 'C26978': '41.2k',
-    'C25792': '47k', 'C53398': '53.6k', 'C25741': '100k', 'C25764': '200k', 'C26083': '1M', 'C2904234': '2.5m',
+    'C25792': '47k', 'C53398': '53.6k', 'C11626': '54.9k','C25741': '100k', 'C25764': '200k', 'C26083': '1M', 'C2904234': '2.5m',
     'C138687': '10u/50V', 'C525654': '47u/10V', 'C2836438': '22u/50V', 'C29823': '4.7u/50V', 'C15850': '10u/25V',
     'C45783': '22u/25V', 'C59461': '22u/10V', 'C19702': '10u/10V', 'C15849': '1u/50V', 'C23630': '2.2u/16V', 'C52923': '1u/25V',
     'C1525': '100n/16V', 'C307331': '100n/50V', 'C15195': '10n/50V', 'C47118429': '5.1n/50V', 'C1664': '330p/50V',
@@ -533,7 +533,7 @@ def buck_sheet(root):
     rows = [(U.p('4'), br_part('R', 'R31', 'C53398')),
             (U.p('3'), br_part('R', 'R32', 'C26978')),
             (U.p('18'), br_label('5V_VDDA')),
-            (U.p('6'), item(br_part('R', 'R35', 'C25744'), br_part('R', 'R34', 'C53398', V5))),
+            (U.p('6'), item(br_part('R', 'R35', 'C25744'), br_part('R', 'R34', 'C11626', V5))),
             (U.p('5'), item(br_part('C', 'C48', 'C576704'),
                             br_chain([('R', 'R33', 'C2933105'), ('C', 'C47', 'C47118429')], node='5V_RC'))),
             (U.p('9'), br_part('C', 'C44', 'C23630')),
@@ -553,7 +553,7 @@ def buck_sheet(root):
     s.power('GND', *t.p(1))
     s.text('405 kHz (RT 53.6k), DRSS spread spectrum primary (CNFG 41.2k), diode-emulation PFM (PFM/SYNC = VDDA), '
            'internal VCC (VCCX = GND).', 20.32, 266.7)
-    s.text('Vout = 0.8 V x (1 + 53.6k/10k) = 5.09 V.  EN/UVLO 100k/15.4k: on 7.49 V, off 6.49 V.  '
+    s.text('Vout = 0.8 V x (1 + 54.9k/10k) = 5.19 V (port VBUS >= 4.75 V at 3 A).  EN/UVLO 100k/15.4k: on 7.49 V, off 6.49 V.  '
            'Peak limit 60 mV / 2.5 mOhm = 24 A typ (19.6-29.2 A).', 20.32, 271.78)
     return s
 

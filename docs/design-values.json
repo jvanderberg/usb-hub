@@ -2,9 +2,10 @@
  "values": [
   {
    "name": "5V_BUS output voltage (LM5148 FB divider)",
-   "value": "5.09 V (0.8 V x (1 + 53.6k/10k)); 4.98-5.18 V with VREF 795-808 mV and 1 % resistors",
+   "value": "5.19 V (0.8 V x (1 + 54.9k/10k)); 5.07-5.33 V with VREF 795-808 mV and 1 % resistors (below SY6863 OVP 5.6 V typ)",
    "equation": "VOUT = VREF x (1 + RFB1/RFB2)",
-   "where": "docs/power-design.md (WEBENCH); LM5148 s8.3.2 Eq 6 p20",
+   "where": "docs/power-design.md (WEBENCH 53.6k; 54.9k by user decision 2026-11-17, review D3); LM5148 s8.3.2 Eq 6 p20",
+   "approved": "2026-11-17: R34 54.9k so port VBUS stays >= 4.75 V at 3 A worst case",
    "depends_on": [
     {
      "ref": "U30",
@@ -15,9 +16,9 @@
     },
     {
      "ref": "R34",
-     "part": "C53398",
+     "part": "C11626",
      "param": "resistance",
-     "used": "53.6k 1 %",
+     "used": "54.9k 1 %",
      "source": "BOM"
     },
     {

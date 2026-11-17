@@ -30,7 +30,7 @@ WEBENCH's default LM5148 design ran at 2.08 MHz (92.7 %). Customised to **405 kH
 | Cin | 4x 10 uF 50 V X7R 1210 (26 uF derated) | Cin RMS 7.39 A; Vin ripple 306 mV p-p |
 | Cout | 160 uF derated ceramic (custom) | Cout RMS 1.84 A; Vout ripple 12.4 mV p-p |
 | Compensation | Rcomp 5.23 k, Ccomp 5.1 nF, Ccomp2 110 pF | phase margin 61 deg, crossover 38.9 kHz, gain margin -13.3 dB |
-| FB divider | 53.6 k / 10 k | Vout actual 5.09 V, tolerance 2.97 % |
+| FB divider | ~~53.6 k~~ **54.9 k** / 10 k | WEBENCH: 53.6 k, Vout 5.09 V, tolerance 2.97 %. Changed to 54.9 k (C11626) by user decision 2026-11-17 (review D3): Vout 5.19 V nominal, 5.07-5.33 V worst case (VREF 795-808 mV, 1 % resistors), below the SY6863 OVP (5.6 V typ, p4); port VBUS at 3 A worst case 4.81 V (was 4.71 V). The divider ratio changes loop gain by 2 % (5.09/5.19): negligible against 61 deg phase margin |
 | Cvcc / Cvdda / Cboot | 2.2 uF / 100 nF / 100 nF | |
 | Load step | 8.5 A step: -121 mV / +67 mV | |
 | IC | Pd 0.52 W, Tj 68 C (theta-JA eff. 34.8 C/W assumed) | |

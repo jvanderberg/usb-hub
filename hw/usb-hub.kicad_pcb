@@ -31399,12 +31399,12 @@
 			)
 		)
 	)
-	(footprint "JLCImport:0402WGF5362TCE"
+	(footprint "JLCImport:0402WGF5492TCE"
 		(layer "F.Cu")
 		(uuid "8385098c-eeb9-571d-91ab-90fe7387c350")
 		(at 156.55 128.9 90)
-		(descr "53.6KΩ (5362) ±1%")
-		(tags "0402WGF5362TCE C53398 R0402 UNI-ROYAL")
+		(descr "54.9KΩ (5492) ±1%")
+		(tags "0402WGF5492TCE C11626 R0402 UNI-ROYAL")
 		(property "Reference" "R34"
 			(at 0 -1.4986 90)
 			(layer "F.SilkS")
@@ -31417,7 +31417,7 @@
 				)
 			)
 		)
-		(property "Value" "53.6k"
+		(property "Value" "54.9k"
 			(at 0 1.4986 90)
 			(layer "F.Fab")
 			(uuid "5ca4aad9-a366-52d1-bc83-46a310e55ccc")
@@ -31428,7 +31428,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C53398.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C11626.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31440,7 +31440,7 @@
 				)
 			)
 		)
-		(property "Description" "53.6KΩ (5362) ±1%"
+		(property "Description" "54.9KΩ (5492) ±1%"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31464,7 +31464,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part" "0402WGF5362TCE"
+		(property "Manufacturer Part" "0402WGF5492TCE"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31476,7 +31476,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C53398"
+		(property "LCSC" "C11626"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -31570,7 +31570,7 @@
 			(uuid "08d50993-332a-58e6-ab91-1292e4460a6b")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/JLCImport.3dshapes/0402WGF5362TCE.wrl"
+		(model "${KIPRJMOD}/JLCImport.3dshapes/0402WGF5492TCE.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -39869,7 +39869,7 @@
 			(net "GND")
 			(pinfunction "GND_39")
 			(pintype "passive")
-			(uuid "d0e68e86-2419-51f3-8177-1f5f47044db1")
+			(uuid "14416d1f-6146-55de-84ae-a02d7edbe89e")
 		)
 		(pad "39" smd rect
 			(at -0.965 0 270)
@@ -39878,7 +39878,7 @@
 			(net "GND")
 			(pinfunction "GND_39")
 			(pintype "passive")
-			(uuid "14416d1f-6146-55de-84ae-a02d7edbe89e")
+			(uuid "d0e68e86-2419-51f3-8177-1f5f47044db1")
 		)
 		(pad "39" thru_hole circle
 			(at -0.965 0.9 270)
@@ -43670,7 +43670,7 @@
 			(net "GND")
 			(pinfunction "VSS_37")
 			(pintype "power_in")
-			(uuid "136421d5-acd8-5acd-8c53-5cf3044bc765")
+			(uuid "3349f43c-c1e8-56bf-b9f9-9522aca7ae65")
 		)
 		(pad "37" smd rect
 			(at 0 0 90)
@@ -43679,7 +43679,7 @@
 			(net "GND")
 			(pinfunction "VSS_37")
 			(pintype "power_in")
-			(uuid "3349f43c-c1e8-56bf-b9f9-9522aca7ae65")
+			(uuid "136421d5-acd8-5acd-8c53-5cf3044bc765")
 		)
 		(pad "37" thru_hole circle
 			(at 0 1 90)

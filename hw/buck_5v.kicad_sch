@@ -2457,7 +2457,7 @@
 		)
 		(uuid "b219b0e6-f6da-5177-a646-3e133beabc2a")
 	)
-	(text "Vout = 0.8 V x (1 + 53.6k/10k) = 5.09 V.  EN/UVLO 100k/15.4k: on 7.49 V, off 6.49 V.  Peak limit 60 mV / 2.5 mOhm = 24 A typ (19.6-29.2 A)."
+	(text "Vout = 0.8 V x (1 + 54.9k/10k) = 5.19 V (port VBUS >= 4.75 V at 3 A).  EN/UVLO 100k/15.4k: on 7.49 V, off 6.49 V.  Peak limit 60 mV / 2.5 mOhm = 24 A typ (19.6-29.2 A)."
 		(exclude_from_sim no)
 		(at 20.32 271.78 0)
 		(effects
@@ -2466,7 +2466,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ba3c5f03-fd09-5b5b-943e-fcfb9d42a516")
+		(uuid "8d2c1caf-c393-50de-8c0a-97090169df70")
 	)
 	(junction
 		(at 53.34 151.13)
@@ -8487,7 +8487,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "53.6k"
+		(property "Value" "54.9k"
 			(at 66.04 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8498,7 +8498,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:0402WGF5362TCE"
+		(property "Footprint" "JLCImport:0402WGF5492TCE"
 			(at 63.5 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8510,7 +8510,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C53398.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C11626.pdf"
 			(at 63.5 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8534,7 +8534,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "53.6KΩ (5362) ±1%"
+		(property "Description" "54.9KΩ (5492) ±1%"
 			(at 63.5 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8557,7 +8557,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer Part" "0402WGF5362TCE"
+		(property "Manufacturer Part" "0402WGF5492TCE"
 			(at 63.5 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8569,7 +8569,7 @@
 				(justify left)
 			)
 		)
-		(property "LCSC" "C53398"
+		(property "LCSC" "C11626"
 			(at 63.5 154.94 0)
 			(hide yes)
 			(show_name no)
