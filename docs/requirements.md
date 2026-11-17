@@ -172,7 +172,7 @@ brick and resets everything.
 
 | Item | Requirement |
 |---|---|
-| Board outline | **80 x 80 mm** square (user, 2026-11-16, after the 70 x 70 area check: parts 2,950 mm2 = 63 % of one side; trimmed to 2,761 mm2 = 45 % of 80 x 80 less hole keepouts) |
+| Board outline | **85 x 85 mm** square (user, 2026-11-16; after area check: ~2,800 mm2 of parts = ~40 % of one side less hole keepouts) |
 | Area budget | Perimeter band ~10 mm deep for USB-C receptacles + port switch/ESD/Rp (3 sides) and host/PD (4th); 4 corner mounting keepouts ~8 mm dia; interior ~50 x 50 mm for PD sink, 17 A 2-phase buck (~25 x 30 mm), 3V3 regulator, 2 hub ICs + crystals |
 | Connector positions | Front: ports 1-4 (14 mm pitch). Left: ports 5-7. Right: ports 8-10 (14 mm pitch). Back: HOST and PWR IN. First/last port centre >= ~11 mm from each corner so perpendicular plugs and the mounting hole clear |
 | Mounting holes | 4 x M3 (3.2 mm) in the corners, into heat-set inserts in printed bosses |
@@ -276,7 +276,7 @@ Datasheets in `docs/datasheets/`. Front-runner first in each block; nothing here
 | Port switch | Silergy SY6863B3ABC x10 (3.47-4.08 A, reverse block, EN active-high) | User; cheaper than AP22815 | 2026-11-16 |
 | Hub ICs | USB2517 (7-port) -> USB2514B (4-port) cascade | Only in-stock MTT pair with strap-only individual port power | 2026-11-16 (presented, not objected) |
 | Regulator design tool | TI WEBENCH OK | User | 2026-11-16 |
-| Board size / trims | 80 x 80 mm; per-port VBUS TVS (SMF6.0A) and host VBUS TVS dropped; port caps 0603; 1.0 mm test pads | User (option 1 + 80x80) | 2026-11-16 |
+| Board size / trims | 85 x 85 mm; per-port and host VBUS TVS kept but as onsemi ESD5Z6.0T1G SOD-523 (C82323) instead of SMF6.0A; port caps 0603; 1.0 mm test pads | User (option 1 + 80x80) | 2026-11-16 |
 | Overload behaviour | Accept brownout/reset; per-port limit only; converter limit ~17 A; hub logic on its own regulator from VIN | User | 2026-11-16 |
 
 An agreed decision is frozen: changing it later (a substitute part, a new threshold) goes back to the user with the

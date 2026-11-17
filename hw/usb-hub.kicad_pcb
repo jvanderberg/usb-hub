@@ -154,7 +154,7 @@
 	(footprint "JLCImport:1206B475K500NT"
 		(layer "F.Cu")
 		(uuid "402cb1a3-5d54-5223-9b16-6812f265037d")
-		(at 195 100)
+		(at 200 100)
 		(descr "4.7uF (475) ±10% 50V")
 		(tags "1206B475K500NT C1206 C29823 FH")
 		(property "Reference" "C1"
@@ -380,7 +380,7 @@
 	(footprint "JLCImport:CL05B103KB5NNNC"
 		(layer "F.Cu")
 		(uuid "01e68009-f51e-53d6-b63a-417409d07029")
-		(at 195 108)
+		(at 200 108)
 		(descr "10nF (103) ±10% 50V")
 		(tags "C0402 C15195 CL05B103KB5NNNC SAMSUNG")
 		(property "Reference" "C2"
@@ -606,7 +606,7 @@
 	(footprint "JLCImport:CL05B103KB5NNNC"
 		(layer "F.Cu")
 		(uuid "2560a81c-d8da-5a64-8adb-c835c19df46f")
-		(at 195 116)
+		(at 200 116)
 		(descr "10nF (103) ±10% 50V")
 		(tags "C0402 C15195 CL05B103KB5NNNC SAMSUNG")
 		(property "Reference" "C3"
@@ -832,7 +832,7 @@
 	(footprint "JLCImport:CL05B103KB5NNNC"
 		(layer "F.Cu")
 		(uuid "d2605eba-6442-573e-88c4-1b9de84c773e")
-		(at 195 124)
+		(at 200 124)
 		(descr "10nF (103) ±10% 50V")
 		(tags "C0402 C15195 CL05B103KB5NNNC SAMSUNG")
 		(property "Reference" "C4"
@@ -1058,7 +1058,7 @@
 	(footprint "JLCImport:CL05B103KB5NNNC"
 		(layer "F.Cu")
 		(uuid "21c10010-5177-5502-ae79-6eb1687c3551")
-		(at 195 132)
+		(at 200 132)
 		(descr "10nF (103) ±10% 50V")
 		(tags "C0402 C15195 CL05B103KB5NNNC SAMSUNG")
 		(property "Reference" "C5"
@@ -1284,7 +1284,7 @@
 	(footprint "JLCImport:CL10C331JB8NNNC"
 		(layer "F.Cu")
 		(uuid "6c32e9ba-5509-5208-ba02-96373cbb2c61")
-		(at 195 140)
+		(at 200 140)
 		(descr "330pF (331) ±5% 50V")
 		(tags "C0603 C1664 CL10C331JB8NNNC SAMSUNG")
 		(property "Reference" "C6"
@@ -1510,7 +1510,7 @@
 	(footprint "JLCImport:CL10C331JB8NNNC"
 		(layer "F.Cu")
 		(uuid "c39ca78e-c8f4-5074-91b0-0ef6bce6009e")
-		(at 195 148)
+		(at 200 148)
 		(descr "330pF (331) ±5% 50V")
 		(tags "C0603 C1664 CL10C331JB8NNNC SAMSUNG")
 		(property "Reference" "C7"
@@ -1736,7 +1736,7 @@
 	(footprint "JLCImport:CL32B106KBJNNNE"
 		(layer "F.Cu")
 		(uuid "3cb97369-f318-549e-ac98-974d226c2839")
-		(at 195 156)
+		(at 200 156)
 		(descr "CL32B106KBJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C138687 CL32B106KBJNNNE SAMSUNG")
 		(property "Reference" "C8"
@@ -1962,7 +1962,7 @@
 	(footprint "JLCImport:CL21A106KAYNNNE"
 		(layer "F.Cu")
 		(uuid "df71dfbf-158a-5213-b19a-72a2e3d5258e")
-		(at 195 164)
+		(at 200 164)
 		(descr "10uF (106) ±10% 25V")
 		(tags "C0805 C15850 CL21A106KAYNNNE SAMSUNG")
 		(property "Reference" "C9"
@@ -2188,7 +2188,7 @@
 	(footprint "JLCImport:CL21A106KAYNNNE"
 		(layer "F.Cu")
 		(uuid "1ceaf41b-531c-5e8a-8462-c1e415b06525")
-		(at 195 172)
+		(at 200 172)
 		(descr "10uF (106) ±10% 25V")
 		(tags "C0805 C15850 CL21A106KAYNNNE SAMSUNG")
 		(property "Reference" "C10"
@@ -2414,7 +2414,7 @@
 	(footprint "JLCImport:CL21A106KAYNNNE"
 		(layer "F.Cu")
 		(uuid "eae27bc0-4b1a-5bb3-85fd-a1dc75a6eb02")
-		(at 195 180)
+		(at 200 180)
 		(descr "10uF (106) ±10% 25V")
 		(tags "C0805 C15850 CL21A106KAYNNNE SAMSUNG")
 		(property "Reference" "C11"
@@ -2640,7 +2640,7 @@
 	(footprint "JLCImport:RVT22UF50V67RV0028"
 		(layer "F.Cu")
 		(uuid "f643118c-6998-5f78-ba41-d8c70bc76932")
-		(at 195 188)
+		(at 200 188)
 		(descr "RVT22UF50V67RV0028; CAP-SMD_BD6.3-L6.6-W6.6-FD; KNSCHA")
 		(tags "C2836438 CAP-SMD_BD6.3-L6.6-W6.6-FD KNSCHA RVT22UF50V67RV0028")
 		(property "Reference" "C12"
@@ -2914,7 +2914,7 @@
 	(footprint "JLCImport:CL32B106KBJNNNE"
 		(layer "F.Cu")
 		(uuid "2f99f465-d316-5293-be7f-ec44188700a6")
-		(at 205 100)
+		(at 210 100)
 		(descr "CL32B106KBJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C138687 CL32B106KBJNNNE SAMSUNG")
 		(property "Reference" "C13"
@@ -3140,7 +3140,7 @@
 	(footprint "JLCImport:CL05B104KB54PNC"
 		(layer "F.Cu")
 		(uuid "501133dc-c24c-5054-a5eb-d71f31637498")
-		(at 205 108)
+		(at 210 108)
 		(descr "CL05B104KB54PNC; C0402; SAMSUNG")
 		(tags "C0402 C307331 CL05B104KB54PNC SAMSUNG")
 		(property "Reference" "C14"
@@ -3366,7 +3366,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "fd160233-3b8d-5828-8836-312f39603262")
-		(at 205 116)
+		(at 210 116)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C15"
@@ -3592,7 +3592,7 @@
 	(footprint "JLCImport:CL21A226MAQNNNE"
 		(layer "F.Cu")
 		(uuid "e4976205-8a79-5095-9cec-99a93220421b")
-		(at 205 124)
+		(at 210 124)
 		(descr "CL21A226MAQNNNE; C0805; SAMSUNG")
 		(tags "C0805 C45783 CL21A226MAQNNNE SAMSUNG")
 		(property "Reference" "C16"
@@ -3818,7 +3818,7 @@
 	(footprint "JLCImport:CL21A226MAQNNNE"
 		(layer "F.Cu")
 		(uuid "a6ee4831-5a19-59a8-999f-c00ed3c776c2")
-		(at 205 132)
+		(at 210 132)
 		(descr "CL21A226MAQNNNE; C0805; SAMSUNG")
 		(tags "C0805 C45783 CL21A226MAQNNNE SAMSUNG")
 		(property "Reference" "C17"
@@ -4044,7 +4044,7 @@
 	(footprint "JLCImport:CL21A226MAQNNNE"
 		(layer "F.Cu")
 		(uuid "f237d127-0211-5bac-a85f-5c032b706606")
-		(at 205 140)
+		(at 210 140)
 		(descr "CL21A226MAQNNNE; C0805; SAMSUNG")
 		(tags "C0805 C45783 CL21A226MAQNNNE SAMSUNG")
 		(property "Reference" "C18"
@@ -4270,7 +4270,7 @@
 	(footprint "JLCImport:0402CG470J500NT"
 		(layer "F.Cu")
 		(uuid "b0721998-c610-575e-970c-764db045b530")
-		(at 205 148)
+		(at 210 148)
 		(descr "47pF (470) ±5% 50V")
 		(tags "0402CG470J500NT C0402 C1567 FH")
 		(property "Reference" "C19"
@@ -4496,7 +4496,7 @@
 	(footprint "JLCImport:CL32B106KBJNNNE"
 		(layer "F.Cu")
 		(uuid "524a6393-9ea2-5b54-9d59-e9933688d195")
-		(at 205 156)
+		(at 210 156)
 		(descr "CL32B106KBJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C138687 CL32B106KBJNNNE SAMSUNG")
 		(property "Reference" "C30"
@@ -4722,7 +4722,7 @@
 	(footprint "JLCImport:CL32B106KBJNNNE"
 		(layer "F.Cu")
 		(uuid "382bee26-08bf-56ac-bf3f-fd83d63502db")
-		(at 205 164)
+		(at 210 164)
 		(descr "CL32B106KBJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C138687 CL32B106KBJNNNE SAMSUNG")
 		(property "Reference" "C31"
@@ -4948,7 +4948,7 @@
 	(footprint "JLCImport:CL32B106KBJNNNE"
 		(layer "F.Cu")
 		(uuid "1086efe5-3b7c-5d84-abd5-f26b71318f5e")
-		(at 205 172)
+		(at 210 172)
 		(descr "CL32B106KBJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C138687 CL32B106KBJNNNE SAMSUNG")
 		(property "Reference" "C32"
@@ -5174,7 +5174,7 @@
 	(footprint "JLCImport:CL32B106KBJNNNE"
 		(layer "F.Cu")
 		(uuid "13492770-4037-598a-8e7b-8c2be7f8a61b")
-		(at 205 180)
+		(at 210 180)
 		(descr "CL32B106KBJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C138687 CL32B106KBJNNNE SAMSUNG")
 		(property "Reference" "C33"
@@ -5400,7 +5400,7 @@
 	(footprint "JLCImport:CL05B104KB54PNC"
 		(layer "F.Cu")
 		(uuid "45cf1f17-01bd-5104-b6e5-7ba7addf61df")
-		(at 205 188)
+		(at 210 188)
 		(descr "CL05B104KB54PNC; C0402; SAMSUNG")
 		(tags "C0402 C307331 CL05B104KB54PNC SAMSUNG")
 		(property "Reference" "C34"
@@ -5626,7 +5626,7 @@
 	(footprint "JLCImport:CL05B104KB54PNC"
 		(layer "F.Cu")
 		(uuid "6059cd49-6336-5f00-b6f1-3019e1084bf0")
-		(at 215 100)
+		(at 220 100)
 		(descr "CL05B104KB54PNC; C0402; SAMSUNG")
 		(tags "C0402 C307331 CL05B104KB54PNC SAMSUNG")
 		(property "Reference" "C35"
@@ -5852,7 +5852,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "39c4e80f-3e3b-585d-bed8-a095fcf40870")
-		(at 215 108)
+		(at 220 108)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C36"
@@ -6078,7 +6078,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "dbf55347-70b5-56b4-9bff-49ec175b8370")
-		(at 215 116)
+		(at 220 116)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C37"
@@ -6304,7 +6304,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "bdf847e7-b725-5832-8da2-460f357419c1")
-		(at 215 124)
+		(at 220 124)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C38"
@@ -6530,7 +6530,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "d9304354-03b4-5823-aba4-c49245f99bdc")
-		(at 215 132)
+		(at 220 132)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C39"
@@ -6756,7 +6756,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "0f78a222-8141-5482-a14d-86c43f444728")
-		(at 215 140)
+		(at 220 140)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C40"
@@ -6982,7 +6982,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "1ee5528e-cbc5-519e-a290-f30e754538f4")
-		(at 215 148)
+		(at 220 148)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C41"
@@ -7208,7 +7208,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "4f5011db-1b7c-5426-a619-953653b5e0ff")
-		(at 215 156)
+		(at 220 156)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C42"
@@ -7434,7 +7434,7 @@
 	(footprint "JLCImport:CL32A476KPJNNNE"
 		(layer "F.Cu")
 		(uuid "d53620ee-b387-5ec4-b21a-9605c30b13ff")
-		(at 215 164)
+		(at 220 164)
 		(descr "CL32A476KPJNNNE; C1210; SAMSUNG")
 		(tags "C1210 C525654 CL32A476KPJNNNE SAMSUNG")
 		(property "Reference" "C43"
@@ -7660,7 +7660,7 @@
 	(footprint "JLCImport:CL10A225KO8NNNC"
 		(layer "F.Cu")
 		(uuid "c627cd82-291d-5c3f-b2a3-b49888816d43")
-		(at 215 172)
+		(at 220 172)
 		(descr "2.2uF (225) ±10% 16V")
 		(tags "C0603 C23630 CL10A225KO8NNNC SAMSUNG")
 		(property "Reference" "C44"
@@ -7886,7 +7886,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "1f2e84bd-af50-50de-bb4f-dc1fc85d43fc")
-		(at 215 180)
+		(at 220 180)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C45"
@@ -8112,7 +8112,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "c7aba233-6688-5a40-8292-555309a0dcdd")
-		(at 215 188)
+		(at 220 188)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C46"
@@ -8338,7 +8338,7 @@
 	(footprint "JLCImport:0402B512K500NT"
 		(layer "F.Cu")
 		(uuid "2d9fa3e4-1284-5c89-a06b-85ba05726bad")
-		(at 225 100)
+		(at 230 100)
 		(descr "0402B512K500NT; C0402; FH")
 		(tags "0402B512K500NT C0402 C47118429 FH")
 		(property "Reference" "C47"
@@ -8564,7 +8564,7 @@
 	(footprint "JLCImport:CC0402JRNPO9BN111"
 		(layer "F.Cu")
 		(uuid "50dfe5fd-2cca-5abc-a3e4-930b748da3e2")
-		(at 225 108)
+		(at 230 108)
 		(descr "CC0402JRNPO9BN111; C0402; YAGEO")
 		(tags "C0402 C576704 CC0402JRNPO9BN111 YAGEO")
 		(property "Reference" "C48"
@@ -8790,7 +8790,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "c2d7c6d4-8030-5ab3-8c58-30c79e2d9f45")
-		(at 225 116)
+		(at 230 116)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C50"
@@ -9016,7 +9016,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "6270895d-b4a4-59ea-a630-e3152e86498c")
-		(at 225 124)
+		(at 230 124)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C51"
@@ -9242,7 +9242,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "08c326d5-4aa3-5808-90a2-10d9b9f969ec")
-		(at 225 132)
+		(at 230 132)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C52"
@@ -9468,7 +9468,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "8b1f26f5-3e7c-5839-a34a-36f633383479")
-		(at 225 140)
+		(at 230 140)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C53"
@@ -9694,7 +9694,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "ecc5bae0-4a74-5444-aea1-c1c1b05be8bf")
-		(at 225 148)
+		(at 230 148)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C54"
@@ -9920,7 +9920,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "58c43bd5-1bd8-547e-a70c-6dc79d83858a")
-		(at 225 156)
+		(at 230 156)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C55"
@@ -10146,7 +10146,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "e867973c-8ddc-53e6-8410-1f92ee70b9be")
-		(at 225 164)
+		(at 230 164)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C56"
@@ -10372,7 +10372,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "24028ee4-558b-5c3d-935b-b320d162fbf2")
-		(at 225 172)
+		(at 230 172)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C57"
@@ -10598,7 +10598,7 @@
 	(footprint "JLCImport:CL10A105KB8NNNC"
 		(layer "F.Cu")
 		(uuid "038cd18d-07cc-541d-bb49-2379d8bc4549")
-		(at 225 180)
+		(at 230 180)
 		(descr "1uF (105) ±10% 50V")
 		(tags "C0603 C15849 CL10A105KB8NNNC SAMSUNG")
 		(property "Reference" "C58"
@@ -10824,7 +10824,7 @@
 	(footprint "JLCImport:CL10A105KB8NNNC"
 		(layer "F.Cu")
 		(uuid "5ca3662a-e994-514c-9553-fc400d26e2c2")
-		(at 225 188)
+		(at 230 188)
 		(descr "1uF (105) ±10% 50V")
 		(tags "C0603 C15849 CL10A105KB8NNNC SAMSUNG")
 		(property "Reference" "C59"
@@ -11050,7 +11050,7 @@
 	(footprint "JLCImport:0402CG180J500NT"
 		(layer "F.Cu")
 		(uuid "2002a92b-8e51-51ef-9cf2-f78576ee3a27")
-		(at 235 100)
+		(at 240 100)
 		(descr "18pF (180) ±5% 50V")
 		(tags "0402CG180J500NT C0402 C1549 FH")
 		(property "Reference" "C60"
@@ -11276,7 +11276,7 @@
 	(footprint "JLCImport:0402CG180J500NT"
 		(layer "F.Cu")
 		(uuid "322fe5d8-609d-52af-a1ef-d920a8cef430")
-		(at 235 108)
+		(at 240 108)
 		(descr "18pF (180) ±5% 50V")
 		(tags "0402CG180J500NT C0402 C1549 FH")
 		(property "Reference" "C61"
@@ -11502,7 +11502,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "10a18da3-a870-590f-b7eb-32e4509a0e10")
-		(at 235 116)
+		(at 240 116)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C62"
@@ -11728,7 +11728,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "84f39151-d99d-5982-80ce-4751fa31e14a")
-		(at 235 124)
+		(at 240 124)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C63"
@@ -11954,7 +11954,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "852df342-3eac-59df-adb9-232cbbb30a1f")
-		(at 235 132)
+		(at 240 132)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C64"
@@ -12180,7 +12180,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "dbbb7bf9-7e6c-568e-ab90-6df6647bdabd")
-		(at 235 140)
+		(at 240 140)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C65"
@@ -12406,7 +12406,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "ed3e4fff-431c-5518-aa9b-450fbe58db8d")
-		(at 235 148)
+		(at 240 148)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C66"
@@ -12632,7 +12632,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "006e8908-0e2c-5029-bb2d-a7020f2c862f")
-		(at 235 156)
+		(at 240 156)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C67"
@@ -12858,7 +12858,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "9f356026-94fa-5847-b238-e12d0bd11d28")
-		(at 235 164)
+		(at 240 164)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C68"
@@ -13084,7 +13084,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "de4b65cc-7585-5ada-b0e6-848ba0e94ea8")
-		(at 235 172)
+		(at 240 172)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C69"
@@ -13310,7 +13310,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "81c46caa-00bd-575f-ac8e-2c2398a6bb87")
-		(at 235 180)
+		(at 240 180)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C70"
@@ -13536,7 +13536,7 @@
 	(footprint "JLCImport:0402CG150J500NT"
 		(layer "F.Cu")
 		(uuid "32417dc3-8701-5198-9d95-ba2a7cf092a7")
-		(at 235 188)
+		(at 240 188)
 		(descr "15pF (150) ±5% 50V")
 		(tags "0402CG150J500NT C0402 C1548 FH")
 		(property "Reference" "C71"
@@ -13762,7 +13762,7 @@
 	(footprint "JLCImport:0402CG150J500NT"
 		(layer "F.Cu")
 		(uuid "9e0866ca-f8ed-5d37-8d30-e688e5cc69fb")
-		(at 245 100)
+		(at 250 100)
 		(descr "15pF (150) ±5% 50V")
 		(tags "0402CG150J500NT C0402 C1548 FH")
 		(property "Reference" "C72"
@@ -13988,7 +13988,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "68639a8e-1d60-5f48-bdf8-785a3ed1cff3")
-		(at 245 108)
+		(at 250 108)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C73"
@@ -14214,7 +14214,7 @@
 	(footprint "JLCImport:CL05A105KA5NQNC"
 		(layer "F.Cu")
 		(uuid "8f4003a6-8104-5455-a1be-5f1dd56c820f")
-		(at 245 116)
+		(at 250 116)
 		(descr "1uF (105) ±10% 25V")
 		(tags "C0402 C52923 CL05A105KA5NQNC SAMSUNG")
 		(property "Reference" "C74"
@@ -14440,7 +14440,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "e79a54cd-c2df-5923-ac9f-ec49883a01c6")
-		(at 245 124)
+		(at 250 124)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C101"
@@ -14666,7 +14666,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "c68a8658-e84a-5d8d-8216-9ead595297a6")
-		(at 245 132)
+		(at 250 132)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C102"
@@ -14892,7 +14892,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "9349c8ed-fb81-55a7-a7f6-7fac3a6f083c")
-		(at 245 140)
+		(at 250 140)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C103"
@@ -15118,7 +15118,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "da91b9f6-d558-5320-ba50-8b9822778f74")
-		(at 245 148)
+		(at 250 148)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C201"
@@ -15344,7 +15344,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "fc0d3b1b-14f8-5f81-9ac5-61e93b88a828")
-		(at 245 156)
+		(at 250 156)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C202"
@@ -15570,7 +15570,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "8d015c29-1e9a-5485-b239-9c95da255a7d")
-		(at 245 164)
+		(at 250 164)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C203"
@@ -15796,7 +15796,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "f6fc7ccf-2f96-516d-9bd8-75472676e198")
-		(at 245 172)
+		(at 250 172)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C301"
@@ -16022,7 +16022,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "53eeb767-322d-57ba-9045-9b3c10abf93e")
-		(at 245 180)
+		(at 250 180)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C302"
@@ -16248,7 +16248,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "5700acda-a02d-5b6c-8f4b-453eb7c9b5f4")
-		(at 245 188)
+		(at 250 188)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C303"
@@ -16474,7 +16474,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "a3da7c1c-0a20-5ee2-a532-52b7b43fb219")
-		(at 255 100)
+		(at 260 100)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C401"
@@ -16700,7 +16700,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "c49ea60b-bd50-5a5e-8972-420f23b04988")
-		(at 255 108)
+		(at 260 108)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C402"
@@ -16926,7 +16926,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "c71a566b-b386-590c-80f7-9c9a84dbf7e7")
-		(at 255 116)
+		(at 260 116)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C403"
@@ -17152,7 +17152,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "034b6fce-c37d-5b7d-8b42-f84a84b6e7c1")
-		(at 255 124)
+		(at 260 124)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C501"
@@ -17378,7 +17378,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "e92498ba-e45e-5e38-acc7-3e4734a0ccf7")
-		(at 255 132)
+		(at 260 132)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C502"
@@ -17604,7 +17604,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "9fe35fcc-adc8-5aa6-8edb-ff5defe5fe9e")
-		(at 255 140)
+		(at 260 140)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C503"
@@ -17830,7 +17830,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "778f452f-f7eb-55ec-ab43-80391499a71e")
-		(at 255 148)
+		(at 260 148)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C601"
@@ -18056,7 +18056,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "68b3e7ea-20d8-59c8-8e2a-30bffe15b70e")
-		(at 255 156)
+		(at 260 156)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C602"
@@ -18282,7 +18282,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "5a7efe07-9a0e-5742-8fb9-62d1e60cf076")
-		(at 255 164)
+		(at 260 164)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C603"
@@ -18508,7 +18508,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "77117d5f-d588-5f3c-8cd4-6bf9bd869cd2")
-		(at 255 172)
+		(at 260 172)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C701"
@@ -18734,7 +18734,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "f2b35cba-807c-5118-8f14-0fd0f0c92aa6")
-		(at 255 180)
+		(at 260 180)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C702"
@@ -18960,7 +18960,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "732c3c13-2a09-59e5-a3c8-7d7cf20161cc")
-		(at 255 188)
+		(at 260 188)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C703"
@@ -19186,7 +19186,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "63cee03b-575c-5361-a5f7-ff410211135a")
-		(at 265 100)
+		(at 270 100)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C801"
@@ -19412,7 +19412,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "1970179b-b307-5791-ac51-8958e822f71d")
-		(at 265 108)
+		(at 270 108)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C802"
@@ -19638,7 +19638,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "02b14652-92c4-5a80-b360-597a71ce5e46")
-		(at 265 116)
+		(at 270 116)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C803"
@@ -19864,7 +19864,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "ce76c699-a943-524d-8f7d-e97a55b764b5")
-		(at 265 124)
+		(at 270 124)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C901"
@@ -20090,7 +20090,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "0efbc64f-4d0d-5e41-8833-cf58eeff9f2a")
-		(at 265 132)
+		(at 270 132)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C902"
@@ -20316,7 +20316,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "e2032226-5ed8-5ff4-a118-60124aad5dd3")
-		(at 265 140)
+		(at 270 140)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C903"
@@ -20542,7 +20542,7 @@
 	(footprint "JLCImport:CL10A106KP8NNNC"
 		(layer "F.Cu")
 		(uuid "da7695c0-0e6f-5b84-80b4-5d0814ffcff1")
-		(at 265 148)
+		(at 270 148)
 		(descr "CL10A106KP8NNNC; C0603; SAMSUNG")
 		(tags "C0603 C19702 CL10A106KP8NNNC SAMSUNG")
 		(property "Reference" "C1001"
@@ -20768,7 +20768,7 @@
 	(footprint "JLCImport:CL10A226MQ8NRNC"
 		(layer "F.Cu")
 		(uuid "42d189bf-ffdb-5043-9f2e-10f9cd442246")
-		(at 265 156)
+		(at 270 156)
 		(descr "CL10A226MQ8NRNC; C0603; SAMSUNG")
 		(tags "C0603 C59461 CL10A226MQ8NRNC SAMSUNG")
 		(property "Reference" "C1002"
@@ -20994,7 +20994,7 @@
 	(footprint "JLCImport:CL05B104KO5NNNC"
 		(layer "F.Cu")
 		(uuid "8fba0370-cecd-50f2-a0d7-8d66ca7ed956")
-		(at 265 164)
+		(at 270 164)
 		(descr "100nF (104) ±10% 16V")
 		(tags "C0402 C1525 CL05B104KO5NNNC SAMSUNG")
 		(property "Reference" "C1003"
@@ -21220,7 +21220,7 @@
 	(footprint "JLCImport:ESTVS2200DRVR"
 		(layer "F.Cu")
 		(uuid "8802bcff-880a-57cb-b7c4-c284a11ab1ce")
-		(at 265 172)
+		(at 270 172)
 		(descr "ESTVS2200DRVR; DFN-6_L2.0-W2.0-P0.65-BL-EP1.6; ElecSuper")
 		(tags "C42400188 DFN-6_L2.0-W2.0-P0.65-BL-EP1.6 ESTVS2200DRVR ElecSuper")
 		(property "Reference" "D1"
@@ -21511,7 +21511,7 @@
 	(footprint "JLCImport:SS34_C8678"
 		(layer "F.Cu")
 		(uuid "a87e7c2e-01ed-5d74-9b59-b80d40c09813")
-		(at 265 180)
+		(at 270 180)
 		(descr "SS34")
 		(tags "C8678 MDD SMA_L4.3-W2.6-LS5.2-RD SS34")
 		(property "Reference" "D2"
@@ -21745,7 +21745,7 @@
 	(footprint "JLCImport:PESD24VS1UL_315"
 		(layer "F.Cu")
 		(uuid "cfa67571-15db-5837-9b88-5736ef2ce274")
-		(at 265 188)
+		(at 270 188)
 		(descr "PESD24VS1UL,315; SOD-882_L1.0-W0.6-RD; Nexperia")
 		(tags "C477994 Nexperia PESD24VS1UL,315 SOD-882_L1.0-W0.6-RD")
 		(property "Reference" "D3"
@@ -21997,7 +21997,7 @@
 	(footprint "JLCImport:PESD24VS1UL_315"
 		(layer "F.Cu")
 		(uuid "44b60af4-8a7f-5236-93d6-df8eb912d4ab")
-		(at 275 100)
+		(at 280 100)
 		(descr "PESD24VS1UL,315; SOD-882_L1.0-W0.6-RD; Nexperia")
 		(tags "C477994 Nexperia PESD24VS1UL,315 SOD-882_L1.0-W0.6-RD")
 		(property "Reference" "D4"
@@ -22249,7 +22249,7 @@
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "f29ce06b-4861-5fd2-9430-74cf88ba0338")
-		(at 275 108)
+		(at 280 108)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D5"
@@ -22581,7 +22581,7 @@
 	(footprint "JLCImport:KT-0603R"
 		(layer "F.Cu")
 		(uuid "dbe3ba58-1933-5714-a70c-84046750a436")
-		(at 275 116)
+		(at 280 116)
 		(descr "0603")
 		(tags "C2286 KENTO KT-0603R LED-SMD_L1.6-W0.8-R-RD")
 		(property "Reference" "D6"
@@ -22838,10 +22838,574 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "d95058e5-7c4a-5a8e-8bdd-5df8c9981d6b")
+		(at 280 124)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D40"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "224518aa-90f6-520f-9c2f-4c74daa17709")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "d3b5ddc4-c5d6-5207-adae-751cf2568a16")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ca906311-bed7-54a0-a321-832bc42d57c1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d3516c0f-7921-5da9-b149-f2a54afc8196")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1630faa4-22db-5398-85b7-74cd51cd9cb6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "811fb5c6-6278-5528-bc0a-277fc98f01d1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "340af728-a6b1-5c71-bf3a-af72b66c4798")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/c6102769-c8bf-5148-85f1-79d32ada20fa/377109e8-179f-5320-b496-2fd9356e902a")
+		(sheetname "/hubs/")
+		(sheetfile "hubs.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "214f07bd-e1f1-5f23-b811-88c636945a5e")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c3912e3f-1f59-52a8-8a30-d9949ca0ec55")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3e514e8a-f077-5b84-8828-ff92cbe0c64b")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "bf9c8ed4-f81c-52b0-8929-17b16e34dc25")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a09ec988-308b-5834-8ce3-f779ddbdd209")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ad187639-4982-5010-a14a-e9eaa2b6f235")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "2f60e66e-aacc-51b2-8f35-3160fe0035c0")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "06e4725f-1959-5d16-ad62-d6c608881fef")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "4e4f060d-20c6-5f2f-b98f-dd22580c1f08")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "242b8d6b-1f3c-5bd3-b065-2d7904af90a6")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "9f88848d-e1ea-5431-89fa-6ed107101835")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "ad5b33fe-e88e-510d-b2f6-ea8bfd4d7a7d")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/hubs/HOST_VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "28eb41b6-8153-58b6-b272-3c171e541457")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "a460924d-aaaf-5067-bb31-0b6c29adfe4a")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "5556adfc-6ae4-50ff-9be1-8895614a3a24")
+		(at 280 132)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D101"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fca0f4b1-3198-5cc6-b7c7-7205e8e69907")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "fd6d50db-1aae-56c7-9f0a-00b2e332e37b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e4ebacbb-1a6e-5e30-8fed-42f9cebd2ad5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "09fc9a43-9bf8-5137-bbc1-a57d8d06fcbc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0b724012-23c2-53fb-92aa-8f72445b285f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5df06ef4-ad74-5b30-81f8-c8854ac275a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e7133ad1-acaf-555b-a619-253243e52b91")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/bd42a66a-7c74-5ded-bcac-127a8e46faf5/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port1/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2cb8bc94-6896-5060-ae7a-231392a81aa3")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "8d1513df-0fa8-57d2-9688-402d915371b4")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "cea22aba-ccba-5497-b636-8c2539f75f82")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ef08c804-1250-5b8b-9967-17d9f5aa8332")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "79bd0985-b726-5714-811c-54ade14272c8")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "cfe9c5a6-cc11-5ce4-b872-bc22a9e0be1d")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "c4766354-6ed5-5f47-abf6-be6b9f3cfc20")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "c75b6b67-23c8-59e9-b14b-d8355abe06a5")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "222a153b-607f-5321-ad90-3dd5e70f8bd3")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "44676417-27aa-5f54-945d-da13619cd54a")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "d62840a9-d5d3-5db5-a69b-27153b66e1e9")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "34d3fc64-38b0-5734-b218-e85b171bfd8a")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port1/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "5645ebd4-50ad-5887-b447-728402c3e0e2")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "4a202693-b36a-5d65-baf0-291f7be41bae")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "5bc78c09-296a-509b-8561-c00e4c6f8f38")
-		(at 275 124)
+		(at 280 140)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D102"
@@ -23170,10 +23734,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "b846e7f5-54d5-50b5-8258-86790b8a369a")
+		(at 280 148)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D201"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "51421560-389d-531b-99cb-32c970c80693")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "318a96e7-4348-5258-b826-65aedd7006cd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "54e25c33-da54-59e5-9f53-109c44fa80bd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ee930d35-f791-5fd6-ac6a-87cdf58e3924")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33b5a55e-ad7c-5d06-8c14-f7f39ea47f84")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2372d004-6a7c-5752-b384-bc892402414f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ae7ca66d-58c8-5ce7-b930-439c04a92f47")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/44d7116e-b79d-574c-ac17-fae9bf012216/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port2/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "53d8d6f6-b800-546b-be7d-5fed000f66aa")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "19d557ea-e0e9-5286-8e5e-bb4a11ee2c0d")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "59d2fb32-01aa-5c9b-9d79-7e869bb4ca2e")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7d8a91d8-1173-5e93-a991-db73cf2e1f7c")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "941b9f73-045b-533e-8cca-39d87037c033")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e8469d47-bd49-5d87-a630-14bddd0f5b08")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "9d4d7ce7-74db-5ced-855a-af1576be1b52")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "b8ba9648-b6a5-544c-ae8c-2a7557e008f1")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "16b5e513-5600-5ed8-9b2b-2a114c8815c5")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "48cc56e4-a7a1-5aee-9db2-7faed6622b73")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "a1841bf1-86cb-5d72-85f3-251c90151f32")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "5527c24f-09b1-5d66-81a4-594984947ef2")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port2/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "95ea20d8-f317-5fc0-b140-fa9599b47731")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "fd7cd901-8c3f-5370-9b2d-a20d1f95ae14")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "d293f071-73b5-522e-be86-2863716405fa")
-		(at 275 132)
+		(at 280 156)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D202"
@@ -23502,10 +24348,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "3d4fb5e1-0739-566e-ac85-80fc0a254043")
+		(at 280 164)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D301"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "fa0f73aa-a31c-52c1-83d7-f0ce59db4cea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "45a1a33c-26b5-5376-9315-a1b4acf0adf5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4c1b0e8c-626f-5207-990d-5945527a4119")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "390aa01d-7b9a-53a3-84c6-dbd943879724")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38c3ca7a-cfc5-5dd2-9f9a-d264a3fff455")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8146c4bd-fe21-5947-a3e4-a3b16be2f658")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f4000e3a-6b35-5044-bb70-be97ca0ddf63")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/12e80188-de64-5e71-b232-42807e2e99e8/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port3/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ad32d578-e365-5b93-a782-033c837e4830")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "63a66fd2-3a5f-5026-84e9-7aa04a039b77")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "dd3659f8-4a2a-5b54-9ff0-04ceb2285cda")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4768215a-a702-5741-82d0-793c2a95126d")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "dd6fed0e-28b0-5999-8ac4-4cdf433da72e")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2e06124d-53c8-5bf6-b54b-de3debab6566")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "601f447f-296a-5885-aaa4-d0fac968b43d")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "5e0514fd-3f36-5c44-b78b-248b58e8de48")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "a0450c74-21f1-5cff-8e31-9624c42f39d2")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "3eda93ef-ead8-55d8-81b5-dbfa1761409e")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "d39a9577-f259-5aa2-a953-e269780910f3")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "eb64e9f3-f7f5-5a14-b34d-d6cdf6c47c88")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port3/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "c9a0ec02-39cc-59de-8a04-04a1c0b5ef16")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "09a7703e-669f-5cb6-8539-999dadc51aa2")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "44d1ecdb-1e0c-572c-89e6-0775f128f77a")
-		(at 275 140)
+		(at 280 172)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D302"
@@ -23834,10 +24962,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "2746e44f-8e86-5e21-bafb-171614e01440")
+		(at 280 180)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D401"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8e3490e7-ae77-5cb9-8a92-e16dcd3eca80")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "54f64ac2-b787-5f0a-904e-fa36a62236aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1907d76d-33b8-5f6f-bb13-ffbe74509466")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cb9a6113-e938-53d6-8e6e-7d2b09e0905c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0bcaee8-906e-53dc-a408-cf3796eb20bf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "da9abc00-60dc-50ab-9d3f-abcb34cff00e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ba18deaf-4288-5a1f-9c58-0635393e9e4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/5c0e697c-0016-52a2-83b5-b6fe1a634059/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port4/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d74d1e9a-3a7c-51ad-a74a-c4707ed86238")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c64f7ffc-a8e0-5286-8bec-da9e392d0535")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "46673c8b-ed12-55a4-b747-8a680bf6a178")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fea3c010-2cc7-5a71-9308-603a3c75acc6")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b98e5f44-444b-5e91-9eb4-27850e544983")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0e0e6cd5-8190-5fd8-af92-4b607ab3ada2")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "e3927760-b618-5623-87a6-d06507741b67")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "2607a892-043b-597e-af8a-3bf07b29fb29")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "4fbeb9e5-741f-598d-9480-7a371044132a")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "5df6d1a1-44dc-5a58-87e7-213cbacbaa72")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "5dff4e33-749d-5bd3-9634-b9509b70e2ab")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "0f687229-1af5-5702-ab2b-3f2fb0bde980")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port4/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "f2c3a850-13ef-588e-91b8-f6a155007e6d")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "ba8d4374-ac2f-5b2f-a5a1-d7c2cb1f1de7")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "f8e7dd4f-951d-5e11-929e-e2ac4aeafdc8")
-		(at 275 148)
+		(at 280 188)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D402"
@@ -24166,10 +25576,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "c9627d45-dc1e-5d48-a413-ffe82ba6e8f2")
+		(at 290 100)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D501"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8bfa77b4-c5b0-58ac-97ba-92ea3eb7b1c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "3bc56593-b7a9-5a7b-a17f-bdc63cf1b286")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "33e86344-5aa1-5aa5-9eb4-bd8384ca82bd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d55684a0-cfad-55f2-935b-1a3668793c2d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "65b0b45d-3179-5601-bb60-58b0c3e2e0cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dde7c4be-df46-5b4b-8c97-3d98133e64ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7354b432-ac25-5b1d-a1ca-144d1c19d817")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/cbeab2be-fea6-55d4-bac3-4ec302f2abe1/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port5/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "ba7351ad-9b7b-5e16-ae22-07609b3c8a5c")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2a2648ea-6ec7-5e8f-b394-45e662348659")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2a2eae5c-a66a-548b-aae2-45dd500e8a3e")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c8b5542b-1b5e-5c70-9151-1fa3ab0b7897")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9e052fd4-aa54-5943-b224-e24f421eebf0")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2e64b4c7-d7a5-5a1e-a5f1-d408422d6cb2")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "25aa48db-4a54-5006-af3c-8f0a383694b6")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "e9deaea4-1289-5aaa-ae09-dba22b7b660b")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "5790ef61-7ba4-550a-9589-5ee4e9b67ff3")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "964df6a8-3f1b-5bcc-bd41-dbc30098182e")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "84bc90d6-d1f5-586d-9733-bb7aab4f156c")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "1540c6b2-43da-544d-8dda-42d855321c1b")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port5/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "1dd95fd1-183d-5b85-ac18-8739eb54327b")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "2c7d1aa9-dda9-5146-b71a-ad2683af4674")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "ee8b0969-6a34-5b26-879e-f9e3c00d8167")
-		(at 275 156)
+		(at 290 108)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D502"
@@ -24498,10 +26190,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "24fc4d0a-ecc7-5f2f-926d-dd3d0c3a4357")
+		(at 290 116)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D601"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "2f4aa7c8-0cc6-5894-b00c-3689a735c7ec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "9f7d4e8f-dea7-5af9-9db4-79252ead67a5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f94292ce-b88e-5392-a213-f7c75668750a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94c07c3c-cb1a-525e-84e7-b6c1a6647796")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5912fda1-4a42-5469-85b8-117c7a540435")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "df31da2e-e5f8-5196-a3cb-092bbbf54aaa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ab5d7cce-1636-5e3d-9f65-618ca2f701d1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/3cbf5cd6-2b90-524c-8727-62594c6cfcc7/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port6/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "67e6d379-01a5-58b8-b073-ab06638f1f77")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0cca558c-2532-5c6c-b5f5-e1e46d6c03a1")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "cab27d76-afcc-5ea6-8960-9e11bac3a39a")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d450b690-0681-56d7-b5de-b891a998cedb")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "b827ca07-0f3d-5025-826a-16a5d1cac0ae")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "127efca5-c39f-52ee-af11-37edf143b33f")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "2d995f0c-f5be-5871-b5e0-8a6dee980631")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "44df7171-6847-549b-8370-daf0bd41de18")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "4a688438-6fe9-5d54-a7a7-d980a2d57297")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "dd6e4055-8a9b-59b2-8f72-3b7782a48721")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "4bb97cd5-ed16-59f4-a1df-286d96e20e1c")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "7232b118-6f2d-5259-9f51-d923baf6f979")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port6/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "9c403971-9294-5853-b162-75241b7556c8")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "02fe5886-fb0e-5351-b8f5-d909b052c174")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "edec5e09-3137-5e10-a214-0f4a765b5fe5")
-		(at 275 164)
+		(at 290 124)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D602"
@@ -24830,10 +26804,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "44dbae06-8e7e-56e4-8fcb-a8e989eb5201")
+		(at 290 132)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D701"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1b50c53a-3425-5af8-81d9-22c9b3dc2f29")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "a31ee0b6-7056-5b1a-be01-64a6247de79f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08f024c9-ecf8-54f3-a3e2-5b0433257d88")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "acadbc66-a704-5e73-b9d8-29f4ad5b78e3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "17bd8651-b839-5740-82cf-e68b1b949ef0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "aad45413-eac6-5785-956a-4acdd36f03d6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d28b2c8e-ee8d-5ff3-b6fb-fb2f39e3d1b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/82b8cbb8-7008-58e7-8a69-2e3308d796ae/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port7/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3d9dda19-1e02-5f05-98c3-b78ab95651d5")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f91a524f-8618-5f28-af6c-33f2ddd8a212")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e8cabd6e-3a30-5d64-aa80-7626ec4f6c3d")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "64b54a90-c3f0-5c6e-8f09-505de9f481d3")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "387c4417-21fd-59d6-8794-e388ba654629")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2a01b575-76fa-5ff5-b345-582ac2d623e5")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "0b86ca12-d925-5acb-bb77-f350d896f04d")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "9f8e5adb-08a7-5003-a567-b2c332ff832e")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "21dba9a7-c93a-5b64-be6e-2493b68c274f")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "5731e0df-610d-5c9d-a86e-64a02c095ea0")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "2d2baf16-874a-52f0-b265-da776583829f")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "3d6f9ffb-f75e-5502-8d41-b868a7f23680")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port7/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "7881b4ae-f0b6-5861-8e97-f6879e054cb7")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "f8d7f925-da4e-5ff9-a2ce-28646ecf0b95")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "7e06c8c6-83b6-5b2e-b406-2b8520d60bd9")
-		(at 275 172)
+		(at 290 140)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D702"
@@ -25162,10 +27418,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "7b19b462-1a93-5f5c-b326-5ce6abeaa132")
+		(at 290 148)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D801"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "45334821-86f3-5aa8-83f0-0cdb223ed18c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "236996bc-6466-54d8-8f43-1c05f96d86a7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cec2dd25-c74c-5df9-b6b4-3ec4261d0fc1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a696781-67eb-59ee-a810-b2fd3614d0be")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2783bf59-4015-59bf-8a47-e3985a855df9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ff40941f-2099-56b4-8423-1202e6732500")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6088227a-d1c7-5de4-9084-fe88480eaed1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/190a02a4-2439-51c5-8e78-3e881b8767fd/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port8/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7c932c91-7bb4-5798-a7dd-ae6b3c5beba7")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "52d57e37-2bf9-55e1-a5b0-e4b955097467")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2b19c4ab-ceb3-5a8e-8ee4-548db6762e51")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9c911e48-fe06-586f-8b7b-bad8003c0fe0")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "da64bad4-934b-5239-88f9-cebfc0b979e3")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5875b3c2-6c9c-50d7-b7e9-494e0494af7c")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "73c454a6-d4ff-5a55-a52e-9afe7cae17ad")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "238d5b95-9ea2-55fa-bfa3-b9468c22b655")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "21ae2f36-6fe2-56b1-a876-e49eba0d1bcc")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "dcc0d361-ea1d-56dc-8340-9a62a45744d1")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "01a11dcc-cee7-5bec-bc4a-715641a47822")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "beadce3b-a2bb-5bf1-9583-6eeb66f6f8be")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port8/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "5a3f0605-bb64-5445-a556-28b34a51f9a3")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "d61e0b44-bbff-5ce6-bc2f-103f0576bdfb")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "83e9a55b-551a-597c-85c4-b7025ef25423")
-		(at 275 180)
+		(at 290 156)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D802"
@@ -25494,10 +28032,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "969649e1-833d-5f8e-ac3c-fbce2f59b7df")
+		(at 290 164)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D901"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c5af3bfe-1f4d-5da2-8589-4ef95b20e460")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "66676be4-19e4-5ccf-8190-c493b4292f10")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "971ebc2e-0377-5335-ac22-e3c199a0e882")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "31c631c4-7926-586a-b9d9-41ae3eb01c67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "701e617c-9c6b-5147-8e4c-a1bc1f510307")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f0f0feb0-cd16-5955-82eb-713c6f4c1cd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b6c4e732-10cd-5357-a3e1-88b10edde81a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/a15ca183-978f-54b2-bd75-e554d5959c3d/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port9/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "f5863374-1527-5a86-9fed-6b51a82de3ce")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "af2392d8-3b9b-5d96-928b-8e23c5447c4b")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5bc1df07-31c0-536d-b329-d93ca0b23f89")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "6acf0496-abed-5869-b0ea-9e633ca724d7")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "122d35e5-1a73-5bdf-8e3e-5ad77956b745")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "09a6acc4-45d4-5eb1-9d21-1659c9dcfaed")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "221a100e-8207-5263-8705-47a32957a257")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "0120f81f-d51c-5fa5-b4d7-165298da2287")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "47363bc7-adc8-5943-bf10-4e2f7b0a0417")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "77f1bd9c-0b79-5939-9ef3-1e30c86ff972")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "a03ec6c7-f232-509a-a3a3-35d1b0662ad8")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "9a556a2f-942b-5ed5-b0f9-7e1c20e6aec2")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port9/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "c5777c58-f310-5df5-89d3-109b8bc5271b")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "02896ac2-3b63-53f6-b900-dc4be07f0634")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "da7c1b43-657f-53cb-a029-727566cfd740")
-		(at 275 188)
+		(at 290 172)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D902"
@@ -25826,10 +28646,292 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "JLCImport:ESD5Z6_0T1G"
+		(layer "F.Cu")
+		(uuid "a8769d7e-58ab-5fa0-a983-177265ebfebf")
+		(at 290 180)
+		(descr "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi")
+		(tags "C82323 ESD5Z6.0T1G SOD-523F_L1.2-W0.8-LS1.7-RD onsemi")
+		(property "Reference" "D1001"
+			(at 0 -1.431825 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "711cc7f5-c5dd-5b5b-a1e0-78e3a3aef968")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "ESD5Z6.0"
+			(at 0 1.431825 0)
+			(layer "F.Fab")
+			(uuid "f3b3c06f-52e0-5918-941f-6de9eec60413")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C82323.pdf"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4d96fb02-9aea-576c-b5f0-3fc8443a2d1c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "ESD5Z6.0T1G; SOD-523F_L1.2-W0.8-LS1.7-RD; onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38e6773c-2256-5adc-bbae-a2adad8710fe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "38eb2447-f5d2-53e8-976b-56970e5d708f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Manufacturer Part" "ESD5Z6.0T1G"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dc47964f-b01c-5f0d-89f5-cc83b04b31b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C82323"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c1f8795-2ae0-51bc-bce9-5361a7c69d49")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/b73a9499-2801-5911-9c3b-755b9c8c1e8f/7e850c58-ffc9-54d7-bd10-f2aa33821884")
+		(sheetname "/port10/")
+		(sheetfile "port.kicad_sch")
+		(attr smd)
+		(fp_line
+			(start 0.660146 0.326136)
+			(end 0.660146 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d94dd48a-2674-5df9-8be6-d6dcc0025139")
+		)
+		(fp_line
+			(start 0.660146 0.4318)
+			(end -0.660654 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5feda7db-1ea6-5700-8ef2-81f9c1a34812")
+		)
+		(fp_line
+			(start -0.660654 0.4318)
+			(end -0.660527 0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "2cec8135-66db-5b2d-93a9-30d26c507088")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end -0.660527 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "692350e7-7591-5b01-8ae7-65478fe487e8")
+		)
+		(fp_line
+			(start -0.660527 -0.4318)
+			(end 0.660273 -0.4318)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7ea69d62-7ae5-558a-94e1-1a4601e4fde2")
+		)
+		(fp_line
+			(start 0.660273 -0.4318)
+			(end 0.660273 -0.3302)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "9b5e4773-d99a-5260-9c2b-cbe2b389a2ba")
+		)
+		(fp_poly
+			(pts
+				(xy -0.889127 -0.105664) (xy -0.482727 -0.105664) (xy -0.482727 -0.004) (xy -0.889127 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "2342be5d-0953-50d1-b8a7-b5e0bb966ccb")
+		)
+		(fp_poly
+			(pts
+				(xy 0.558673 -0.080264) (xy 0.990473 -0.080264) (xy 0.990473 -0.004) (xy 0.558673 -0.004)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "4e003661-7ec4-590f-8020-99634e9fb49b")
+		)
+		(fp_poly
+			(pts
+				(xy 0.723773 0.186436) (xy 0.723773 -0.245364) (xy 0.8 -0.245364) (xy 0.8 0.186436)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.Fab")
+			(uuid "801faaea-2580-52c4-a521-a81cb1ab7fac")
+		)
+		(fp_poly
+			(pts
+				(xy -0.317627 0.4191) (xy -0.317627 -0.4191) (xy -0.190627 -0.4191) (xy -0.190627 0.4191)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "be8c761e-2035-564d-a8de-9aa0681e9fea")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 -0.4826) (xy -0.635127 -0.4826) (xy -0.736727 -0.4826) (xy -0.736727 -0.2794) (xy -0.533527 -0.2794)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "a71665e9-910d-5661-9f33-3eec71a9e40e")
+		)
+		(fp_poly
+			(pts
+				(xy -0.533527 0.2794) (xy -0.635127 0.2794) (xy -0.736727 0.2794) (xy -0.736727 0.4826) (xy -0.533527 0.4826)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill solid)
+			(layer "F.SilkS")
+			(uuid "9d5f9e00-cd10-5f22-bf9e-79a5b569c19a")
+		)
+		(pad "1" smd custom
+			(at -0.7112 -0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "/port10/VBUS")
+			(pinfunction "K_1")
+			(pintype "passive")
+			(uuid "05da656c-064e-5237-8a01-31490ce5f03a")
+		)
+		(pad "2" smd custom
+			(at 0.7112 0.00508)
+			(size 0.1 0.1)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(options
+				(clearance outline)
+				(anchor rect)
+			)
+			(primitives
+				(gr_poly
+					(pts
+						(xy -0.305 -0.2413) (xy 0.304673 -0.2413) (xy 0.304673 0.2413) (xy -0.305 0.2413)
+					)
+					(width 0)
+					(fill yes)
+				)
+			)
+			(net "GND")
+			(pinfunction "A_2")
+			(pintype "passive")
+			(uuid "7325ea4e-6e34-52db-adab-27024a04ed06")
+		)
+		(model "${KIPRJMOD}/JLCImport.3dshapes/ESD5Z6_0T1G.wrl"
+			(offset
+				(xyz -0.000127 0.004 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(footprint "JLCImport:0603_Green_509-620mcd"
 		(layer "F.Cu")
 		(uuid "ac2a04f6-8923-5ae7-9901-11451cc744ec")
-		(at 285 100)
+		(at 290 188)
 		(descr "0603")
 		(tags "C12624 KENTO KT-0603G LED0603-RD")
 		(property "Reference" "D1002"
@@ -26271,7 +29373,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "64ed8543-04d1-513b-99b7-44647ab1525d")
-		(at 176 104)
+		(at 181 104)
 		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
 		(tags "mountinghole M3")
 		(property "Reference" "H2"
@@ -26381,7 +29483,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "a6f224a2-6192-54bb-9cd9-67ffa1e0bccc")
-		(at 104 176)
+		(at 104 181)
 		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
 		(tags "mountinghole M3")
 		(property "Reference" "H3"
@@ -26491,7 +29593,7 @@
 	(footprint "MountingHole:MountingHole_3.2mm_M3"
 		(layer "F.Cu")
 		(uuid "3deb2ee4-6fe3-5ef6-b6f5-51dc6f7b9031")
-		(at 176 176)
+		(at 181 181)
 		(descr "Mounting Hole 3.2mm, M3, no annular, generated by kicad-footprint-generator mountinghole.py")
 		(tags "mountinghole M3")
 		(property "Reference" "H4"
@@ -26601,7 +29703,7 @@
 	(footprint "JLCImport:USB4105-GF-A"
 		(layer "F.Cu")
 		(uuid "d67d8704-717a-51ec-af8e-b607cc1eb4f1")
-		(at 285 108)
+		(at 300 100)
 		(descr "USB4105-GF-A; TYPE-C-SMD_SBC-160S1A-20-S412; GCT")
 		(tags "C3020560 GCT TYPE-C-SMD_SBC-160S1A-20-S412 USB4105-GF-A")
 		(property "Reference" "J1"
@@ -26977,7 +30079,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "196c4040-578d-5121-a7c3-15721f7bede6")
-		(at 285 116)
+		(at 300 108)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J2"
@@ -27379,7 +30481,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "7a8dd6cc-97a6-5e37-884e-cb6fec0bc610")
-		(at 285 124)
+		(at 300 116)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J101"
@@ -27781,7 +30883,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "45ceff42-ee1a-5a1b-abd0-715dc1486a95")
-		(at 285 132)
+		(at 300 124)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J201"
@@ -28183,7 +31285,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "a9496356-9cf5-5700-9da5-453dc877f6f9")
-		(at 285 140)
+		(at 300 132)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J301"
@@ -28585,7 +31687,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "ecf22bce-c7ad-54e3-bb9f-a38579c6a89b")
-		(at 285 148)
+		(at 300 140)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J401"
@@ -28987,7 +32089,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "37502048-34bc-5830-9943-7a41a99c608d")
-		(at 285 156)
+		(at 300 148)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J501"
@@ -29389,7 +32491,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "935d86f0-ab5d-53f2-8e5e-6dddea33cf65")
-		(at 285 164)
+		(at 300 156)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J601"
@@ -29791,7 +32893,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "6ada7b1e-4074-5189-a490-f687e0e69eee")
-		(at 285 172)
+		(at 300 164)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J701"
@@ -30193,7 +33295,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "4a6df750-12d6-59ef-94f3-2361d293e51a")
-		(at 285 180)
+		(at 300 172)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J801"
@@ -30595,7 +33697,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "e724bf2d-e868-5010-9efc-968e8bc2fe85")
-		(at 285 188)
+		(at 300 180)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J901"
@@ -30997,7 +34099,7 @@
 	(footprint "JLCImport:TYPE-C-31-M-12"
 		(layer "F.Cu")
 		(uuid "8f73faa9-daa3-59d9-9af8-7a1a739ca082")
-		(at 295 100)
+		(at 300 188)
 		(descr "TYPE-C-31-M-12; USB-C_SMD-TYPE-C-31-M-12_1; 韩国韩荣")
 		(tags "C165948 TYPE-C-31-M-12 USB-C_SMD-TYPE-C-31-M-12_1 韩国韩荣")
 		(property "Reference" "J1001"
@@ -31399,7 +34501,7 @@
 	(footprint "JLCImport:FXL0630-100-M"
 		(layer "F.Cu")
 		(uuid "dc133e90-b04c-5ebe-929f-cc55333ec284")
-		(at 295 108)
+		(at 310 100)
 		(descr "FXL0630-100-M; IND-SMD_L7.3-W6.8; cjiang")
 		(tags "C167223 FXL0630-100-M IND-SMD_L7.3-W6.8 cjiang")
 		(property "Reference" "L1"
@@ -31583,7 +34685,7 @@
 	(footprint "JLCImport:XAL1010-152MED"
 		(layer "F.Cu")
 		(uuid "1ff09fdf-d064-5dcd-954c-db0349f9cd42")
-		(at 295 116)
+		(at 310 108)
 		(descr "XAL1010-152MED; IND-SMD_L11.3-W10.0_XAL1010-332ME; Coilcraft")
 		(tags "C6753479 Coilcraft IND-SMD_L11.3-W10.0_XAL1010-332ME XAL1010-152MED")
 		(property "Reference" "L30"
@@ -31771,7 +34873,7 @@
 	(footprint "JLCImport:AO3401A"
 		(layer "F.Cu")
 		(uuid "4794be0b-f46f-5f9d-a8fa-5ff60b7580fb")
-		(at 295 124)
+		(at 310 116)
 		(descr "AO3401A; SOT-23_L2.9-W1.3-P1.90-LS2.4-BR; AOS")
 		(tags "AO3401A AOS C15127 SOT-23_L2.9-W1.3-P1.90-LS2.4-BR")
 		(property "Reference" "Q1"
@@ -31964,7 +35066,7 @@
 	(footprint "JLCImport:CSD17505Q5A"
 		(layer "F.Cu")
 		(uuid "2066a552-5249-5790-b26b-78fe4ec70208")
-		(at 295 132)
+		(at 310 124)
 		(descr "CSD17505Q5A; DFN-8_L5.8-W4.9-P1.27-LS6.0-BL-1; TI")
 		(tags "C553150 CSD17505Q5A DFN-8_L5.8-W4.9-P1.27-LS6.0-BL-1 TI")
 		(property "Reference" "Q30"
@@ -32293,7 +35395,7 @@
 	(footprint "JLCImport:CSD17573Q5B"
 		(layer "F.Cu")
 		(uuid "2bcfaee3-1563-5fc4-bb7d-7643cb4469bc")
-		(at 295 140)
+		(at 310 132)
 		(descr "CSD17573Q5B; POWERVDFN-8_L6.0-W5.0-P1.27-BL; TI")
 		(tags "C202231 CSD17573Q5B POWERVDFN-8_L6.0-W5.0-P1.27-BL TI")
 		(property "Reference" "Q31"
@@ -32601,7 +35703,7 @@
 	(footprint "JLCImport:0402WGF2003TCE"
 		(layer "F.Cu")
 		(uuid "aefc3156-f59f-5353-ac3b-9c638ba1fda0")
-		(at 295 148)
+		(at 310 140)
 		(descr "200KΩ (2003) ±1%")
 		(tags "0402WGF2003TCE C25764 R0402 UNI-ROYAL")
 		(property "Reference" "R1"
@@ -32783,7 +35885,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "06bb315f-24eb-5e2b-bb19-be6007cfb823")
-		(at 295 156)
+		(at 310 148)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R2"
@@ -32965,7 +36067,7 @@
 	(footprint "JLCImport:0402WGF2003TCE"
 		(layer "F.Cu")
 		(uuid "3b98706e-6f75-5778-9d95-faded83f6abe")
-		(at 295 164)
+		(at 310 156)
 		(descr "200KΩ (2003) ±1%")
 		(tags "0402WGF2003TCE C25764 R0402 UNI-ROYAL")
 		(property "Reference" "R3"
@@ -33147,7 +36249,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "43ce70f1-aff1-50be-bb5b-6b4f1c02a926")
-		(at 295 172)
+		(at 310 164)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R4"
@@ -33329,7 +36431,7 @@
 	(footprint "JLCImport:0402WGF2003TCE"
 		(layer "F.Cu")
 		(uuid "4c595c86-557a-55dd-8233-91f19983102c")
-		(at 295 180)
+		(at 310 172)
 		(descr "200KΩ (2003) ±1%")
 		(tags "0402WGF2003TCE C25764 R0402 UNI-ROYAL")
 		(property "Reference" "R5"
@@ -33511,7 +36613,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "477e7077-9552-57f2-927e-093fe41c3aab")
-		(at 295 188)
+		(at 310 180)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R6"
@@ -33693,7 +36795,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "ad3f6075-2fc1-5281-8986-5eb266346299")
-		(at 305 100)
+		(at 310 188)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R7"
@@ -33875,7 +36977,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "bbaa9227-d6f0-552b-967b-fab8005c9dc8")
-		(at 305 108)
+		(at 320 100)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R8"
@@ -34057,7 +37159,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "e1e99f5b-5667-5c60-8337-f36ed4375cb3")
-		(at 305 116)
+		(at 320 108)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R9"
@@ -34239,7 +37341,7 @@
 	(footprint "JLCImport:0402WGF3301TCE"
 		(layer "F.Cu")
 		(uuid "837c32fe-bd81-56da-9051-a0395c87163e")
-		(at 305 124)
+		(at 320 116)
 		(descr "3.3KΩ (3301) ±1%")
 		(tags "0402WGF3301TCE C25890 R0402 UNI-ROYAL")
 		(property "Reference" "R10"
@@ -34421,7 +37523,7 @@
 	(footprint "JLCImport:0402WGF3301TCE"
 		(layer "F.Cu")
 		(uuid "cf7f942f-c727-50d9-914b-20e6e18837d2")
-		(at 305 132)
+		(at 320 124)
 		(descr "3.3KΩ (3301) ±1%")
 		(tags "0402WGF3301TCE C25890 R0402 UNI-ROYAL")
 		(property "Reference" "R11"
@@ -34603,7 +37705,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "8c5a63d1-91ab-5dd9-af04-16e34631c4ff")
-		(at 305 140)
+		(at 320 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R12"
@@ -34785,7 +37887,7 @@
 	(footprint "JLCImport:0402WGF0000TCE"
 		(layer "F.Cu")
 		(uuid "f44f8fcf-b835-5375-b321-f0351507f543")
-		(at 305 148)
+		(at 320 140)
 		(descr "0Ω (0R0) ±1%")
 		(tags "0402WGF0000TCE C17168 R0402 UNI-ROYAL")
 		(property "Reference" "R13"
@@ -34967,7 +38069,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "fa402358-5c8b-543b-a9ca-c9d79d07c15c")
-		(at 305 156)
+		(at 320 148)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R14"
@@ -35149,7 +38251,7 @@
 	(footprint "JLCImport:0402WGF2202TCE"
 		(layer "F.Cu")
 		(uuid "b963e8d9-6746-54f1-b20f-55f9449f08d9")
-		(at 305 164)
+		(at 320 156)
 		(descr "22KΩ (2202) ±1%")
 		(tags "0402WGF2202TCE C25768 R0402 UNI-ROYAL")
 		(property "Reference" "R15"
@@ -35331,7 +38433,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "d624f570-e1cf-5af2-a964-15709f046878")
-		(at 305 172)
+		(at 320 164)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R16"
@@ -35513,7 +38615,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "14c492e8-77ff-5899-b12f-a9f0ee8ac167")
-		(at 305 180)
+		(at 320 172)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R17"
@@ -35695,7 +38797,7 @@
 	(footprint "JLCImport:0402WGF1001TCE"
 		(layer "F.Cu")
 		(uuid "2e472579-40f1-5fc3-b22d-a9e46c5ef066")
-		(at 305 188)
+		(at 320 180)
 		(descr "1KΩ (1001) ±1%")
 		(tags "0402WGF1001TCE C11702 R0402 UNI-ROYAL")
 		(property "Reference" "R18"
@@ -35877,7 +38979,7 @@
 	(footprint "JLCImport:HOJLR2512-3W-2_5MR-1"
 		(layer "F.Cu")
 		(uuid "04c28373-3f6c-5734-9a97-3bb4b51b08ad")
-		(at 315 100)
+		(at 320 188)
 		(descr "HoJLR2512-3W-2.5mR-1%; RES-SMD_L6.4-W3.2-R2512; Milliohm")
 		(tags "C2904234 HoJLR2512-3W-2.5mR-1% Milliohm RES-SMD_L6.4-W3.2-R2512")
 		(property "Reference" "R30"
@@ -36059,7 +39161,7 @@
 	(footprint "JLCImport:0402WGF5362TCE"
 		(layer "F.Cu")
 		(uuid "dcc209da-e933-5543-8927-578d048ef4be")
-		(at 315 108)
+		(at 330 100)
 		(descr "53.6KΩ (5362) ±1%")
 		(tags "0402WGF5362TCE C53398 R0402 UNI-ROYAL")
 		(property "Reference" "R31"
@@ -36241,7 +39343,7 @@
 	(footprint "JLCImport:0402WGF4122TCE"
 		(layer "F.Cu")
 		(uuid "f25797d7-8283-59b4-88ec-21241a15efb2")
-		(at 315 116)
+		(at 330 108)
 		(descr "41.2KΩ (4122) ±1%")
 		(tags "0402WGF4122TCE C26978 R0402 UNI-ROYAL")
 		(property "Reference" "R32"
@@ -36423,7 +39525,7 @@
 	(footprint "JLCImport:FRC0402F5231TS"
 		(layer "F.Cu")
 		(uuid "22a8f61d-9ed7-53e9-899d-852cb5468589")
-		(at 315 124)
+		(at 330 116)
 		(descr "FRC0402F5231TS; R0402; FOJAN")
 		(tags "C2933105 FOJAN FRC0402F5231TS R0402")
 		(property "Reference" "R33"
@@ -36605,7 +39707,7 @@
 	(footprint "JLCImport:0402WGF5362TCE"
 		(layer "F.Cu")
 		(uuid "8385098c-eeb9-571d-91ab-90fe7387c350")
-		(at 315 132)
+		(at 330 124)
 		(descr "53.6KΩ (5362) ±1%")
 		(tags "0402WGF5362TCE C53398 R0402 UNI-ROYAL")
 		(property "Reference" "R34"
@@ -36787,7 +39889,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "73fc0ca8-fe47-5d86-abe8-c2a4a22c9c27")
-		(at 315 140)
+		(at 330 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R35"
@@ -36969,7 +40071,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "b58a23cf-1dad-5668-ad66-ce285b2e058a")
-		(at 315 148)
+		(at 330 140)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R36"
@@ -37151,7 +40253,7 @@
 	(footprint "JLCImport:0402WGF1542TCE"
 		(layer "F.Cu")
 		(uuid "86a3041a-0484-5e22-abc4-48f37e3fb310")
-		(at 315 156)
+		(at 330 148)
 		(descr "15.4KΩ (1542) ±1%")
 		(tags "0402WGF1542TCE C62740 R0402 UNI-ROYAL")
 		(property "Reference" "R37"
@@ -37333,7 +40435,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "4713593c-e60d-5b57-af90-5c3304ca8d45")
-		(at 315 164)
+		(at 330 156)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R38"
@@ -37515,7 +40617,7 @@
 	(footprint "JLCImport:0402WGF1004TCE"
 		(layer "F.Cu")
 		(uuid "b591c058-abcd-5e5b-b0ce-b79c48562807")
-		(at 315 172)
+		(at 330 164)
 		(descr "1MΩ (1004) ±1%")
 		(tags "0402WGF1004TCE C26083 R0402 UNI-ROYAL")
 		(property "Reference" "R40"
@@ -37697,7 +40799,7 @@
 	(footprint "JLCImport:0402WGF1202TCE"
 		(layer "F.Cu")
 		(uuid "6766db2c-4718-58fd-9a49-ff812782a0ab")
-		(at 315 180)
+		(at 330 172)
 		(descr "12KΩ (1202) ±1%")
 		(tags "0402WGF1202TCE C25752 R0402 UNI-ROYAL")
 		(property "Reference" "R41"
@@ -37879,7 +40981,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "cb9054d9-8831-50ee-b6bf-1f5047f21515")
-		(at 315 188)
+		(at 330 180)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R42"
@@ -38061,7 +41163,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "257b55d2-b7f9-55a6-a0da-70aa774dead0")
-		(at 325 100)
+		(at 330 188)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R43"
@@ -38243,7 +41345,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "10149a74-5379-512f-b440-4a776a2ef1d9")
-		(at 325 108)
+		(at 340 100)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R44"
@@ -38425,7 +41527,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "7d56462c-099c-5890-9841-4ddcae7d680e")
-		(at 325 116)
+		(at 340 108)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R45"
@@ -38607,7 +41709,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "2cdd692c-db04-571b-a404-9db15e701ca2")
-		(at 325 124)
+		(at 340 116)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R46"
@@ -38789,7 +41891,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "63cc9058-995f-54f6-9d7b-6432000e34b3")
-		(at 325 132)
+		(at 340 124)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R47"
@@ -38971,7 +42073,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "eea9a9b1-e1a6-558c-ac23-0317d8ed362e")
-		(at 325 140)
+		(at 340 132)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R48"
@@ -39153,7 +42255,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "cceff83d-81f6-5596-a399-784a753cade8")
-		(at 325 148)
+		(at 340 140)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R49"
@@ -39335,7 +42437,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "d25522e1-fdcc-5c3b-b991-420c068c1f39")
-		(at 325 156)
+		(at 340 148)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R50"
@@ -39517,7 +42619,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "2cc3917b-800d-5301-aa33-2f67446e90da")
-		(at 325 164)
+		(at 340 156)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R51"
@@ -39699,7 +42801,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "9ea17740-ae83-52dc-8cf1-1da329018d38")
-		(at 325 172)
+		(at 340 164)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R52"
@@ -39881,7 +42983,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "1722e043-6139-5d2d-a035-74ff492ac8c4")
-		(at 325 180)
+		(at 340 172)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R53"
@@ -40063,7 +43165,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "4965c81e-5bf7-5ad9-8b20-8a37b48fdcae")
-		(at 325 188)
+		(at 340 180)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R54"
@@ -40245,7 +43347,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "842e28ba-6927-58f8-a008-ceccc09c90f5")
-		(at 335 100)
+		(at 340 188)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R55"
@@ -40427,7 +43529,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "6ec2e96f-f5d2-57ee-8a44-03cf2c7ecac6")
-		(at 335 108)
+		(at 350 100)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R56"
@@ -40609,7 +43711,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "1b73299e-3125-5743-adf2-fe7e0e54bb9f")
-		(at 335 116)
+		(at 350 108)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R57"
@@ -40791,7 +43893,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "67c39ea3-39f0-521a-b623-11d066c42a9b")
-		(at 335 124)
+		(at 350 116)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R58"
@@ -40973,7 +44075,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "5c5eb5b1-945e-5c9d-a365-408edab794b1")
-		(at 335 132)
+		(at 350 124)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R59"
@@ -41155,7 +44257,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "c94fc654-52c0-5e28-a74a-15274958dd9d")
-		(at 335 140)
+		(at 350 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R60"
@@ -41337,7 +44439,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "28c47da4-cda9-5765-ab7b-b9a181fb728a")
-		(at 335 148)
+		(at 350 140)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R61"
@@ -41519,7 +44621,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "31d4d795-d433-58ad-897f-b39011daf1d1")
-		(at 335 156)
+		(at 350 148)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R62"
@@ -41701,7 +44803,7 @@
 	(footprint "JLCImport:0402WGF0000TCE"
 		(layer "F.Cu")
 		(uuid "3eb986f4-31c3-5c7d-8f85-316a05239015")
-		(at 335 164)
+		(at 350 156)
 		(descr "0Ω (0R0) ±1%")
 		(tags "0402WGF0000TCE C17168 R0402 UNI-ROYAL")
 		(property "Reference" "R63"
@@ -41883,7 +44985,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "d51974fb-c98e-57fd-8a88-24a0914da37a")
-		(at 335 172)
+		(at 350 164)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R64"
@@ -42065,7 +45167,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "acd29f31-c1d0-5b39-8bbe-59301c70dffa")
-		(at 335 180)
+		(at 350 172)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R65"
@@ -42247,7 +45349,7 @@
 	(footprint "JLCImport:0402WGF1202TCE"
 		(layer "F.Cu")
 		(uuid "393a24b9-d99b-5a2b-8ce1-f29f42f7c314")
-		(at 335 188)
+		(at 350 180)
 		(descr "12KΩ (1202) ±1%")
 		(tags "0402WGF1202TCE C25752 R0402 UNI-ROYAL")
 		(property "Reference" "R66"
@@ -42429,7 +45531,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "a7a50958-1174-51b2-a90c-63d65cbaf26c")
-		(at 345 100)
+		(at 350 188)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R67"
@@ -42611,7 +45713,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "3fa0da0b-16c0-54ca-9375-1c1df32e8a6b")
-		(at 345 108)
+		(at 360 100)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R68"
@@ -42793,7 +45895,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "1ceaba4c-20e4-5b20-93fe-ee33653f3999")
-		(at 345 116)
+		(at 360 108)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R69"
@@ -42975,7 +46077,7 @@
 	(footprint "JLCImport:0402WGF4702TCE"
 		(layer "F.Cu")
 		(uuid "ead81c1f-ace7-56b5-a02c-4f337e8b9558")
-		(at 345 124)
+		(at 360 116)
 		(descr "47KΩ (4702) ±1%")
 		(tags "0402WGF4702TCE C25792 R0402 UNI-ROYAL")
 		(property "Reference" "R70"
@@ -43157,7 +46259,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "a2802633-1579-558a-b16f-d16309fbb316")
-		(at 345 132)
+		(at 360 124)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R71"
@@ -43339,7 +46441,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "cd63e4ce-1592-53db-9ffc-eef7d94abdfe")
-		(at 345 140)
+		(at 360 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R72"
@@ -43521,7 +46623,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "fc241513-adbf-5fd2-aecc-2102e2e7a91a")
-		(at 345 148)
+		(at 360 140)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R73"
@@ -43703,7 +46805,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "fa14d6a7-a466-59b2-bdfb-12f2ae4ea00e")
-		(at 345 156)
+		(at 360 148)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R74"
@@ -43885,7 +46987,7 @@
 	(footprint "JLCImport:0402WGF0000TCE"
 		(layer "F.Cu")
 		(uuid "7dfee6b1-f6f2-5b06-815f-aff13b426832")
-		(at 345 164)
+		(at 360 156)
 		(descr "0Ω (0R0) ±1%")
 		(tags "0402WGF0000TCE C17168 R0402 UNI-ROYAL")
 		(property "Reference" "R75"
@@ -44067,7 +47169,7 @@
 	(footprint "JLCImport:0402WGF1003TCE"
 		(layer "F.Cu")
 		(uuid "96e963b6-d260-5aa5-a7c2-7d95934677f3")
-		(at 345 172)
+		(at 360 164)
 		(descr "100KΩ (1003) ±1%")
 		(tags "0402WGF1003TCE C25741 R0402 UNI-ROYAL")
 		(property "Reference" "R76"
@@ -44249,7 +47351,7 @@
 	(footprint "JLCImport:0402WGF5101TCE"
 		(layer "F.Cu")
 		(uuid "c93e97a2-d4bc-5b8f-a887-3096b776d113")
-		(at 345 180)
+		(at 360 172)
 		(descr "5.1KΩ (5101) ±1%")
 		(tags "0402WGF5101TCE C25905 R0402 UNI-ROYAL")
 		(property "Reference" "R77"
@@ -44431,7 +47533,7 @@
 	(footprint "JLCImport:0402WGF5101TCE"
 		(layer "F.Cu")
 		(uuid "92ea819c-d9a5-572b-8e7a-2b9aa3ae22e8")
-		(at 345 188)
+		(at 360 180)
 		(descr "5.1KΩ (5101) ±1%")
 		(tags "0402WGF5101TCE C25905 R0402 UNI-ROYAL")
 		(property "Reference" "R78"
@@ -44613,7 +47715,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "32ab62b4-6253-5c11-88eb-1236c605d38c")
-		(at 355 100)
+		(at 360 188)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R101"
@@ -44795,7 +47897,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "c3c22015-89c8-5564-9413-9aab496c4520")
-		(at 355 108)
+		(at 370 100)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R102"
@@ -44977,7 +48079,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "e1669ed4-f147-5ce3-9a8c-62272cb82bba")
-		(at 355 116)
+		(at 370 108)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R103"
@@ -45159,7 +48261,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "d2906eab-1729-5ff9-9e5d-cfbd3d2c2eb6")
-		(at 355 124)
+		(at 370 116)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R104"
@@ -45341,7 +48443,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "0448083c-834f-5f1b-af71-871417be0bb1")
-		(at 355 132)
+		(at 370 124)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R201"
@@ -45523,7 +48625,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "4529f237-842b-5b60-8064-3ecd1849aa60")
-		(at 355 140)
+		(at 370 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R202"
@@ -45705,7 +48807,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "ff5fd70a-a397-50f2-8734-25d3ac5bbc84")
-		(at 355 148)
+		(at 370 140)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R203"
@@ -45887,7 +48989,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "c0d4b8b3-3007-58c4-90a7-d257de19ba08")
-		(at 355 156)
+		(at 370 148)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R204"
@@ -46069,7 +49171,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "67f83c44-a053-5a72-8a0f-d085f17a431a")
-		(at 355 164)
+		(at 370 156)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R301"
@@ -46251,7 +49353,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "e4f00096-3273-5a49-806a-39312a17c063")
-		(at 355 172)
+		(at 370 164)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R302"
@@ -46433,7 +49535,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "9b2d068a-a05a-5d9a-ac12-33c808c5d4b4")
-		(at 355 180)
+		(at 370 172)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R303"
@@ -46615,7 +49717,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "646b56ac-eb8c-5d87-bca0-1b0219c49854")
-		(at 355 188)
+		(at 370 180)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R304"
@@ -46797,7 +49899,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "3d345cfd-c606-5f8d-afc8-f58f908e99da")
-		(at 365 100)
+		(at 370 188)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R401"
@@ -46979,7 +50081,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "93bc408e-3920-5cfe-8fb1-d01ca709a988")
-		(at 365 108)
+		(at 380 100)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R402"
@@ -47161,7 +50263,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "9c16b76d-9974-5086-a0fc-483339ec02d0")
-		(at 365 116)
+		(at 380 108)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R403"
@@ -47343,7 +50445,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "74137cd1-d8d6-5022-952d-3e3258574ced")
-		(at 365 124)
+		(at 380 116)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R404"
@@ -47525,7 +50627,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "6590b8ae-1649-5677-b9be-bec2f3c2bba4")
-		(at 365 132)
+		(at 380 124)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R501"
@@ -47707,7 +50809,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "b9b3293f-210e-51af-94ac-497e0071c24e")
-		(at 365 140)
+		(at 380 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R502"
@@ -47889,7 +50991,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "698365a5-a4e1-578e-abae-117270cb5dca")
-		(at 365 148)
+		(at 380 140)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R503"
@@ -48071,7 +51173,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "2fb081da-9540-564a-b294-cfc5983d2bdc")
-		(at 365 156)
+		(at 380 148)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R504"
@@ -48253,7 +51355,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "9b45d2f6-b5f4-5062-ba6b-975c6330e028")
-		(at 365 164)
+		(at 380 156)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R601"
@@ -48435,7 +51537,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "699d4cc8-e7c4-5d3c-81e8-ba51e24c97b7")
-		(at 365 172)
+		(at 380 164)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R602"
@@ -48617,7 +51719,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "74807aef-aa7a-5d8f-a430-25cbfdf7b37b")
-		(at 365 180)
+		(at 380 172)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R603"
@@ -48799,7 +51901,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "1c9c158e-e2cb-5da3-9cc7-ce55a77e96fe")
-		(at 365 188)
+		(at 380 180)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R604"
@@ -48981,7 +52083,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "8a055f1e-82f0-5c7a-b77d-db956e20a225")
-		(at 375 100)
+		(at 380 188)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R701"
@@ -49163,7 +52265,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "c33a5fab-5af9-58bd-8606-68e949d4f0e6")
-		(at 375 108)
+		(at 390 100)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R702"
@@ -49345,7 +52447,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "29e73b1e-880a-5d61-9396-5836a32c2b09")
-		(at 375 116)
+		(at 390 108)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R703"
@@ -49527,7 +52629,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "f20359b3-3e53-58c7-b7f9-3f45e133885e")
-		(at 375 124)
+		(at 390 116)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R704"
@@ -49709,7 +52811,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "5d8089a3-ca4f-5d5a-84df-a80b8f157e24")
-		(at 375 132)
+		(at 390 124)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R801"
@@ -49891,7 +52993,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "d2d1a6bd-e539-5f0a-8bc9-456eabf42990")
-		(at 375 140)
+		(at 390 132)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R802"
@@ -50073,7 +53175,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "575a2ed9-df46-569a-ad91-8f01e6bb82d8")
-		(at 375 148)
+		(at 390 140)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R803"
@@ -50255,7 +53357,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "54de26a7-ed6c-54c9-a1a9-f3f04bde2496")
-		(at 375 156)
+		(at 390 148)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R804"
@@ -50437,7 +53539,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "8ab05437-2ded-523d-ac28-499310dd8d76")
-		(at 375 164)
+		(at 390 156)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R901"
@@ -50619,7 +53721,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "d0789f0d-a332-5a04-bdb5-8a3272b301e2")
-		(at 375 172)
+		(at 390 164)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R902"
@@ -50801,7 +53903,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "17d79a0d-371c-5bc4-aede-4e322b826c70")
-		(at 375 180)
+		(at 390 172)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R903"
@@ -50983,7 +54085,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "28c24af7-0adc-549b-b70b-38b636ada4e6")
-		(at 375 188)
+		(at 390 180)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R904"
@@ -51165,7 +54267,7 @@
 	(footprint "JLCImport:0402WGF1871TCE"
 		(layer "F.Cu")
 		(uuid "a0b4c55a-7c1c-5bac-a322-812fb04e5d4a")
-		(at 385 100)
+		(at 390 188)
 		(descr "0402WGF1871TCE; R0402; UNI-ROYAL")
 		(tags "0402WGF1871TCE C270633 R0402 UNI-ROYAL")
 		(property "Reference" "R1001"
@@ -51347,7 +54449,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "3a826fb4-bd2e-54cc-9cb2-193afcddc033")
-		(at 385 108)
+		(at 400 100)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R1002"
@@ -51529,7 +54631,7 @@
 	(footprint "JLCImport:0402WGF1002TCE"
 		(layer "F.Cu")
 		(uuid "3dc1d533-1320-5835-ac9c-01b34446e11a")
-		(at 385 116)
+		(at 400 108)
 		(descr "10KΩ (1002) ±1%")
 		(tags "0402WGF1002TCE C25744 R0402 UNI-ROYAL")
 		(property "Reference" "R1003"
@@ -51711,7 +54813,7 @@
 	(footprint "JLCImport:0402WGF1501TCE"
 		(layer "F.Cu")
 		(uuid "11aca00f-1e9d-539d-bd70-91cdc9f16a71")
-		(at 385 124)
+		(at 400 116)
 		(descr "1.5KΩ (1501) ±1%")
 		(tags "0402WGF1501TCE C25867 R0402 UNI-ROYAL")
 		(property "Reference" "R1004"
@@ -51893,7 +54995,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "61a24b49-76cc-50c9-a331-5117cbbde287")
-		(at 385 132)
+		(at 400 124)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP1"
@@ -51997,7 +55099,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "9b0b889c-6aca-5f93-8cf6-5a4ceed33d79")
-		(at 385 140)
+		(at 400 132)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP2"
@@ -52101,7 +55203,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "b1519269-e3b6-50ca-a938-c0291f40ca01")
-		(at 385 148)
+		(at 400 140)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP3"
@@ -52205,7 +55307,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "d5d35cf8-31ec-509a-9534-192e3b15c34c")
-		(at 385 156)
+		(at 400 148)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP4"
@@ -52309,7 +55411,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "6b1577d4-3a28-5a31-9104-0cb6aa5b1e91")
-		(at 385 164)
+		(at 400 156)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP5"
@@ -52413,7 +55515,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "86aacd57-2c13-5e77-97ad-2f7fc5c9851a")
-		(at 385 172)
+		(at 400 164)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP6"
@@ -52517,7 +55619,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "222ef325-43d7-5438-8130-13c1f396f5a4")
-		(at 385 180)
+		(at 400 172)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP7"
@@ -52621,7 +55723,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "911e4c45-9e03-544a-9285-21ad5f85f735")
-		(at 385 188)
+		(at 400 180)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP8"
@@ -52725,7 +55827,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "ba97dfea-bc15-5fce-b59e-425e71664fe0")
-		(at 395 100)
+		(at 400 188)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP30"
@@ -52829,7 +55931,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "ca0c9bc0-ab32-52a8-8ce8-8585e8d4fb06")
-		(at 395 108)
+		(at 410 100)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP31"
@@ -52933,7 +56035,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "5463ba3d-287f-5fc7-9834-b7aacd3d872b")
-		(at 395 116)
+		(at 410 108)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP32"
@@ -53037,7 +56139,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "389b6ce7-c591-53a4-8c5c-cd83792c409c")
-		(at 395 124)
+		(at 410 116)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP40"
@@ -53141,7 +56243,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "66e47bc6-af29-5b96-80f8-65f24dafe972")
-		(at 395 132)
+		(at 410 124)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP41"
@@ -53245,7 +56347,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
 		(layer "F.Cu")
 		(uuid "c2cd0253-d85a-58be-8b95-27053dda314a")
-		(at 395 140)
+		(at 410 132)
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP42"
@@ -53349,7 +56451,7 @@
 	(footprint "JLCImport:TPS25730DREFR"
 		(layer "F.Cu")
 		(uuid "a19d1be9-3dec-55e1-ad28-707637adccbb")
-		(at 395 148)
+		(at 410 140)
 		(descr "TPS25730DREFR; QFN-38_L6.0-W4.0-P0.40-TL-EP_RJK; TI")
 		(tags "C22438973 QFN-38_L6.0-W4.0-P0.40-TL-EP_RJK TI TPS25730DREFR")
 		(property "Reference" "U1"
@@ -53994,7 +57096,7 @@
 	(footprint "JLCImport:TPS54202DDCR"
 		(layer "F.Cu")
 		(uuid "81f39311-8d35-5ecc-8d2b-58828894bca3")
-		(at 395 156)
+		(at 410 148)
 		(descr "TPS54202DDCR; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL; TI")
 		(tags "C191884 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL TI TPS54202DDCR")
 		(property "Reference" "U2"
@@ -54194,7 +57296,7 @@
 	(footprint "JLCImport:USB2517-JZX"
 		(layer "F.Cu")
 		(uuid "ea0a61ea-6a32-510a-944d-618f8d77f7a2")
-		(at 395 164)
+		(at 410 156)
 		(descr "USB2517-JZX; QFN-64_L9.0-W9.0-P0.50-BL-EP4.8; MICROCHIP")
 		(tags "C1521556 MICROCHIP QFN-64_L9.0-W9.0-P0.50-BL-EP4.8 USB2517-JZX")
 		(property "Reference" "U4"
@@ -54987,7 +58089,7 @@
 	(footprint "JLCImport:USB2514B-AEZC-TR"
 		(layer "F.Cu")
 		(uuid "b0d507ac-36fa-5930-92ce-92629d092124")
-		(at 395 172)
+		(at 410 164)
 		(descr "USB2514B-AEZC-TR; VQFN-36_L6.0-W6.0-P0.50-BL-EP; MICROCHIP")
 		(tags "C16251 MICROCHIP USB2514B-AEZC-TR VQFN-36_L6.0-W6.0-P0.50-BL-EP")
 		(property "Reference" "U5"
@@ -55528,7 +58630,7 @@
 	(footprint "JLCImport:TPS3809K33DBVR"
 		(layer "F.Cu")
 		(uuid "1be01d66-8f7d-5a0e-a56a-e0e8e6b382de")
-		(at 395 180)
+		(at 410 172)
 		(descr "TPS3809K33DBVR; SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR; TI")
 		(tags "C61364 SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR TI TPS3809K33DBVR")
 		(property "Reference" "U6"
@@ -55721,7 +58823,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "6bb8d86d-6eb8-563c-a3f2-9dbaeeb5edac")
-		(at 395 188)
+		(at 410 180)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U7"
@@ -55957,7 +59059,7 @@
 	(footprint "JLCImport:LM5148RGYR"
 		(layer "F.Cu")
 		(uuid "9b4bae88-54cc-5323-b2a1-e035f691850a")
-		(at 405 100)
+		(at 410 188)
 		(descr "LM5148RGYR; VQFN-24_L5.5-W3.5-P0.50-BL-EP-2; TI")
 		(tags "C7470701 LM5148RGYR TI VQFN-24_L5.5-W3.5-P0.50-BL-EP-2")
 		(property "Reference" "U30"
@@ -56390,7 +59492,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "5f184bc1-dfd1-55a9-b0d9-ae83d4ab2006")
-		(at 405 108)
+		(at 420 100)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U101"
@@ -56591,7 +59693,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "e38e731f-1211-5afe-b5fb-02d82079cd61")
-		(at 405 116)
+		(at 420 108)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U102"
@@ -56827,7 +59929,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "b6f819ae-3c29-5430-9984-b9802bdd019c")
-		(at 405 124)
+		(at 420 116)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U201"
@@ -57028,7 +60130,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "9e1c99b6-9afd-57dd-9e98-edb192ddb379")
-		(at 405 132)
+		(at 420 124)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U202"
@@ -57264,7 +60366,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "82370007-2b31-5bb7-a875-25e0c0863836")
-		(at 405 140)
+		(at 420 132)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U301"
@@ -57465,7 +60567,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "d536ad61-0297-5e90-87f7-ca65413912d6")
-		(at 405 148)
+		(at 420 140)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U302"
@@ -57701,7 +60803,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "d5fc5bff-8762-5f53-9a97-0dd612aca170")
-		(at 405 156)
+		(at 420 148)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U401"
@@ -57902,7 +61004,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "cdf40a5d-fcb4-581d-88f7-00e196695adc")
-		(at 405 164)
+		(at 420 156)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U402"
@@ -58138,7 +61240,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "550a58cd-ad44-550f-989a-76222eae2e7d")
-		(at 405 172)
+		(at 420 164)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U501"
@@ -58339,7 +61441,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "554a85c1-5347-5a56-b48e-cbfcd5991fb7")
-		(at 405 180)
+		(at 420 172)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U502"
@@ -58575,7 +61677,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "68d459b4-0695-50bb-b032-8b3d673cfd36")
-		(at 405 188)
+		(at 420 180)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U601"
@@ -58776,7 +61878,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "f39c100d-6392-54cd-920c-79c5ed813572")
-		(at 415 100)
+		(at 420 188)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U602"
@@ -59012,7 +62114,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "502fa72f-3985-5d40-b64c-36efcee58b72")
-		(at 415 108)
+		(at 430 100)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U701"
@@ -59213,7 +62315,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "37c86d2a-9768-54d9-a509-bf0c4646ec53")
-		(at 415 116)
+		(at 430 108)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U702"
@@ -59449,7 +62551,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "ebbe2674-5f85-51c9-9df1-bae91b2971a9")
-		(at 415 124)
+		(at 430 116)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U801"
@@ -59650,7 +62752,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "e4068c1e-aebb-50be-b491-4f05d2ffbeae")
-		(at 415 132)
+		(at 430 124)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U802"
@@ -59886,7 +62988,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "37714a74-065a-5d34-94be-a020da2be574")
-		(at 415 140)
+		(at 430 132)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U901"
@@ -60087,7 +63189,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "4385588a-971a-59de-9a90-4e93fa87dd37")
-		(at 415 148)
+		(at 430 140)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U902"
@@ -60323,7 +63425,7 @@
 	(footprint "JLCImport:SY6863B3ABC"
 		(layer "F.Cu")
 		(uuid "6c44f3d1-7708-5fe1-819b-572c43380f23")
-		(at 415 156)
+		(at 430 148)
 		(descr "SY6863B3ABC; SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR; Silergy")
 		(tags "C2687365 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR SY6863B3ABC Silergy")
 		(property "Reference" "U1001"
@@ -60524,7 +63626,7 @@
 	(footprint "JLCImport:TPD4E05U06DQAR_C138714"
 		(layer "F.Cu")
 		(uuid "c7edbaf7-e4bc-5db9-9fd6-c25a0690dd63")
-		(at 415 164)
+		(at 430 156)
 		(descr "TPD4E05U06DQAR; USON-10_L2.5-W1.0-P0.50-BL; TI")
 		(tags "C138714 TI TPD4E05U06DQAR USON-10_L2.5-W1.0-P0.50-BL")
 		(property "Reference" "U1002"
@@ -60760,7 +63862,7 @@
 	(footprint "JLCImport:X322524MOB4SI"
 		(layer "F.Cu")
 		(uuid "2a433f7d-beb8-5167-a23d-4e9ef04c843a")
-		(at 415 172)
+		(at 430 164)
 		(descr "YSX321SL 24MHZ 12PF 10PPM -40~+85")
 		(tags "C70590 CRYSTAL-SMD_4P-L3.2-W2.5-BL X322524MOB4SI YXC")
 		(property "Reference" "Y1"
@@ -60985,7 +64087,7 @@
 	(footprint "JLCImport:X322524MOB4SI"
 		(layer "F.Cu")
 		(uuid "ed53a4e6-f7a6-5ed8-a0b4-7a1544ba696c")
-		(at 415 180)
+		(at 430 172)
 		(descr "YSX321SL 24MHZ 12PF 10PPM -40~+85")
 		(tags "C70590 CRYSTAL-SMD_4P-L3.2-W2.5-BL X322524MOB4SI YXC")
 		(property "Reference" "Y2"
@@ -61208,37 +64310,37 @@
 		(embedded_fonts no)
 	)
 	(gr_arc
-		(start 178 100)
-		(mid 179.414214 100.585786)
-		(end 180 102)
+		(start 183 100)
+		(mid 184.414214 100.585786)
+		(end 185 102)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "36c7b624-14e8-5bd7-955a-6cdafd5b0185")
+		(uuid "e4ad2041-0eac-5a62-b537-8076e471298c")
 	)
 	(gr_arc
-		(start 180 178)
-		(mid 179.414214 179.414214)
-		(end 178 180)
+		(start 185 183)
+		(mid 184.414214 184.414214)
+		(end 183 185)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "d8ffc182-bde3-5ad1-a3c2-cd8d43bfdb96")
+		(uuid "92ba5509-2dbf-5a38-b126-d808148c1c48")
 	)
 	(gr_arc
-		(start 102 180)
-		(mid 100.585786 179.414214)
-		(end 100 178)
+		(start 102 185)
+		(mid 100.585786 184.414214)
+		(end 100 183)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "5d1820a0-288a-5f92-b9ed-94f6e7e4d703")
+		(uuid "bebed689-2b6f-58e3-b0e8-78191572dac6")
 	)
 	(gr_arc
 		(start 100 102)
@@ -61253,43 +64355,43 @@
 	)
 	(gr_line
 		(start 102 100)
-		(end 178 100)
+		(end 183 100)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "a7e8fca9-1eb0-59af-ac5a-d09af41068f0")
+		(uuid "81141ab2-b5d2-52e9-8e56-c4806d03afa8")
 	)
 	(gr_line
-		(start 180 102)
-		(end 180 178)
+		(start 185 102)
+		(end 185 183)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "255fdba6-12f7-5d02-8d75-3c65935e44c6")
+		(uuid "2462cb99-01cc-501c-841c-8f3b9bf63431")
 	)
 	(gr_line
-		(start 178 180)
-		(end 102 180)
+		(start 183 185)
+		(end 102 185)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "df948c4e-e5a8-549a-95f0-95a2c60fc7e9")
+		(uuid "48981e60-2b18-52bf-9d88-ae9a19b21e9b")
 	)
 	(gr_line
-		(start 100 178)
+		(start 100 183)
 		(end 100 102)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "7fca6102-67f8-5f71-8343-c72caf711e3b")
+		(uuid "6bb63f8d-3c1d-58ed-bd66-723cedafb3b1")
 	)
 	(embedded_fonts no)
 )

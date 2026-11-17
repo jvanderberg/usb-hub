@@ -14,7 +14,7 @@ python3 "$ROOT/tools/gen_sch.py"
 "$KICAD_CLI" sch export netlist --format kicadxml -o "$HW/net.xml" "$HW/usb-hub.kicad_sch"
 test -s "$HW/net.xml"
 python3 "$K/netspec.py" check "$ROOT/tools/nets.json" "$HW/net.xml"
-python3 "$K/new_board.py" "$HW/net.xml" "$HW/usb-hub.kicad_pcb" --layers 4 --outline 80x80 --origin 100,100 \
+python3 "$K/new_board.py" "$HW/net.xml" "$HW/usb-hub.kicad_pcb" --layers 4 --outline 85x85 --origin 100,100 \
     --corner-r 2 --refs fab --placement "$ROOT/tools/place.json"
 # Net classes. USB: every D+/D- pair (hub downstream ports incl. the hub A -> hub B link, HOST upstream).
 # Power: the input/bus rails and every switched port VBUS. HighCurrent: the LM5148 switch node and the

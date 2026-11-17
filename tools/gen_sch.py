@@ -36,7 +36,7 @@ VAL = {  # value shown on the sheet, per LCSC part (one part per value/package)
     'C45783': '22u/25V', 'C59461': '22u/10V', 'C19702': '10u/10V', 'C15849': '1u/50V', 'C23630': '2.2u/16V', 'C52923': '1u/25V',
     'C1525': '100n/16V', 'C307331': '100n/50V', 'C15195': '10n/50V', 'C47118429': '5.1n/50V', 'C1664': '330p/50V',
     'C576704': '110p/50V', 'C1567': '47p/50V', 'C1549': '18p/50V', 'C1548': '15p/50V',
-    'C6753479': '1.5u', 'C167223': '10u', 'C12624': 'green', 'C8678': 'SS34', 'C123790': 'SMF6.0A',
+    'C6753479': '1.5u', 'C167223': '10u', 'C12624': 'green', 'C8678': 'SS34', 'C123790': 'SMF6.0A', 'C82323': 'ESD5Z6.0',
     'C477994': 'PESD24VS1UL', 'C70590': '24MHz',
 }
 DEVSYM = {'R': 'Device:R', 'C': 'Device:C', 'CP': 'Device:C_Polarized', 'L': 'Device:L', 'LED': 'Device:LED',
@@ -269,7 +269,7 @@ def port_sheet(root):
     s.wire(U1.p('1'), J.p('A4B9'))
     hang(s, 'C', 'C2', 'C59461', 91.44, yV)
     hang(s, 'C', 'C3', 'C1525', 104.14, yV)
-    # no VBUS TVS per port (dropped 2026-11-16 to fit 80x80: SY6863 OUT withstands 28 V, TPD4E05U06 covers data/CC)
+    vdio(s, 'DZ', 'D1', 'C82323', 119.38, yV)      # VBUS TVS, onsemi ESD5Z6.0T1G SOD-523 (6.0 V VRWM)
     r4 = hang(s, 'R', 'R4', 'C25867', 132.08, yV, bottom=None)
     vdio(s, 'LED', 'D2', 'C12624', 132.08, r4.p(2)[1], top='A', tap=False)
     s.wire((142.24, yV), (142.24, yV - 5.08))
@@ -705,6 +705,7 @@ def hubs_sheet(root):
     s.wire(J.p('A4B9'), (xr + 45.72, yV))
     s.wire((xr, yV), (xr, yV - 5.08))
     s.label('HOST_VBUS', xr, yV - 5.08, 90)
+    vdio(s, 'DZ', 'D40', 'C82323', xr + 12.7, yV)
     hang(s, 'C', 'C74', 'C52923', xr + 30.48, yV)
     r64 = hang(s, 'R', 'R64', 'C25741', xr + 45.72, yV, bottom=None)
     hang(s, 'R', 'R65', 'C25741', xr + 45.72, r64.p(2)[1], tap=False)
