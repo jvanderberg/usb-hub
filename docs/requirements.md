@@ -25,7 +25,7 @@ certified use.
 |---|---|
 | Location | Indoor, on a bench |
 | Ambient temperature | 0 to 40 C |
-| Enclosure | 3D-printed case (material TBD; PLA softens ~55-60 C, PETG/ASA safer). Needs vents over the 5 V converter |
+| Enclosure | 3D-printed case (material TBD; PLA softens ~55-60 C, PETG/ASA safer). Needs vents over the 5 V converter (Q30/Q31/L30/U30) and hub A (U4, 0.8-1.4 W whenever a host is connected): review-2026-11-17 D1 |
 | Mounting | Screw bosses in the printed case (hole positions set at physical level) |
 | Vibration / moisture / dust | None |
 | External connections | 10x USB-C downstream (plugged/unplugged all day), 1x USB-C host, 1x USB-C PD input; cables ~1-2 m |
@@ -102,7 +102,7 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 
 | Connection | Connector or pad | Label | Polarity / keying | Side |
 |---|---|---|---|---|
-| Ports 1-10 | USB-C receptacle, TH shell legs | 1..10 (silk + case) | Type-C (reversible) | Front 1-4, left 5-7, right 8-10 |
+| Ports 1-10 | USB-C receptacle, TH shell legs | 1..10 (silk + case) | Type-C (reversible) | Left 1-3 (back to front), front 4-7 (left to right), right 8-10 (front to back): as placed and silk-labelled |
 | Host | USB-C receptacle | HOST | Type-C | Back |
 | Power in | USB-C receptacle | PWR IN / PD | Type-C | Back |
 
