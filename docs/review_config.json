@@ -78,7 +78,7 @@
       {"ref": "U801", "kind": "i2r", "R_ohm": 0.050, "R_hot_factor": 1.4, "I": "I_port_b", "basis": "SY6863 p4"},
       {"ref": "U901", "kind": "i2r", "R_ohm": 0.050, "R_hot_factor": 1.4, "I": "I_port_b", "basis": "SY6863 p4"},
       {"ref": "U1001", "kind": "i2r", "R_ohm": 0.050, "R_hot_factor": 1.4, "I": "I_port_b", "basis": "SY6863 p4"},
-      {"ref": "U4", "what": "USB2517 hub", "kind": "fixed", "P_W": 1.39, "basis": "420 mA typ x 3.3 V (2517 Table 8-2 p50)"},
+      {"ref": "U4", "what": "USB2517 hub", "kind": "fixed", "P_W": {"full": 1.39, "bench": 1.09}, "basis": "full: IHCH7 420 mA typ x 3.3 V, all 7 downstream ports at HS. bench: IHCH4 330 mA typ x 3.3 V, the hub B link + 3 HS devices (2517 Table 8-2 p50)"},
       {"ref": "U5", "what": "USB2514B hub", "kind": "fixed", "P_W": 0.48, "basis": "145 mA typ x 3.3 V (2514B Table 6-4 p41)"},
       {"ref": "U2", "what": "TPS54202 3V3 buck", "kind": "fixed", "P_W": 0.13, "basis": "power-design-pd-3v3.md s4.3, 21 V / 0.65 A"},
       {"ref": "L1", "what": "3V3 inductor", "kind": "fixed", "P_W": 0.03, "basis": "68 mOhm DCR at 0.65 A"},
