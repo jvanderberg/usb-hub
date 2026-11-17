@@ -597,9 +597,48 @@ def route_hub_b(r):
         _module('route_hub_b').route(r)
 
 
+def route_edge_stitch(r, step=4.0):
+    """GND stitching vias along the board edge, last, so they only take spots nothing else needed. Targets every `step`
+    mm along each edge, 1.0-2.6 mm inside it; the first legal spot within +-1.5 mm of each target is taken (router
+    clearances decide), so a target behind a connector or a pour of another net is skipped and the gap measured by
+    planes.py shows what is left. Ties L2 / L4 GND (and L1 GND where a pour reaches the edge) at the board edge."""
+    gnd = net_of(r, 'J1', '1')
+    x0, y0, x1, y1 = BOARD
+    insets = (1.0, 1.6, 2.2, 2.6)
+    offsets = (0.0, 0.5, -0.5, 1.0, -1.0, 1.5, -1.5)
+    placed = tried = 0
+    for edge in ('top', 'bottom', 'left', 'right'):
+        horiz = edge in ('top', 'bottom')
+        a0, a1 = (x0, x1) if horiz else (y0, y1)
+        t = a0 + 6.0                                   # clear of the corner radius and the M3 holes at 4 mm
+        while t <= a1 - 6.0 + 1e-6:
+            tried += 1
+            done = False
+            for ins in insets:
+                for off in offsets:
+                    u = t + off
+                    if edge == 'top':
+                        pt = (u, y0 + ins)
+                    elif edge == 'bottom':
+                        pt = (u, y1 - ins)
+                    elif edge == 'left':
+                        pt = (x0 + ins, u)
+                    else:
+                        pt = (x1 - ins, u)
+                    if r.via(pt, gnd, *SV, quiet=True):
+                        done = True
+                        break
+                if done:
+                    break
+            placed += done
+            t += step
+    r.log.append('edge stitching: %d of %d targets placed' % (placed, tried))
+
+
 def build(r):
     route_power(r)
     planes(r)
     route_ports(r)
     route_hub_a(r)
     route_hub_b(r)
+    route_edge_stitch(r)
