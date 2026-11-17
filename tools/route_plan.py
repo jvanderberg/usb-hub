@@ -8,6 +8,7 @@ Coordinates are absolute board mm (outline 100..185). Every track takes its net 
 free points name the net of the pad they continue from.
 """
 import math
+import os
 
 F, L2, L3, B = 'F.Cu', 'In1.Cu', 'In2.Cu', 'B.Cu'
 SIG = 0.2           # TPS25730 Table 9-1: CC / GPIO / LDO 8 mil minimum
@@ -570,22 +571,31 @@ def route_ports(r):
     ports.route_ports(r)
 
 
-def route_usb(r):
-    pass
+def _module(name):
+    import importlib
+    import os
+    import sys
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    return importlib.import_module(name)
 
 
-def route_hubs(r):
-    pass
+def route_hub_a(r):
+    """Hub A (USB2517, U4): its fan-out, straps, crystal, reset, HOST pair, ports 1-6 pairs/EN/OCS: tools/route_hub_a.py"""
+    if not os.environ.get('SKIP_HUB_A'):         # for an isolated scratch iteration of the other hub's module only
+        _module('route_hub_a').route(r)
 
 
-def route_signals(r):
-    pass
+def route_hub_b(r):
+    """Hub B (USB2514B, U5): fan-out, straps, crystal, hub A DN7 link, ports 7-10: tools/route_hub_b.py"""
+    if not os.environ.get('SKIP_HUB_B'):
+        _module('route_hub_b').route(r)
 
 
 def build(r):
     route_power(r)
     planes(r)
     route_ports(r)
-    route_usb(r)
-    route_hubs(r)
-    route_signals(r)
+    route_hub_a(r)
+    route_hub_b(r)
