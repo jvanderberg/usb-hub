@@ -106,7 +106,8 @@ The other ports are the same frame, rotated.
 
 | Item | Status | Detail |
 |---|---|---|
-| Paste over thermal vias | **decision needed** | board_lint: 54 PASTE ON HOLE (U4 16, U5 9, U1 9, U30 6, Q30 12, D1 2 vias, 0.3 mm drill, in exposed pads with 100 % paste). Either order the vias filled and capped (JLC via-in-pad, `--vias-filled`) or split the paste into windows with `paste_clear.py` |
+| Paste over thermal vias | done (user: windows, 2026-11-16) | The thermal vias are now pads in project footprints (hw/usb-hub.pretty/*_ThermalVias, tools/thermal_fp.py), and paste_clear.py cuts the paste windows clear of every drill. Coverage: U1 41 %, D1 59 %, Q30 49 %, U30 50 %, U4 51 %, U5 55 %. board_lint: 0 PASTE ON HOLE |
 | Small-signal GND | deviation | The LM5148 small-signal GND (except C45/R35) and all TPS25730 strap GNDs go to L2 through a via at each pad |
 | Placement moves for routing | done | `tools/place_gen.py` comments: C1/C4-C7, R7/R8, R1-R6/R12, R10/R11, TP3-TP5, R31/R32, R36/R37, TP31 (lane order, via room, silk clearance) |
-| 5V_BUS L1 at the shunt | risk | power.py: 4.6 A/mm over ~9 mm of the L1 output copper from R30:2 to the via strip (outer threshold 3.2); set by the output-cap placement. Total 5V_BUS copper loss 0.43 W |
+| 5V_BUS L1 at the shunt | improved, accepted | Before: power.py 4.6 A/mm over ~9 mm of the L1 output copper from R30:2 to the via strip (outer threshold 3.2). Fix: the pour now fills the R30-L30 strip (x 130.4-132.7), with 4 vias to L3 at x 131.1. After: 4.1 A/mm at the R30 pad corner, set by 17 A leaving a 2512 pad; max via current 1.0 -> 0.86 A; 5V_BUS copper loss 0.39 W |
+| GND edge stitching | done | 75 vias every 4 mm along the edge (route_edge_stitch). planes.py: edge gaps over 10 mm went from 9 to 4, and the 4 left are the M3-hole corners (13.1 mm) |

@@ -65,4 +65,15 @@ tail -3 "$B/router.log"
 grep -q '^wrote ' "$B/router.log" || { cat "$B/router.log"; echo "router did not write the board (exit $rc)"; exit 1; }
 if grep -E '^ +(VIOLATION|REJECTED)' "$B/router.log"; then echo "router rejected items: fix tools/route_plan.py"; exit 1; fi
 [ "$rc" -eq 0 ] || { echo "router exited $rc"; exit 1; }
+
+# Zone fills: router.py writes zone outlines only. Refill with KiCad and save, twice (the first refill can leave stale
+# clearances), so the committed board carries its fills: gerbers exported from it without --check-zones, and the
+# board as opened in KiCad, show the planes (adversarial review 2026-11-17: 37 zones with 0 fills -> 499 unconnected).
+for pass in 1 2; do
+    rm -f "$B/fill.json"
+    "$KICAD_CLI" pcb drc --refill-zones --save-board --format json -o "$B/fill.json" "$HW/usb-hub.kicad_pcb" \
+        > "$B/fill.log" 2>&1 || true
+    test -s "$B/fill.json" || { cat "$B/fill.log"; echo "zone refill failed"; exit 1; }
+done
+grep -q 'filled_polygon' "$HW/usb-hub.kicad_pcb" || { echo "no zone fills after refill"; exit 1; }
 echo "build ok"
