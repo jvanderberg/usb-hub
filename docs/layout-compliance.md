@@ -56,7 +56,7 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 | 3 | Crystal and load caps tight to XTAL1/XTAL2 | ok (placement) | Y1 4.5 / 5.4 mm; C60/C61 at the crystal pads | The UP pair and the PLL group share that corner |
 | 4 | RBIAS resistor at its pin | ok (placement) | R41 3.3 mm | |
 | 5 | ePad soldered with multiple GND vias | ok (routing) | 4 x 4 vias, 0.3 mm drill, in the ePad | Paste over the vias: see the decision below |
-| 6 | 90 ohm pairs, no stubs, solid reference | open (routing) | L1 over L2, w 0.26 / s 0.15 (estimate) | layout-plan s3 |
+| 6 | 90 ohm pairs, no stubs, solid reference | open (routing) | L1 over L2, w 0.26 / s 0.15 (JLC calculator: ~88 ohm on JLC04161H-7628, inside 90 ohm +-15 %) | layout-plan s3 |
 
 ## USB2514B hub B (Microchip DS; pin diagram p4, p9/14, package p44-47)
 

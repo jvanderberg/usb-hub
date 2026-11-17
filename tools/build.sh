@@ -27,7 +27,8 @@ python3 "$K/new_board.py" "$HW/net.xml" "$HW/usb-hub.kicad_pcb" --layers 4 --out
 # inductor-to-shunt node (the 17 A path that is not already a Power rail). Clearance 0.2 mm: the LM5148 QFN pads
 # (SW 14 / CBOOT 15, ISNS+ 20 / EN 19 / VOUT 21) sit 0.22 mm apart, so 0.3 mm could never pass DRC.
 # USB pair: track 0.26 / gap 0.15 mm, ~90 ohm edge-coupled microstrip on L1 over L2 (JLC04161H-7628, h 0.2104 mm,
-# Er 4.4, 15 um mask: layout-plan.md s3). An estimate: TO CONFIRM WITH JLC's IMPEDANCE CALCULATOR before ordering.
+# Er 4.4, 15 um mask: layout-plan.md s3). JLC's impedance calculator (2026-11-17): ~88 ohm on this stackup
+# (90 ohm would be 0.247 mm); inside USB 2.0's 90 ohm +-15 %, kept.
 # board_setup.py has no diff-pair keys, so tools/netclass_dp.py sets the pair width / gap right after it.
 python3 "$K/board_setup.py" "$HW/usb-hub.kicad_pro" --stackup JLC04161H-7628 --finish ENIG \
     --class 'USB:track=0.26,clearance=0.15' --class 'Power:track=0.8,clearance=0.2' \

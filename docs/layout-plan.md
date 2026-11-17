@@ -21,7 +21,7 @@ L1-L2 and L3-L4 prepreg 7628, 0.2104 mm, Er 4.4 (JLC table value). Core between 
 
 So L4 takes only edge-insensitive signals. They are allowed to cross under the L1 pairs because the solid L2 shields them. The one exception is the short (<2 mm) D+/D- A/B-row tie under each receptacle. It is the normal USB-C stub, it sits over the 5V_BUS pour, and it is length-matched within the pair.
 
-## 3. USB 2.0 pair geometry (L1 over L2): an estimate to confirm with JLC
+## 3. USB 2.0 pair geometry (L1 over L2): 0.26 / 0.15 mm, ~88 ohm per JLC's calculator
 
 Model: edge-coupled microstrip, h = 0.2104 mm, Er 4.4, t = 0.035 mm, optional 15 um solder mask (Er 3.8).
 
@@ -41,9 +41,23 @@ I solved it with a 2-D finite-difference field solver (`scratchpad/zsolve/fd.py`
 - Keep the length mismatch within a pair ≤ 0.5 mm.
 - No pair vias, except the A/B tie described in s2.
 
-**This is an estimate. Confirm it with JLC's impedance calculator for JLC04161H-7628 before routing.**
+**Checked with JLC's impedance calculator (jlcpcb.com/pcb-impedance-calculator, 2026-11-17).** Inputs: Rigid,
+4 layers, 1.6 mm, inner 0.5 oz, outer 1 oz, "Differential Pair (Non coplanar)" on L1 with L2 as reference, spacing
+0.15 mm, stackup tab JLC04161H-7628 (Standard). JLC's trace width for each target:
 
-The USB net class is set to this estimate in `tools/build.sh` (stage 3): track 0.26 mm (board_setup) and diff pair 0.26 / 0.15 mm (`tools/netclass_dp.py`, since board_setup has no diff-pair keys). **Still to confirm with JLC's impedance calculator before ordering;** a change there is the two numbers in build.sh plus `USB_W` / `USB_GAP` in `tools/route_ports.py`.
+| Target Zdiff | JLC width at s 0.15 mm |
+|---|---|
+| 90 ohm | 0.2474 mm |
+| 88 ohm | 0.2619 mm |
+| 87 ohm | 0.2690 mm |
+
+So JLC puts our 0.26 / 0.15 mm at **about 88 ohm**, 2 ohm under target and 2 ohm under the field-solver estimate above.
+That is inside USB 2.0's 90 ohm +-15 % (76.5-103.5 ohm), with JLC's +-10 % fabrication tolerance still inside it
+(79-97 ohm). **Kept at 0.26 / 0.15 mm**: the ports were already routed at that width, and the hubs were being routed
+at it. A board ordered with impedance control could move to 0.25 mm. That change is the two numbers in
+`tools/build.sh` plus `USB_W` / `USB_GAP` in `tools/route_ports.py` and the hub modules.
+
+The USB net class is set to this geometry in `tools/build.sh` (stage 3): track 0.26 mm (board_setup) and diff pair 0.26 / 0.15 mm (`tools/netclass_dp.py`, since board_setup has no diff-pair keys).
 
 ## 4. Floorplan (Stage 1, as placed)
 
