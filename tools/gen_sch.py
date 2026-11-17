@@ -33,7 +33,7 @@ VAL = {  # value shown on the sheet, per LCSC part (one part per value/package)
     'C2933105': '5.23k', 'C25744': '10k', 'C25752': '12k', 'C62740': '15.4k', 'C25768': '22k', 'C26978': '41.2k',
     'C25792': '47k', 'C53398': '53.6k', 'C25741': '100k', 'C25764': '200k', 'C26083': '1M', 'C2904234': '2.5m',
     'C138687': '10u/50V', 'C525654': '47u/10V', 'C2836438': '22u/50V', 'C29823': '4.7u/50V', 'C15850': '10u/25V',
-    'C45783': '22u/25V', 'C19702': '10u/10V', 'C15849': '1u/50V', 'C23630': '2.2u/16V', 'C52923': '1u/25V',
+    'C45783': '22u/25V', 'C59461': '22u/10V', 'C19702': '10u/10V', 'C15849': '1u/50V', 'C23630': '2.2u/16V', 'C52923': '1u/25V',
     'C1525': '100n/16V', 'C307331': '100n/50V', 'C15195': '10n/50V', 'C47118429': '5.1n/50V', 'C1664': '330p/50V',
     'C576704': '110p/50V', 'C1567': '47p/50V', 'C1549': '18p/50V', 'C1548': '15p/50V',
     'C6753479': '1.5u', 'C167223': '10u', 'C12624': 'green', 'C8678': 'SS34', 'C123790': 'SMF6.0A',
@@ -62,7 +62,7 @@ def tp(s, ref, x, y, rot=0, label=None, **fields):
     if rot == 0:                                  # pad up: ref centred above it
         f.update({'_ref_at': (x, y - 6.35), '_just': 'center'})
     f.update(fields)
-    p = s.add('Connector:TestPoint', ref, label or 'TP', x, y, rot, footprint='TestPoint:TestPoint_Pad_D1.5mm',
+    p = s.add('Connector:TestPoint', ref, label or 'TP', x, y, rot, footprint='TestPoint:TestPoint_Pad_D1.0mm',
               fields=f, in_bom=False)
     return p
 
@@ -255,7 +255,7 @@ def port_sheet(root):
     assert eq(U1.p('1'), (76.2, yV)), U1.p('1')
     s.wire((27.94, yV), U1.p('6'))
     s.power('5V_BUS', 27.94, yV)
-    hang(s, 'C', 'C1', 'C15850', 38.1, yV)
+    hang(s, 'C', 'C1', 'C19702', 38.1, yV)
     en, ocb = U1.p('4'), U1.p('3')
     s.wire((20.32, yV + 25.4), (50.8, yV + 25.4), (50.8, en[1]), en)
     s.hlabel('EN', 20.32, yV + 25.4, 180, shape='input')
@@ -267,9 +267,9 @@ def port_sheet(root):
     hang(s, 'R', 'R1', 'C270633', 81.28, iset[1])
     # VBUS rail: OUT -> receptacle, shunts hanging below it
     s.wire(U1.p('1'), J.p('A4B9'))
-    hang(s, 'C', 'C2', 'C45783', 91.44, yV)
+    hang(s, 'C', 'C2', 'C59461', 91.44, yV)
     hang(s, 'C', 'C3', 'C1525', 104.14, yV)
-    vdio(s, 'DZ', 'D1', 'C123790', 119.38, yV)
+    # no VBUS TVS per port (dropped 2026-11-16 to fit 80x80: SY6863 OUT withstands 28 V, TPD4E05U06 covers data/CC)
     r4 = hang(s, 'R', 'R4', 'C25867', 132.08, yV, bottom=None)
     vdio(s, 'LED', 'D2', 'C12624', 132.08, r4.p(2)[1], top='A', tap=False)
     s.wire((142.24, yV), (142.24, yV - 5.08))
@@ -705,7 +705,6 @@ def hubs_sheet(root):
     s.wire(J.p('A4B9'), (xr + 45.72, yV))
     s.wire((xr, yV), (xr, yV - 5.08))
     s.label('HOST_VBUS', xr, yV - 5.08, 90)
-    vdio(s, 'DZ', 'D40', 'C123790', xr + 12.7, yV)
     hang(s, 'C', 'C74', 'C52923', xr + 30.48, yV)
     r64 = hang(s, 'R', 'R64', 'C25741', xr + 45.72, yV, bottom=None)
     hang(s, 'R', 'R65', 'C25741', xr + 45.72, r64.p(2)[1], tap=False)

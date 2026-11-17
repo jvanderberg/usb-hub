@@ -55,3 +55,8 @@ CC1/CC2 -> TPS25730 CC1/CC2 with 330 pF C0G + PESD24VS1UL each; D+/D- not connec
 - **Port D+/D-**: the hub's DP/DM go to the ESD array; the receptacle's D+/D- join them through local labels
   "DP"/"DM", which KiCad merges with the sheet's hierarchical labels of the same name (checked with netspec).
 - **CC2's Rp (R3)** is drawn hanging below CC2 to a VBUS label so it does not cross CC1; same circuit as R2.
+
+## Fit-to-board changes (2026-11-16, user-approved: board 80 x 80, trims)
+- Per-port VBUS TVS (SMF6.0A) and the HOST VBUS TVS removed (SY6863 OUT rated 28 V; TPD4E05U06 covers DP/DM/CC).
+- Port C_IN 10 uF now 0603 10 V (CL10A106KP8NNNC C19702); port C_OUT 22 uF now 0603 10 V (CL10A226MQ8NRNC C59461).
+- Test pads 1.0 mm.

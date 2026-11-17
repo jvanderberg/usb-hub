@@ -571,172 +571,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Zener"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Zener"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Zener diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "D_Zener_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Zener_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -4164,12 +3998,6 @@
 		(uuid "f5cccd54-9c13-54e0-b36e-e2b881eb179a")
 	)
 	(junction
-		(at 132.08 313.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7305d4f9-2733-5bf9-bc1d-c30bae9bc394")
-	)
-	(junction
 		(at 139.7 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6235,23 +6063,13 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 313.69) (xy 132.08 313.69)
+			(xy 119.38 313.69) (xy 149.86 313.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1fc80bbb-0648-5b3f-9950-3294e0d65ce3")
-	)
-	(wire
-		(pts
-			(xy 132.08 313.69) (xy 149.86 313.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "883ca1d2-23f8-5473-bc8d-03fdf72f082a")
+		(uuid "a64df0b0-7f4f-5af4-ab6a-52f4dd872725")
 	)
 	(wire
 		(pts
@@ -21011,215 +20829,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener")
-		(at 132.08 317.5 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "377109e8-179f-5320-b496-2fd9356e902a")
-		(property "Reference" "D40"
-			(at 134.62 316.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SMF6.0A"
-			(at 134.62 318.77 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:SMF6_0A-C123790"
-			(at 132.08 317.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C123790.pdf"
-			(at 132.08 317.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Zener diode"
-			(at 132.08 317.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "SMF6.0A; SOD-123F_L2.8-W1.8-LS3.7-RD; MDD"
-			(at 132.08 317.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "MDD"
-			(at 132.08 317.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer Part" "SMF6.0A"
-			(at 132.08 317.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "LCSC" "C123790"
-			(at 132.08 317.5 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "1"
-			(uuid "d574253d-e12a-5c2e-96c7-06b9d5e168ce")
-		)
-		(pin "2"
-			(uuid "c154a992-90b2-55b6-ae93-94d113a1fb1e")
-		)
-		(instances
-			(project "usb-hub"
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "D40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 321.31 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d01b902e-4705-5b71-a638-2a54b4a95bdc")
-		(property "Reference" "#PWR143"
-			(at 132.08 317.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 132.08 317.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 321.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 321.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 321.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7cf05ac4-6d0c-554a-b9cc-7e9c16d65919")
-		)
-		(instances
-			(project "usb-hub"
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR143")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 149.86 317.5 0)
 		(unit 1)
@@ -21361,7 +20970,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5896ef1c-1231-5820-b70d-f1cf79882564")
-		(property "Reference" "#PWR144"
+		(property "Reference" "#PWR143"
 			(at 149.86 317.5 0)
 			(hide yes)
 			(show_name no)
@@ -21422,7 +21031,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR144")
+					(reference "#PWR143")
 					(unit 1)
 				)
 			)
@@ -21701,7 +21310,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3c600fc7-ca8d-5489-b4e2-90865db36a6d")
-		(property "Reference" "#PWR145"
+		(property "Reference" "#PWR144"
 			(at 165.1 325.12 0)
 			(hide yes)
 			(show_name no)
@@ -21762,7 +21371,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR145")
+					(reference "#PWR144")
 					(unit 1)
 				)
 			)
@@ -21800,7 +21409,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 177.8 321.31 0)
 			(hide yes)
 			(show_name no)
@@ -21990,7 +21599,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "659c0cd1-3344-59f8-bd4a-fa2db2f8d5f0")
-		(property "Reference" "#PWR146"
+		(property "Reference" "#PWR145"
 			(at 48.26 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -22050,7 +21659,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR146")
+					(reference "#PWR145")
 					(unit 1)
 				)
 			)
@@ -22198,7 +21807,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e900b36d-386a-5d75-891c-5d8f8714e491")
-		(property "Reference" "#PWR147"
+		(property "Reference" "#PWR146"
 			(at 58.42 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -22259,7 +21868,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR147")
+					(reference "#PWR146")
 					(unit 1)
 				)
 			)
@@ -22276,7 +21885,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4eb321b6-3763-5c2b-a8c5-78d2acefa396")
-		(property "Reference" "#PWR148"
+		(property "Reference" "#PWR147"
 			(at 86.36 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -22337,7 +21946,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR148")
+					(reference "#PWR147")
 					(unit 1)
 				)
 			)
@@ -22485,7 +22094,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "09889798-a402-5286-8690-ffe6c6a8962c")
-		(property "Reference" "#PWR149"
+		(property "Reference" "#PWR148"
 			(at 99.06 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -22546,7 +22155,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR149")
+					(reference "#PWR148")
 					(unit 1)
 				)
 			)
@@ -22584,7 +22193,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 106.68 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -22672,7 +22281,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 27.94 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -22739,7 +22348,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "611b101f-a5f6-5557-bcd2-01cc00b13b95")
-		(property "Reference" "#PWR150"
+		(property "Reference" "#PWR149"
 			(at 27.94 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -22800,7 +22409,7 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/c6102769-c8bf-5148-85f1-79d32ada20fa"
-					(reference "#PWR150")
+					(reference "#PWR149")
 					(unit 1)
 				)
 			)

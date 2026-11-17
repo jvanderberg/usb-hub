@@ -165,172 +165,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Zener"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Zener"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Zener diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "D_Zener_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Zener_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -1881,12 +1715,6 @@
 		(uuid "4309b544-c544-53f6-bd0a-108899a3473e")
 	)
 	(junction
-		(at 119.38 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cc24dc0b-9ac9-5c1b-b229-de06832eb46c")
-	)
-	(junction
 		(at 132.08 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2154,23 +1982,13 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 50.8) (xy 119.38 50.8)
+			(xy 104.14 50.8) (xy 132.08 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0b2b49a3-158d-5320-b99c-f58b9f09c6a8")
-	)
-	(wire
-		(pts
-			(xy 119.38 50.8) (xy 132.08 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a085095-e562-5222-aa33-9c0dd4afdcbf")
+		(uuid "ad905bd1-41e6-5807-b4ec-45a942cb24fa")
 	)
 	(wire
 		(pts
@@ -2767,7 +2585,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a7e99ecd-c1ab-5e9d-a612-75eca8548096")
-		(property "Reference" "#PWR151"
+		(property "Reference" "#PWR150"
 			(at 147.32 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -2828,43 +2646,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR151")
+					(reference "#PWR150")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR161")
+					(reference "#PWR159")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR171")
+					(reference "#PWR168")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR181")
+					(reference "#PWR177")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR191")
+					(reference "#PWR186")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR201")
+					(reference "#PWR195")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR211")
+					(reference "#PWR204")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR221")
+					(reference "#PWR213")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR231")
+					(reference "#PWR222")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR241")
+					(reference "#PWR231")
 					(unit 1)
 				)
 			)
@@ -2881,7 +2699,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7d9dbb0b-83c4-58a8-a7e5-2adc8a60f905")
-		(property "Reference" "#PWR152"
+		(property "Reference" "#PWR151"
 			(at 195.58 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -2942,43 +2760,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR152")
+					(reference "#PWR151")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR162")
+					(reference "#PWR160")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR172")
+					(reference "#PWR169")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR182")
+					(reference "#PWR178")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR192")
+					(reference "#PWR187")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR202")
+					(reference "#PWR196")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR212")
+					(reference "#PWR205")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR222")
+					(reference "#PWR214")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR232")
+					(reference "#PWR223")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR242")
+					(reference "#PWR232")
 					(unit 1)
 				)
 			)
@@ -3163,7 +2981,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "acc3694a-4b76-5a69-9151-56c1fd69a8a5")
-		(property "Reference" "#PWR153"
+		(property "Reference" "#PWR152"
 			(at 27.94 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -3223,43 +3041,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR153")
+					(reference "#PWR152")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR163")
+					(reference "#PWR161")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR173")
+					(reference "#PWR170")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR183")
+					(reference "#PWR179")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR193")
+					(reference "#PWR188")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR203")
+					(reference "#PWR197")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR213")
+					(reference "#PWR206")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR223")
+					(reference "#PWR215")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR233")
+					(reference "#PWR224")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR243")
+					(reference "#PWR233")
 					(unit 1)
 				)
 			)
@@ -3287,7 +3105,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u/25V"
+		(property "Value" "10u/10V"
 			(at 40.64 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3298,7 +3116,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:CL21A106KAYNNNE"
+		(property "Footprint" "JLCImport:CL10A106KP8NNNC"
 			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3310,7 +3128,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C15850.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C19702.pdf"
 			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3334,7 +3152,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "10uF (106) ±10% 25V"
+		(property "Description" "CL10A106KP8NNNC; C0603; SAMSUNG"
 			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3357,7 +3175,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer Part" "CL21A106KAYNNNE"
+		(property "Manufacturer Part" "CL10A106KP8NNNC"
 			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3369,7 +3187,7 @@
 				(justify left)
 			)
 		)
-		(property "LCSC" "C15850"
+		(property "LCSC" "C19702"
 			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3443,7 +3261,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5f0a03dc-875c-5630-acea-efa125959b61")
-		(property "Reference" "#PWR154"
+		(property "Reference" "#PWR153"
 			(at 38.1 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3504,43 +3322,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR154")
+					(reference "#PWR153")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR164")
+					(reference "#PWR162")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR174")
+					(reference "#PWR171")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR184")
+					(reference "#PWR180")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR194")
+					(reference "#PWR189")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR204")
+					(reference "#PWR198")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR214")
+					(reference "#PWR207")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR224")
+					(reference "#PWR216")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR234")
+					(reference "#PWR225")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR244")
+					(reference "#PWR234")
 					(unit 1)
 				)
 			)
@@ -3557,7 +3375,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "67dffc33-22cb-5d03-9e1f-6a1712b22308")
-		(property "Reference" "#PWR155"
+		(property "Reference" "#PWR154"
 			(at 71.12 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -3618,43 +3436,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR155")
+					(reference "#PWR154")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR165")
+					(reference "#PWR163")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR175")
+					(reference "#PWR172")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR185")
+					(reference "#PWR181")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR195")
+					(reference "#PWR190")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR205")
+					(reference "#PWR199")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR215")
+					(reference "#PWR208")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR225")
+					(reference "#PWR217")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR235")
+					(reference "#PWR226")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR245")
+					(reference "#PWR235")
 					(unit 1)
 				)
 			)
@@ -3838,7 +3656,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "216e75a7-9735-5f33-a885-968c2036de27")
-		(property "Reference" "#PWR156"
+		(property "Reference" "#PWR155"
 			(at 81.28 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -3899,43 +3717,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR156")
+					(reference "#PWR155")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR166")
+					(reference "#PWR164")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR176")
+					(reference "#PWR173")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR186")
+					(reference "#PWR182")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR196")
+					(reference "#PWR191")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR206")
+					(reference "#PWR200")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR216")
+					(reference "#PWR209")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR226")
+					(reference "#PWR218")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR236")
+					(reference "#PWR227")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR246")
+					(reference "#PWR236")
 					(unit 1)
 				)
 			)
@@ -3963,7 +3781,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u/25V"
+		(property "Value" "22u/10V"
 			(at 93.98 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3974,7 +3792,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:CL21A226MAQNNNE"
+		(property "Footprint" "JLCImport:CL10A226MQ8NRNC"
 			(at 91.44 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -3986,7 +3804,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C45783.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C59461.pdf"
 			(at 91.44 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4010,7 +3828,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "CL21A226MAQNNNE; C0805; SAMSUNG"
+		(property "Description" "CL10A226MQ8NRNC; C0603; SAMSUNG"
 			(at 91.44 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4033,7 +3851,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer Part" "CL21A226MAQNNNE"
+		(property "Manufacturer Part" "CL10A226MQ8NRNC"
 			(at 91.44 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4045,7 +3863,7 @@
 				(justify left)
 			)
 		)
-		(property "LCSC" "C45783"
+		(property "LCSC" "C59461"
 			(at 91.44 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4119,7 +3937,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d20436b0-8d11-57eb-93cd-36ffa232e537")
-		(property "Reference" "#PWR157"
+		(property "Reference" "#PWR156"
 			(at 91.44 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4180,43 +3998,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR157")
+					(reference "#PWR156")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR167")
+					(reference "#PWR165")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR177")
+					(reference "#PWR174")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR187")
+					(reference "#PWR183")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR197")
+					(reference "#PWR192")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR207")
+					(reference "#PWR201")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR217")
+					(reference "#PWR210")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR227")
+					(reference "#PWR219")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR237")
+					(reference "#PWR228")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR247")
+					(reference "#PWR237")
 					(unit 1)
 				)
 			)
@@ -4400,7 +4218,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "294d6694-f2c4-56d2-8fc7-3ea06c0844f3")
-		(property "Reference" "#PWR158"
+		(property "Reference" "#PWR157"
 			(at 104.14 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -4461,324 +4279,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR158")
+					(reference "#PWR157")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR168")
+					(reference "#PWR166")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR178")
+					(reference "#PWR175")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR188")
+					(reference "#PWR184")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR198")
+					(reference "#PWR193")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR208")
+					(reference "#PWR202")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR218")
+					(reference "#PWR211")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR228")
+					(reference "#PWR220")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR238")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR248")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Zener")
-		(at 119.38 54.61 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7e850c58-ffc9-54d7-bd10-f2aa33821884")
-		(property "Reference" "D101"
-			(at 121.92 53.34 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SMF6.0A"
-			(at 121.92 55.88 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "JLCImport:SMF6_0A-C123790"
-			(at 119.38 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C123790.pdf"
-			(at 119.38 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Zener diode"
-			(at 119.38 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "SMF6.0A; SOD-123F_L2.8-W1.8-LS3.7-RD; MDD"
-			(at 119.38 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "MDD"
-			(at 119.38 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer Part" "SMF6.0A"
-			(at 119.38 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "LCSC" "C123790"
-			(at 119.38 54.61 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "1"
-			(uuid "7c5cba86-7ae5-59f7-8d81-c6a5bd3464d9")
-		)
-		(pin "2"
-			(uuid "6ed1e2b5-e423-5abb-909a-b478c51af604")
-		)
-		(instances
-			(project "usb-hub"
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "D101")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "D201")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "D301")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "D401")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "D501")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "D601")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "D701")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "D801")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "D901")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "D1001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 119.38 58.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9f14e317-4c73-5176-8dcc-337463751cc4")
-		(property "Reference" "#PWR159"
-			(at 119.38 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 119.38 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.38 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 119.38 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0b2d65bd-a442-5d36-9f14-e9de8795661f")
-		)
-		(instances
-			(project "usb-hub"
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR159")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR169")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR179")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR189")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR199")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR209")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR219")
-					(unit 1)
-				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
 					(reference "#PWR229")
 					(unit 1)
 				)
-				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR239")
-					(unit 1)
-				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR249")
+					(reference "#PWR238")
 					(unit 1)
 				)
 			)
@@ -5141,7 +4678,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "540ddbf4-c1a8-5b3b-8b3f-3bd2507518e8")
-		(property "Reference" "#PWR160"
+		(property "Reference" "#PWR158"
 			(at 132.08 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -5202,43 +4739,43 @@
 		(instances
 			(project "usb-hub"
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/bd42a66a-7c74-5ded-bcac-127a8e46faf5"
-					(reference "#PWR160")
+					(reference "#PWR158")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/44d7116e-b79d-574c-ac17-fae9bf012216"
-					(reference "#PWR170")
+					(reference "#PWR167")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/12e80188-de64-5e71-b232-42807e2e99e8"
-					(reference "#PWR180")
+					(reference "#PWR176")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/5c0e697c-0016-52a2-83b5-b6fe1a634059"
-					(reference "#PWR190")
+					(reference "#PWR185")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/cbeab2be-fea6-55d4-bac3-4ec302f2abe1"
-					(reference "#PWR200")
+					(reference "#PWR194")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/3cbf5cd6-2b90-524c-8727-62594c6cfcc7"
-					(reference "#PWR210")
+					(reference "#PWR203")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/82b8cbb8-7008-58e7-8a69-2e3308d796ae"
-					(reference "#PWR220")
+					(reference "#PWR212")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/190a02a4-2439-51c5-8e78-3e881b8767fd"
-					(reference "#PWR230")
+					(reference "#PWR221")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/a15ca183-978f-54b2-bd75-e554d5959c3d"
-					(reference "#PWR240")
+					(reference "#PWR230")
 					(unit 1)
 				)
 				(path "/975f1ee6-9048-5278-8b61-90832069fe8c/b73a9499-2801-5911-9c3b-755b9c8c1e8f"
-					(reference "#PWR250")
+					(reference "#PWR239")
 					(unit 1)
 				)
 			)
