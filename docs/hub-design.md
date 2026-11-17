@@ -334,8 +334,11 @@ Requirement: parallel resonant, fundamental, 24 MHz +/-350 ppm (2517 s9.1 p52; 2
 "must not be used to drive any external circuitry other than the crystal circuit" (p14), so each hub gets its own.
 
 Part: **YXC X322524MOB4SI** (C70590, Extended, 316,421 global 2026-11-16; need 11): 24 MHz, CL 12 pF, +/-10 ppm,
-+/-20 ppm over temperature, ESR 50 ohm, SMD3225-4P (LCSC listing; the YXC datasheet has not been read, check the
-pad numbering against the footprint: normally 1 and 3 = crystal, 2 and 4 = case/GND). 12 pF chosen over the 20 pF
++/-20 ppm over temperature, SMD3225-4P. YXC datasheet (YSX321SL series, docs/datasheets/X322524MOB4SI.pdf, read
+2026-11-17): AT fundamental; ESR 50 ohm max for 16-31 MHz; C0 3 pF max; drive level 10-200 uW (100 uW typical);
+aging +/-3 ppm/year. "Top View Crystal Connection" shows the crystal between #1 and #3, with #2 and #4 = GND.
+This matches the JLC footprint (pad 1 at (-1.1, 0.85) and pad 3 at (1.1, -0.85) are diagonal) and tools/nets.json
+(Y1.1 / Y1.3 = XTAL1 / XTAL2, Y2.1 / Y2.3 = XTALIN / XTALOUT). 12 pF chosen over the 20 pF
 X322524MSB4SI (C15643) because smaller load caps mean more oscillator margin; neither datasheet sets an ESR or drive
 limit. No 24 MHz crystal is a JLC Basic part, so this adds one Extended loading.
 
