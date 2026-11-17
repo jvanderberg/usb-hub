@@ -155,39 +155,43 @@ at('J1', 62.0, GCT_EDGE, 180)
 at('U1', 54.0, 14.2, 270)       # rot 270: PPHV pins bottom-left (to the buck input), VBUS right/bottom-right (J1)
 at('D1', 65.0, 10.6, 0)         # VBUS TVS at the receptacle VBUS pins (VBUS pads up)
 at('D2', 68.3, 14.6, 270)       # VBUS-GND Schottky (cathode/VBUS up)
-orient('C1', 63.4, 14.1, 'PD_VBUS', 'L')    # 4.7 uF VBUS
-orient('C4', 57.3, 14.1, 'PD_VBUS', 'L')    # 10 nF at VBUS pins 32/33
-orient('C5', 59.45, 14.1, 'PD_VBUS', 'L')
+orient('C1', 63.4, 13.7, 'PD_VBUS', 'L')    # 4.7 uF VBUS (up 0.4: clear of C6's outline)
+orient('C4', 62.75, 19.5, 'PD_VBUS', 'L')    # 10 nF at VBUS_IN (routing: moved off pins 32/33 so CC1/CC2 escape east)
+orient('C5', 59.75, 13.15, 'PD_VBUS', 'L')   # up/right: C7 sits on the CC2 lane, PLUG_EVENT via west of it
 orient('C2', 55.35, 18.75, 'PD_VBUS', 'U')   # 10 nF at VBUS_IN pins 23-25
 orient('C3', 57.6, 19.4, 'PD_VBUS', 'L')
 orient('D3', 63.05, 9.3, 'Net-(D3-K)', 'U')   # PESD24 at the receptacle CC1 pin
 orient('D4', 60.25, 9.3, 'Net-(D4-K)', 'U')   # PESD24 at CC2
-orient('C7', 57.85, 15.55, 'Net-(D4-K)', 'L')   # 330 pF at CC2 pin 29 (same layer, no via pin-to-cap)
-orient('C6', 57.85, 17.25, 'Net-(D3-K)', 'L')   # 330 pF at CC1 pin 28
+orient('C7', 57.85, 15.05, 'Net-(D4-K)', 'L')   # 330 pF at CC2 pin 29 (same layer, no via pin-to-cap; up 0.43 so the CC1 lane passes under it)
+orient('C6', 61.0, 15.8, 'Net-(D3-K)', 'L')     # 330 pF at CC1 pin 28 (on the CC1 lane east of C7; frees the RES lanes)
 # top side (LDO / ADC straps)
 orient('C9', 55.15, 8.45, 'PD_LDO3V3', 'D')     # LDO_3V3 pin 1
 orient('C10', 52.85, 8.6, 'Net-(U1-LDO_1V5)', 'D')
-orient('R1', 50.65, 9.6, 'PD_LDO3V3', 'U')     # ADCIN1 divider
-orient('R2', 49.4, 9.6, 'GND', 'D')
-orient('R3', 50.65, 7.4, 'PD_LDO3V3', 'U')     # ADCIN3 divider
-orient('R4', 49.4, 7.4, 'GND', 'D')
-# left side: ADCIN4, I2C pull-ups, FAULT_IN
-orient('R5', 50.6, 11.6, 'Net-(U1-ADCIN4)', 'R')
-orient('R6', 50.6, 12.85, 'Net-(U1-ADCIN4)', 'R')
-orient('R10', 50.6, 14.1, 'Net-(U1-I2C_SDA)', 'R')
-orient('R11', 50.6, 15.35, 'Net-(U1-I2C_SCL)', 'R')
-orient('R12', 50.6, 16.6, 'Net-(U1-FAULT_IN)', 'R')
+# ADC dividers and pull-ups in one column of horizontal 0402s (signal pads toward the pins, x 50.53; supply/GND pads
+# outward, x 49.67), so each divider's mid node is one short vertical and the LDO_3V3 pads form two runs fed from the
+# west (routing: the first placement boxed R1's LDO pad in between ADCIN1/ADCIN3 and left no room for the I2C vias).
+orient('R4', 50.1, 6.6, 'Net-(U1-ADCIN3)', 'R')    # ADCIN3 lower (GND)
+orient('R3', 50.1, 7.85, 'Net-(U1-ADCIN3)', 'R')   # ADCIN3 upper (LDO_3V3)
+orient('R1', 50.1, 9.1, 'Net-(U1-ADCIN1)', 'R')    # ADCIN1 upper (LDO_3V3)
+orient('R2', 50.1, 10.35, 'Net-(U1-ADCIN1)', 'R')  # ADCIN1 lower (GND)
+orient('R6', 50.1, 11.6, 'Net-(U1-ADCIN4)', 'R')   # ADCIN4 lower (GND), shares the R2 GND via
+orient('R5', 50.1, 12.85, 'Net-(U1-ADCIN4)', 'R')  # ADCIN4 upper (LDO_3V3)
+orient('R12', 50.1, 16.6, 'Net-(U1-FAULT_IN)', 'R')
+# I2C pull-ups at their test pads (any point of the bus): the pins' corridor holds the SDA/SCL vias instead
+orient('R11', 49.4, 5.0, 'Net-(U1-I2C_SCL)', 'L')
+orient('R10', 51.6, 5.0, 'Net-(U1-I2C_SDA)', 'L')
 # right side: VIN_3V3 cap + DNP link, reserved pins
 orient('C11', 58.7, 11.3, 'Net-(U1-VIN_3V3)', 'L')
 orient('R13', 62.0, 11.3, 'Net-(U1-VIN_3V3)', 'L')
 orient('R9', 57.3, 12.9, 'Net-(R9-Pad1)', 'L')
-orient('R7', 60.7, 17.0, 'Net-(R7-Pad1)', 'L')
-orient('R8', 60.7, 18.25, 'Net-(R8-Pad1)', 'L')
+orient('R7', 60.7, 18.65, 'Net-(R7-Pad1)', 'L')   # R7/R8 swapped: RES lanes do not cross
+orient('R8', 60.7, 17.4, 'Net-(R8-Pad1)', 'L')
 # VIN (PPHV) local cap at the PPHV pins + bulk
 orient('C8', 51.9, 19.1, 'VIN', 'R')
 at('C12', 44.6, 14.2, 0)
 # PD status / I2C test pads, GND pad next to them
-at('TP3', 47.5, 3.0); at('TP4', 49.5, 3.0); at('TP5', 51.5, 3.0); at('TP6', 53.5, 3.0); at('TP7', 55.5, 3.0)
+at('TP5', 47.5, 3.0); at('TP3', 49.5, 3.0); at('TP4', 51.5, 3.0);   # SINK_EN/SCL/SDA order of their L4 lanes (no crossing)
+at('TP6', 53.5, 3.0); at('TP7', 55.5, 3.0)
 at('TP8', 45.5, 3.0)
 at('TP1', 43.5, 3.0)            # VIN
 
@@ -216,14 +220,14 @@ orient('R34', 56.55, 28.9, 'Net-(U30-FB)', 'D')      # FB upper (sense from the 
 orient('C48', 57.8, 28.9, 'Net-(U30-EXTCOMP)', 'D')  # CHF
 orient('R33', 59.6, 31.0, 'Net-(U30-EXTCOMP)', 'L')  # Rcomp
 orient('C47', 61.8, 31.0, '5V_RC', 'L')              # Ccomp
-orient('R31', 59.6, 32.3, 'Net-(U30-RT)', 'L')       # RT
-orient('R32', 59.6, 33.55, 'Net-(U30-CNFG)', 'L')    # CNFG
+orient('R31', 59.6, 33.55, 'Net-(U30-RT)', 'L')      # RT (below CNFG: RT reaches it on L4, CNFG on L1 above)
+orient('R32', 59.6, 32.3, 'Net-(U30-CNFG)', 'L')     # CNFG
 orient('C46', 52.9, 36.0, 'Net-(U30-CBOOT)', 'U')    # CBOOT-SW
 orient('R38', 54.15, 36.0, 'Net-(U30-PG)', 'U')      # PG pull-up
-orient('R37', 55.4, 36.0, 'Net-(U30-EN)', 'U')       # EN lower
-orient('R36', 56.65, 36.0, 'Net-(U30-EN)', 'U')      # EN upper (VIN)
+orient('R37', 55.4, 36.8, 'Net-(U30-EN)', 'U')       # EN lower (R36/R37 0.8 down: ISNS/VOUT/PG vias under the pin row)
+orient('R36', 56.65, 36.8, 'Net-(U30-EN)', 'U')      # EN upper (VIN)
 at('TP30', 62.5, 37.5)           # 5V_BUS
-at('TP31', 62.5, 35.0)           # PG
+at('TP31', 54.5, 39.0)           # PG (beside R38: the space at x 62.5 carries the Kelvin/FB lanes)
 at('TP32', 62.5, 40.0)           # GND
 
 # ---------------------------------------------------------------- 3V3 buck (TPS54202), back left of the PD sink

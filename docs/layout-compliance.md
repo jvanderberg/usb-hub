@@ -2,7 +2,8 @@
 
 Each block is checked against `docs/layout-refs/<part>/`: the datasheet's layout section and figure first, then a vendor or EVM layout.
 
-**Stage 1 covers placement only.**
+**Stage 1 covered placement; stage 2 (power routing, `tools/route_plan.py`) ticks the power rows below.**
+Stage 2 evidence is measured on the built board refilled in a scratch copy: DRC (0 clearance/short/hole errors), `power.py`, `planes.py`, `pour_check.py`, `islands.py` (kicad-board-review). Coordinates are board-relative unless marked absolute.
 - Rows marked **ok (placement)** are satisfied by where the parts sit.
 - Rows marked **open (routing)** are the rules the routing stage must meet, with the copper this placement reserved for them (see `docs/layout-plan.md` s5).
 
@@ -19,10 +20,10 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 | 3 | Inductor next to SW, output caps at the inductor/shunt output, toward the load | ok (placement) | L30 (37.8, 27.8) → R30 (28.6, 30) → C42/C43 + C36-C41 row (y 37) | flow right → left → down toward the board centre / L3 5V_BUS |
 | 4 | Small-signal parts at their pins (VCC, VDDA, FB divider at FB, RT, EXTCOMP, CNFG) | ok (placement) | C44 VCC 1.8, C45 VDDA 1.6, R35 FB 1.6, C48 EXTCOMP 2.6, R31 RT 3.2, R32 CNFG 3.6, R33 3.4 | row at y 28.9 and column at x 59.6 |
 | 5 | CBOOT cap between CBOOT and SW, short | ok (placement) | C46 at (52.9, 36.0), under the CBOOT/SW pins | |
-| 6 | HO/SW routed as a pair, LO with PGND; gate traces ≥ 0.65 mm, short | open (routing) | U30 HO at the left side, ~8 mm to the Q30/Q31 gates | |
-| 7 | Kelvin ISNS+/VOUT from the shunt, routed as a pair away from SW | open (routing) | R30 at (28.6, 30), ~26 mm from U30: the longest run in the block, a risk to watch | layout-plan s6 |
-| 8 | Single-point AGND/PGND at the DAP; 0.3 mm thermal vias in the DAP | open (routing) | 3 x 2 vias reserved | |
-| 9 | No sensitive copper under SW on any layer | open (routing) | L3/L4 keepout under x 41-49, y 26-30 | layout-plan s5 |
+| 6 | HO/SW routed as a pair, LO with PGND; gate traces ≥ 0.65 mm, short | ok (routing) | HO 0.65 mm on L1 at x 50.4 to the Q30 gate with SW 0.65 mm beside it at x 49.5 (U30 pin 14 to Q31 pin 5, branch to C46) | LO: via at U30 → L4 → via at the Q31 gate (48.6, 36.25), over the L3 GND_BUCK region (no other net under it) |
+| 7 | Kelvin ISNS+/VOUT from the shunt, routed as a pair away from SW | ok, with a deviation | From the inner edges of the R30 pads; 0.2 mm pair on L4 at y 41.5 / 41.9, then x 58.8 / 59.2 to U30 | L3 keepout around the VOUT via (VOUT meets 5V_BUS only at R30:2). **Deviation:** the FB divider top (R34) is fed from the same Kelvin VOUT line (via at (56.55, 27.5), over L3 GND), not from a separate output-cap tap. pour_check: the pair crosses the L3 GND_BUCK edge at y 41.2 (0.15-0.2 mm over the island gap), DC sense only |
+| 8 | Single-point AGND/PGND at the DAP; 0.3 mm thermal vias in the DAP | ok, with a deviation | PGND pin 10 and the GND pins into the EP on L1; C45 (VDDA) and R35 (FB divider) GND to AGND pin 7; 3 x 2 0.3 mm-drill vias in the EP | islands.py: the DAP island (U30 EP + pins 1/2/7/10/16/22-24, C45:2, R35:2) is one F.Cu piece joined to the rest of GND only through the 6 EP vias. **Deviation:** C48, R31/R32, C47 and R37 GND go to L2 through their own vias, not to pin 7 (no L1 room in the 0.5 mm-pitch fan-out) |
+| 9 | No sensitive copper under SW on any layer | ok (routing) | L2 solid GND; L3 GND_BUCK region under L30, the SW node and U30; L4 GND pour | No vias in the SW copper (5V_SW has copper on L1 only: pour_check) |
 
 ## TPS54202 3.3 V (TI SLVSD26C s7.4, Fig 7-16; refs p20-21)
 
@@ -32,7 +33,7 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 | 2 | SW to inductor short | ok (placement) | L1 (30.6, 10) SW pad 4.5 mm from pin 2 | zoom_pd_3v3 |
 | 3 | Output caps at the inductor output, separate VOUT path to the FB divider | ok (placement) | C16-C18 at the L1 3V3 pad; R14/R15/C19 at FB on the far side (1.5 mm) | |
 | 4 | BOOT cap at BOOT/SW | ok (placement) | C15 1.5 mm | |
-| 5 | FB away from SW; Kelvin GND for the divider | open (routing) | | |
+| 5 | FB away from SW; Kelvin GND for the divider | ok (routing) | Divider at FB; 3V3 sensed on L4 from the output caps (via (37.9, 4.9) to (40.1, 17.9)); R15 GND to L2 through its own via | SW on L1 (0.8 mm) to L1, nothing under it but L2 GND |
 
 ## TPS25730 PD sink (TI TPS25730 datasheet layout section, Table 9-1; refs p42, p48-52)
 
@@ -42,8 +43,8 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 | 2 | LDO_3V3 / LDO_1V5 / VIN_3V3 caps at their pins | ok (placement) | C9 1.71, C10 1.95, C11 1.87 | |
 | 3 | PPHV output cap close | ok (placement) | C8 2.07 mm from PPHV | |
 | 4 | VBUS input cap / TVS near the connector | ok (placement) | D1 at J1 VBUS; C1/C4/C5 between J1 and U1 | |
-| 5 | VBUS/VBUS_IN and PPHV pours, ≥ 6 / ≥ 15 vias (8 / 16 mil), Table 9-1 widths | open (routing) | L1 + L3 PD_VBUS and VIN islands reserved | layout-plan s5 |
-| 6 | DRAIN pads tied together, isolated, not GND | open (routing) | pins 15/30 = PD_DRAIN | |
+| 5 | VBUS/VBUS_IN and PPHV pours, ≥ 6 / ≥ 15 vias (8 / 16 mil), Table 9-1 widths | ok (routing) | PD_VBUS: L1 pours at both J1 VBUS groups and at U1 VBUS_IN, 36 vias (0.6/0.3) to the L3 PD_VBUS island; PPHV → VIN: L1 pour over C8 and the Cin row, 20 vias to the L3 VIN island (8 at the pour + 12 in the Q30 drain pad); CC 0.2 mm, CC caps via-after-cap | power.py VIN at 5 A (TPS25730 limit): 11.4 mV drop, max via 0.36 A; a 5.5 A/mm corner peak at the PPHV pour's inside corner (52.6, 21.0), set by the C8 / C8-GND-via placement |
+| 6 | DRAIN pads tied together, isolated, not GND | ok (routing) | pins 15/30 = PD_DRAIN, tied to each other on L1 only | DRC: no unconnected PD_DRAIN item |
 
 ## USB2517 hub A (Microchip DS; pin diagram p7, crystal p12/15, package p52-53)
 
@@ -53,7 +54,7 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 | 2 | VDD18 / VDD18PLL caps at the pins | ok (placement) | C58 3.4, C59 4.6 | |
 | 3 | Crystal and load caps tight to XTAL1/XTAL2 | ok (placement) | Y1 4.5 / 5.4 mm; C60/C61 at the crystal pads | The UP pair and the PLL group share that corner |
 | 4 | RBIAS resistor at its pin | ok (placement) | R41 3.3 mm | |
-| 5 | ePad soldered with multiple GND vias | open (routing) | 4 x 4 x 0.3 mm | |
+| 5 | ePad soldered with multiple GND vias | ok (routing) | 4 x 4 vias, 0.3 mm drill, in the ePad | Paste over the vias: see the decision below |
 | 6 | 90 ohm pairs, no stubs, solid reference | open (routing) | L1 over L2, w 0.26 / s 0.15 (estimate) | layout-plan s3 |
 
 ## USB2514B hub B (Microchip DS; pin diagram p4, p9/14, package p44-47)
@@ -64,7 +65,7 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 | 2 | CRFILT / PLLFILT caps at the pins | ok (placement) | C68 2.8, C69 5.6 | C69 is in the x 63.8 column, behind the crystal traces |
 | 3 | Crystal tight to XTALIN/XTALOUT | ok (placement) | Y2 4.4 / 5.1 mm; C71/C72 at its pads | |
 | 4 | RBIAS at its pin | ok (placement) | R66 4.5 mm | |
-| 5 | ePad vias; 90 ohm pairs | open (routing) | 3 x 3 vias | |
+| 5 | ePad vias; 90 ohm pairs | ePad ok (routing); pairs open | 3 x 3 vias, 0.3 mm drill, in the ePad | Pairs: USB stage |
 
 ## SY6863 port switch (Silergy DS Fig 4), port 5 measured
 
@@ -75,7 +76,7 @@ The other ports are the same frame, rotated.
 | 1 | CIN at the IN pin | ok (placement) | C501 2.1 mm | |
 | 2 | COUT near the connector | ok (placement) | C503 100 nF 5.1, C502 22 uF 5.7 mm from the J501 VBUS pad; TVS D501 1.35 mm | The LED sits at the edge between them by plan |
 | 3 | RSET and EN pull-down at their pins | ok (placement) | R501 1.2, R60 1.35 | |
-| 4 | IN on the 5V_BUS pour, OUT on a wide VBUS trace | open (routing) | ≥ 3 vias to L3 at each IN | |
+| 4 | IN on the 5V_BUS pour, OUT on a wide VBUS trace | IN ok (routing); OUT open | Each port: L1 copper CIN → IN plus 3 vias (0.6/0.3) to the L3 5V_BUS plane | power.py 5V_BUS, 17 A from R30:2 to the 10 IN pins: worst drop 34 mV (U801), ≤ 2.5 A/mm at the IN copper. OUT/VBUS: port stage |
 
 ## TPD4E05U06 ESD (TI DS, layout section)
 
@@ -83,4 +84,13 @@ The other ports are the same frame, rotated.
 |---|---|---|---|---|
 | 1 | At the connector, protected lines straight through | ok (placement) | U502 DP/DM pads 2.0-2.1 mm from J501 | zoom_port5 |
 | 2 | Straight-through over the NC pins | **decision needed** | NC pads 6/7/9/10 are `unconnected-` nets in the netlist → DRC short if crossed | layout-plan s6 |
-| 3 | Short, wide GND to L2 | open (routing) | pins 3/8 | |
+| 3 | Short, wide GND to L2 | ok (routing) | Pins 3-8 tied under the body (0.3 mm), one via beyond pin 8 | The via sits between the D- and CC lanes; the USB stage may move it |
+
+## Stage 2 decisions and deviations
+
+| Item | Status | Detail |
+|---|---|---|
+| Paste over thermal vias | **decision needed** | board_lint: 54 PASTE ON HOLE (U4 16, U5 9, U1 9, U30 6, Q30 12, D1 2 vias, 0.3 mm drill, in exposed pads with 100 % paste). Either order the vias filled and capped (JLC via-in-pad, `--vias-filled`) or split the paste into windows with `paste_clear.py` |
+| Small-signal GND | deviation | The LM5148 small-signal GND (except C45/R35) and all TPS25730 strap GNDs go to L2 through a via at each pad |
+| Placement moves for routing | done | `tools/place_gen.py` comments: C1/C4-C7, R7/R8, R1-R6/R12, R10/R11, TP3-TP5, R31/R32, R36/R37, TP31 (lane order, via room, silk clearance) |
+| 5V_BUS L1 at the shunt | risk | power.py: 4.6 A/mm over ~9 mm of the L1 output copper from R30:2 to the via strip (outer threshold 3.2); set by the output-cap placement. Total 5V_BUS copper loss 0.43 W |
