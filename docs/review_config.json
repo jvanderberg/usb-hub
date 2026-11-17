@@ -1,4 +1,33 @@
 {
+  "ground_nets": ["GND"],
+  "net_classes": [
+    {"match": "_D[PM]$", "class": "usb"},
+    {"match": "XTAL", "class": "clock"},
+    {"match": "5V_SW$|U2-SW\\)$", "class": "switch"},
+    {"match": "SDA|SCL", "class": "i2c"},
+    {"match": "CC[12]$", "class": "slow"},
+    {"match": "^(VIN|5V_BUS|3V3)$|VBUS", "class": "power"}
+  ],
+  "fast_classes": ["usb", "clock", "switch"],
+  "diff_pairs": [
+    {"nets": ["/hubs/USB_UP_DP", "/hubs/USB_UP_DM"], "target_ohm": 90},
+    {"nets": ["/hubs/HUBA_DN7_DP", "/hubs/HUBA_DN7_DM"], "target_ohm": 90},
+    {"nets": ["/HUBA_DN1_DP", "/HUBA_DN1_DM"], "target_ohm": 90},
+    {"nets": ["/HUBA_DN2_DP", "/HUBA_DN2_DM"], "target_ohm": 90},
+    {"nets": ["/HUBA_DN3_DP", "/HUBA_DN3_DM"], "target_ohm": 90},
+    {"nets": ["/HUBA_DN4_DP", "/HUBA_DN4_DM"], "target_ohm": 90},
+    {"nets": ["/HUBA_DN5_DP", "/HUBA_DN5_DM"], "target_ohm": 90},
+    {"nets": ["/HUBA_DN6_DP", "/HUBA_DN6_DM"], "target_ohm": 90},
+    {"nets": ["/HUBB_DN1_DP", "/HUBB_DN1_DM"], "target_ohm": 90},
+    {"nets": ["/HUBB_DN2_DP", "/HUBB_DN2_DM"], "target_ohm": 90},
+    {"nets": ["/HUBB_DN3_DP", "/HUBB_DN3_DM"], "target_ohm": 90},
+    {"nets": ["/HUBB_DN4_DP", "/HUBB_DN4_DM"], "target_ohm": 90}
+  ],
+  "rail_voltages": {"VIN": 20, "5V_BUS": 5.1, "3V3": 3.3},
+  "hot_loops": [
+    {"ic": "U30", "in_net": "VIN", "gnd_net": "GND", "label": "LM5148 5 V buck input (Cin to Q30 drain / Q31 source)"},
+    {"ic": "U2", "in_net": "VIN", "gnd_net": "GND", "label": "TPS54202 3V3 buck input"}
+  ],
   "islands": [
     {"name": "LM5148 DAP ground (AGND + PGND pins meet at the exposed pad)", "net": "GND", "layer": "F.Cu",
      "pads": ["U30:25", "U30:7", "U30:10", "U30:16", "U30:1", "U30:2", "U30:22", "U30:23", "U30:24", "C45:2", "R35:2"],
@@ -20,6 +49,7 @@
   ],
   "thermal": {
     "ambient_C": 30,
+    "board_T_max_C": 105,
     "h_W_m2K": "enclosed",
     "corners": {
       "full": {"title": "100 W brick at 20 V, all 10 ports at 1.7 A (17 A on 5V_BUS), both hubs configured HS",

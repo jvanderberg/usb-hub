@@ -65533,6 +65533,138 @@
 		(layer "Edge.Cuts")
 		(uuid "6bb63f8d-3c1d-58ed-bd66-723cedafb3b1")
 	)
+	(gr_text "1"
+		(at 103.3 128.3 0)
+		(layer "F.SilkS")
+		(uuid "a6af3b67-5f2f-5cd9-8bc6-bacd2bc8783c")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "2"
+		(at 103.3 149.8 0)
+		(layer "F.SilkS")
+		(uuid "2b8ba5eb-21a4-5e4e-9a9d-c2ecbced095e")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "3"
+		(at 103.3 171.3 0)
+		(layer "F.SilkS")
+		(uuid "a7c87582-4434-583d-8317-366723e58236")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "4"
+		(at 123 182.7 0)
+		(layer "F.SilkS")
+		(uuid "a113655a-98dd-52c3-8ea0-c4516a066b1a")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "5"
+		(at 140.5 182.7 0)
+		(layer "F.SilkS")
+		(uuid "2b3584eb-aa4f-5046-8d3d-09a2b2a70653")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "6"
+		(at 158.3 182.7 0)
+		(layer "F.SilkS")
+		(uuid "35208777-4abd-517e-82d2-4210344eb385")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "7"
+		(at 176.2 182.7 0)
+		(layer "F.SilkS")
+		(uuid "38ba6c35-92cf-509d-b9ed-6c87f3ed03ca")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "8"
+		(at 182.6 157 0)
+		(layer "F.SilkS")
+		(uuid "b4de68d1-ec71-5dea-bc77-46279f0ee56e")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "9"
+		(at 182.6 135.8 0)
+		(layer "F.SilkS")
+		(uuid "1975c4a0-7391-50a6-8666-d76523eb9f9d")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "10"
+		(at 182.4 114.3 0)
+		(layer "F.SilkS")
+		(uuid "92cc4eb8-4e6f-5f72-a8fb-afc82713ef42")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "HOST"
+		(at 111.5 103.6 0)
+		(layer "F.SilkS")
+		(uuid "4ede3bcf-872f-52cb-9f19-817630c088c6")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "PWR IN"
+		(at 171.5 104 0)
+		(layer "F.SilkS")
+		(uuid "c6fefc70-47fe-5812-ab2c-e2b94fa80b5d")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+			)
+		)
+	)
 	(segment
 		(start 158.95 107.345)
 		(end 158.65 107.345)
