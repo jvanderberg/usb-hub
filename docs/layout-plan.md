@@ -15,7 +15,7 @@ L1-L2 and L3-L4 prepreg 7628, 0.2104 mm, Er 4.4 (JLC table value). Core between 
 | L1 | All parts. Every USB D+/D- pair (L1 only, over L2). Power-stage copper: VIN, SW, 5V_BUS near the buck, PD_VBUS, each port VBUS. Short local signals. |
 | L2 | Solid GND. No traces, no splits. Via antipads only. It is the reference plane for every USB pair and the return path for the LM5148's vertical hot loop. |
 | L3 | 5V_BUS pour. It covers the perimeter band under every SY6863 IN pin and joins the buck output-cap row. Islands: PD_VBUS (J1 -> U1 VBUS_IN), VIN (U1 PPHV -> buck Cin row, TPS54202 VIN), 3V3 under both hubs (fed from the TPS54202 output), and GND fill elsewhere. No L3 copper under the LM5148 switch node except GND. |
-| L4 | Slow signals: 20 PRTPWR/OCS_N lines, HUB_RESET_N, the VBUS_DET lines, the PD I2C/status lines to the test pads, LED/status lines, the 3V3 trunk (TPS54202 -> hub 3V3 island), each receptacle's CC crossing and its short D+/D- A/B-row tie. |
+| L4 | Slow signals: 20 PRTPWR/OCS_N lines, HUB_RESET_N, the VBUS_DET lines, the PD I2C/status lines to the test pads, LED/status lines, the 3V3 trunk (TPS54202 -> hub 3V3 island), each receptacle's CC crossing and its short D+/D- A/B-row tie, and (stage 3) each port's VBUS: a 1.0 mm trunk from the switch OUT vias beside the receptacle (in parallel with the L1 band) and a 0.6 mm tie to the B4A9 pad group, crossing under the pair's hub side at local y -7.5. Hub-stage L4 lanes to a port's EN / OCS_N vias arrive from inside the board and must not cross that trunk/tie (the vias sit on the inner side of it). |
 
 **Why L4 is not a USB layer.** L4 is referenced to L3, and L3 is a split power layer (5V_BUS, VIN and 3V3 islands). A pair routed there would cross island gaps, and its return current would have to jump through decoupling capacitors.
 
@@ -43,7 +43,7 @@ I solved it with a 2-D finite-difference field solver (`scratchpad/zsolve/fd.py`
 
 **This is an estimate. Confirm it with JLC's impedance calculator for JLC04161H-7628 before routing.**
 
-The project's USB net class currently has the KiCad defaults: diff pair 0.2 / 0.25 mm. That is about 110-115 ohm here. **It must be changed in `tools/build.sh` (board_setup) once JLC confirms the geometry.**
+The USB net class is set to this estimate in `tools/build.sh` (stage 3): track 0.26 mm (board_setup) and diff pair 0.26 / 0.15 mm (`tools/netclass_dp.py`, since board_setup has no diff-pair keys). **Still to confirm with JLC's impedance calculator before ordering;** a change there is the two numbers in build.sh plus `USB_W` / `USB_GAP` in `tools/route_ports.py`.
 
 ## 4. Floorplan (Stage 1, as placed)
 

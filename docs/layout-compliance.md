@@ -2,7 +2,8 @@
 
 Each block is checked against `docs/layout-refs/<part>/`: the datasheet's layout section and figure first, then a vendor or EVM layout.
 
-**Stage 1 covered placement; stage 2 (power routing, `tools/route_plan.py`) ticks the power rows below.**
+**Stage 1 covered placement; stage 2 (power routing, `tools/route_plan.py`) ticks the power rows below; stage 3 (port
+clusters and the HOST receptacle, `tools/route_ports.py`) ticks the SY6863 OUT, TPD4E05U06 and receptacle rows.**
 Stage 2 evidence is measured on the built board refilled in a scratch copy: DRC (0 clearance/short/hole errors), `power.py`, `planes.py`, `pour_check.py`, `islands.py` (kicad-board-review). Coordinates are board-relative unless marked absolute.
 - Rows marked **ok (placement)** are satisfied by where the parts sit.
 - Rows marked **open (routing)** are the rules the routing stage must meet, with the copper this placement reserved for them (see `docs/layout-plan.md` s5).
@@ -76,15 +77,28 @@ The other ports are the same frame, rotated.
 | 1 | CIN at the IN pin | ok (placement) | C501 2.1 mm | |
 | 2 | COUT near the connector | ok (placement) | C503 100 nF 5.1, C502 22 uF 5.7 mm from the J501 VBUS pad; TVS D501 1.35 mm | The LED sits at the edge between them by plan |
 | 3 | RSET and EN pull-down at their pins | ok (placement) | R501 1.2, R60 1.35 | |
-| 4 | IN on the 5V_BUS pour, OUT on a wide VBUS trace | IN ok (routing); OUT open | Each port: L1 copper CIN → IN plus 3 vias (0.6/0.3) to the L3 5V_BUS plane | power.py 5V_BUS, 17 A from R30:2 to the 10 IN pins: worst drop 34 mV (U801), ≤ 2.5 A/mm at the IN copper. OUT/VBUS: port stage |
+| 4 | IN on the 5V_BUS pour, OUT on a wide VBUS trace | ok (routing), with a deviation | IN: L1 copper CIN → IN plus 3 vias (0.6/0.3) to the L3 5V_BUS plane. OUT (stage 3, `tools/route_ports.py`): 0.9 mm L1 band OUT → TVS → A4B9 over the switch's edge-side pins, 3 vias (0.6/0.3, 1.25 mm pitch so the L2/L3 antipads do not merge) to a 1.0 mm L4 trunk in parallel, then a 0.6 mm L4 tie to two vias at the B4A9 / Rp side; C_OUT / LED column 0.5 mm on L1 | power.py, 3 A into the receptacle split 1.5 / 1.5 A between A4B9 and B4A9 (ports 1, 5, 9): worst drop 25.8 mV (to B4A9), max via 0.93 A. **Deviation:** the datasheet's layout guide (p11, item 1) asks for 2 oz VBUS copper; the stackup (JLC04161H-7628, user-frozen) has 1 oz outer layers, so the width (0.9 mm L1 + 1.0 mm L4 in parallel) carries it instead |
+| 5 | COUT at the connector and to the GND plane; CIN to GND at the IC | ok (routing) | C503/C502 on the VBUS column 2-3 mm from A4B9, GND to the shell legs (plated, every GND plane); CIN GND via at the pad | |
+| 6 | RSET at ISET, EN pull-down at EN | ok (routing) | ISET pin 5 → R501 straight (0.25 mm, 1.2 mm); EN pin 4 → R60 (0.2 mm) | EN and OCS_N end on handoff vias to L4 (see the receptacle section) |
 
 ## TPD4E05U06 ESD (TI DS, layout section)
 
 | # | Rule | Status | Satisfied by | Evidence |
 |---|---|---|---|---|
-| 1 | At the connector, protected lines straight through | ok (placement) | U502 DP/DM pads 2.0-2.1 mm from J501 | zoom_port5 |
-| 2 | Straight-through over the NC pins | **decision needed** | NC pads 6/7/9/10 are `unconnected-` nets in the netlist → DRC short if crossed | layout-plan s6 |
-| 3 | Short, wide GND to L2 | ok (routing) | Pins 3-8 tied under the body (0.3 mm), one via beyond pin 8 | The via sits between the D- and CC lanes; the USB stage may move it |
+| 1 | At the connector, protected lines straight through (TI s7.4.1) | ok (routing) | U502 DP/DM pads 2.0-2.1 mm from J501; A6/A7 → pins 1/2 → over the pads to pins 10/9 on one axis each (0.2 mm through the 0.5 mm pitch), CC1 pins 4 → 7, CC2 5 → 6 the same way | Every port and the HOST (U7) use the same code (`route_data` / `route_cc`) |
+| 2 | Straight-through over the NC pins | ok (routing) | NC pins 6/7/9/10 carry CC2/CC1/DM/DP in the schematic (commit 09fcf1f); the tracks run over them | DRC: no short, no unconnected item on any port's DP/DM/CC net between the receptacle and the ESD |
+| 3 | Short, wide GND to L2 | ok (routing) | Pins 3-8 tied under the body (0.3 mm), one via beyond pin 8 | The via (kept where stage 2 put it) sits 0.24 mm from the 0.26 mm DM track |
+| 4 | No sharp corners between the TVS and the connector; unprotected traces away from the protected ones | ok, with a deviation | Only DP/DM/CC2 (and VBUS, which has its own TVS) run between U502 and J501 | **Deviation:** the 0.75 mm D+/D- jog from A6/A7 onto pins 1/2 uses two 43° chamfered bends, not radiused arcs (router.py writes straight segments) |
+
+## TYPE-C-31-M-12 receptacles (HRO drawing; 10 ports + HOST), `tools/route_ports.py`
+
+| # | Rule | Status | Satisfied by | Evidence |
+|---|---|---|---|---|
+| 1 | Both D+ (A6/B6) and both D- (A7/B7) pads tied, short stubs | ok (routing) | A6/A7 are the through path to the ESD on L1; B7 and A7 get vias 0.29 mm past the pad ends (row 1), A6 and B6 0.6 mm further (row 2), each pair tied by a 1.0 mm L4 track under the receptacle body (layout-plan s2: the L4 A/B tie) | Stub beyond the pad ends: DM 0.29 + 1.0 + 0.29 mm, DP 0.89 + 1.0 + 0.89 mm on copper, plus two via barrels (~1.6 mm each). Pair length match receptacle → handoff: 0.04 mm |
+| 2 | CC1 crosses the D+/D- pair | ok (routing) | A5 → via under the body → L4 (below the tie, up between B6's and CC2's vias) → via at ESD pin 7 → Rp. HOST: the 3V3 trunk (route_3v3) runs on L4 under J2, so HOST CC1 goes straight in on L4 at x(A5) and comes up beside ESD pin 7; HOST CC2 stays on L1 | CC2 on the ports hops on L4 under the B4A9 link to a via below its Rp |
+| 3 | Both VBUS pad groups tied | ok (routing) | Ports: L4 tie (0.6 mm) A4B9/TVS side → B4A9 side, over the pair's hub side (L4 under L2). HOST (detection only): 0.15 mm link past the locating peg to a via under the body, L4 around the start of the 3V3 trunk | power.py above |
+| 4 | Vias under the receptacle | ok | 5 signal vias (0.45/0.2) per receptacle under the body, between the pad ends and the locating pegs; the board tents vias on both sides | The shell sits on solder mask over them |
+| 5 | Pair handoff to the USB stage | ok (routing) | Coupled pair 0.26 / 0.15 mm from just past ESD pins 10/9 (DM steps 0.09 mm in to the 0.41 mm pitch), ends 1.73 mm past the hub-side pins; `PORT_HANDOFF[k]` in `tools/route_ports.py` (and printed in the router log) | Handoffs, board-relative: port 1 DP (11.08, 20.00); port 5 DP (32.70, 73.92); port 9 DP (73.92, 43.50); HOST DP (21.00, 11.08); DM 0.41 mm beside each. EN / OCS_N: via at the switch (EN 1.13 mm above pin 4, OCS_N beside the TVS); HUBA_VBUS_DET: via 0.98 mm beyond TP41 |
 
 ## Stage 2 decisions and deviations
 

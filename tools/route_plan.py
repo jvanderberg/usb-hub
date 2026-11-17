@@ -560,7 +560,14 @@ def route_power(r):
 
 
 def route_ports(r):
-    pass
+    """10 port clusters + the HOST receptacle's parts: tools/route_ports.py (handoffs in its PORT_HANDOFF)"""
+    import os
+    import sys
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import route_ports as ports
+    ports.route_ports(r)
 
 
 def route_usb(r):

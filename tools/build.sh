@@ -20,12 +20,16 @@ python3 "$K/new_board.py" "$HW/net.xml" "$HW/usb-hub.kicad_pcb" --layers 4 --out
 # Power: the input/bus rails and every switched port VBUS. HighCurrent: the LM5148 switch node and the
 # inductor-to-shunt node (the 17 A path that is not already a Power rail). Clearance 0.2 mm: the LM5148 QFN pads
 # (SW 14 / CBOOT 15, ISNS+ 20 / EN 19 / VOUT 21) sit 0.22 mm apart, so 0.3 mm could never pass DRC.
+# USB pair: track 0.26 / gap 0.15 mm, ~90 ohm edge-coupled microstrip on L1 over L2 (JLC04161H-7628, h 0.2104 mm,
+# Er 4.4, 15 um mask: layout-plan.md s3). An estimate: TO CONFIRM WITH JLC's IMPEDANCE CALCULATOR before ordering.
+# board_setup.py has no diff-pair keys, so tools/netclass_dp.py sets the pair width / gap right after it.
 python3 "$K/board_setup.py" "$HW/usb-hub.kicad_pro" --stackup JLC04161H-7628 --finish ENIG \
-    --class 'USB:track=0.2,clearance=0.15' --class 'Power:track=0.8,clearance=0.2' \
+    --class 'USB:track=0.26,clearance=0.15' --class 'Power:track=0.8,clearance=0.2' \
     --class 'HighCurrent:track=2.0,clearance=0.2' \
     --pattern 'USB=*_DN?_D[PM]' --pattern 'USB=*/USB_UP_D[PM]' \
     --assign 'Power=VIN,5V_BUS,/power_in/PD_VBUS' --pattern 'Power=/port*/VBUS' \
     --assign 'HighCurrent=/buck_5v/5V_SW,/buck_5v/5V_ISNS'
+python3 "$ROOT/tools/netclass_dp.py" "$HW/usb-hub.kicad_pro" USB 0.26 0.15
 rm -f "$HW/net.xml"
 
 # Routing (router.py, no autorouter): dump the unrouted board, then apply tools/route_plan.py onto it. The routed

@@ -277,6 +277,7 @@ Datasheets in `docs/datasheets/`. Front-runner first in each block; nothing here
 | Hub ICs | USB2517 (7-port) -> USB2514B (4-port) cascade | Only in-stock MTT pair with strap-only individual port power | 2026-11-16 (presented, not objected) |
 | Regulator design tool | TI WEBENCH OK | User | 2026-11-16 |
 | Board size / trims | 85 x 85 mm; per-port and host VBUS TVS kept but as onsemi ESD5Z6.0T1G SOD-523 (C82323) instead of SMF6.0A; port caps 0603; 1.0 mm test pads | User (option 1 + 80x80) | 2026-11-16 |
+| Thermal vias in exposed pads | Paste windows cut clear of the holes (paste_clear.py on project copies of the U4, U5, U1, U30, Q30, D1 footprints, vias as footprint pads); no filled/capped vias | User: free, JLC-standard | 2026-11-16 |
 | Overload behaviour | Accept brownout/reset; per-port limit only; converter limit ~17 A; hub logic on its own regulator from VIN | User | 2026-11-16 |
 
 An agreed decision is frozen: changing it later (a substitute part, a new threshold) goes back to the user with the
