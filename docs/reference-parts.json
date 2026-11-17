@@ -1,0 +1,411 @@
+{
+ "U30": {
+  "part": "LM5148RGYR",
+  "source": "SNVSC01 Fig 9-17 p42 (Application Circuit 2, 400 kHz) + Table 9-5 p43; pin table p3-4; WEBENCH design in docs/power-design.md; the half-bridge FETs Q30/Q31 (Fig 9-17 Q1/Q2) are 3-terminal, outside refparts.py (two-pad parts only) - their wiring is covered by tools/nets.json",
+  "parts": [
+   {
+    "role": "CIN ceramic input caps (4x 4.7u/100V in Fig 9-17; 4x 10u/50V here, 24 V max input)",
+    "kind": "C",
+    "between": [
+     "VIN",
+     "GND"
+    ],
+    "value": "10u",
+    "tol": 0.6
+   },
+   {
+    "role": "HF input bypass at the high-side drain",
+    "kind": "C",
+    "between": [
+     "VIN",
+     "GND"
+    ],
+    "value": "100n",
+    "tol": 0.3
+   },
+   {
+    "role": "CVCC 2.2 uF at VCC",
+    "kind": "C",
+    "between": [
+     "VCC",
+     "GND"
+    ],
+    "value": "2.2u",
+    "tol": 0.3
+   },
+   {
+    "role": "CVDDA 0.1 uF at VDDA",
+    "kind": "C",
+    "between": [
+     "VDDA",
+     "GND"
+    ],
+    "value": "100n",
+    "tol": 0.3
+   },
+   {
+    "role": "CBOOT 0.1 uF CBOOT-SW",
+    "kind": "C",
+    "between": [
+     "CBOOT",
+     "SW"
+    ],
+    "value": "100n",
+    "tol": 0.3
+   },
+   {
+    "role": "RRT (54.9k = 400 kHz in Fig 9-17; 53.6k = 405 kHz WEBENCH)",
+    "kind": "R",
+    "between": [
+     "RT",
+     "GND"
+    ],
+    "value": "53.6k",
+    "tol": 0.05
+   },
+   {
+    "role": "RCNFG 41.2k: primary, DRSS on (Table 8-2 p24)",
+    "kind": "R",
+    "between": [
+     "CNFG",
+     "GND"
+    ],
+    "value": "41.2k",
+    "tol": 0.02
+   },
+   {
+    "role": "RCOMP (series, EXTCOMP to CCOMP)",
+    "kind": "R",
+    "between": [
+     "EXTCOMP",
+     "net:/buck_5v/5V_RC"
+    ],
+    "value": "5.23k",
+    "tol": 0.05
+   },
+   {
+    "role": "CCOMP",
+    "kind": "C",
+    "between": [
+     "net:/buck_5v/5V_RC",
+     "GND"
+    ],
+    "value": "5.1n",
+    "tol": 0.1
+   },
+   {
+    "role": "CHF",
+    "kind": "C",
+    "between": [
+     "EXTCOMP",
+     "GND"
+    ],
+    "value": "110p",
+    "tol": 0.2
+   },
+   {
+    "role": "RFB1 upper divider (eq. 6 p20)",
+    "kind": "R",
+    "between": [
+     "FB",
+     "5V_BUS"
+    ],
+    "value": "53.6k",
+    "tol": 0.02
+   },
+   {
+    "role": "RFB2 lower divider, 10-20k recommended (p20)",
+    "kind": "R",
+    "between": [
+     "FB",
+     "GND"
+    ],
+    "value": "10k",
+    "tol": 0.02
+   },
+   {
+    "role": "RS current-sense shunt between ISNS+ and VOUT",
+    "kind": "R",
+    "between": [
+     "ISNS+",
+     "VOUT"
+    ],
+    "value": "2.5m",
+    "tol": 0.1
+   },
+   {
+    "role": "LO power inductor SW to ISNS+",
+    "kind": "L",
+    "between": [
+     "SW",
+     "ISNS+"
+    ],
+    "value": "1.5u",
+    "tol": 0.3
+   },
+   {
+    "role": "CO output ceramics",
+    "kind": "C",
+    "between": [
+     "5V_BUS",
+     "GND"
+    ],
+    "value": "47u",
+    "tol": 0.3
+   },
+   {
+    "role": "EN/UVLO divider upper",
+    "kind": "R",
+    "between": [
+     "VIN",
+     "EN"
+    ],
+    "value": "100k",
+    "tol": 0.02
+   },
+   {
+    "role": "EN/UVLO divider lower",
+    "kind": "R",
+    "between": [
+     "EN",
+     "GND"
+    ],
+    "value": "15.4k",
+    "tol": 0.02
+   },
+   {
+    "role": "PG open-collector pull-up",
+    "kind": "R",
+    "between": [
+     "PG",
+     "VDDA"
+    ],
+    "value": "100k",
+    "tol": 0.5
+   }
+  ]
+ },
+ "U2": {
+  "part": "TPS54202DDCR",
+  "source": "SLVSD26C Fig 7-1 p13 (5 V 2 A reference design), s7.2.3 p14-16; 3.3 V divider per docs/power-design-pd-3v3.md",
+  "parts": [
+   {
+    "role": "C1 input decoupling >= 10 uF ceramic (p14)",
+    "kind": "C",
+    "between": [
+     "VIN",
+     "GND"
+    ],
+    "value": "10u",
+    "tol": 0.3
+   },
+   {
+    "role": "C2 0.1 uF HF input bypass (optional, p14)",
+    "kind": "C",
+    "between": [
+     "VIN",
+     "GND"
+    ],
+    "value": "100n",
+    "tol": 0.3
+   },
+   {
+    "role": "C3 bootstrap 0.1 uF BOOT-SW",
+    "kind": "C",
+    "between": [
+     "BOOT",
+     "SW"
+    ],
+    "value": "100n",
+    "tol": 0.3
+   },
+   {
+    "role": "L1 output inductor (15 uH at 5 V; 10 uH for 3.3 V)",
+    "kind": "L",
+    "between": [
+     "SW",
+     "3V3"
+    ],
+    "value": "10u",
+    "tol": 0.3
+   },
+   {
+    "role": "R2 upper feedback",
+    "kind": "R",
+    "between": [
+     "FB",
+     "3V3"
+    ],
+    "value": "100k",
+    "tol": 0.02
+   },
+   {
+    "role": "R3 lower feedback",
+    "kind": "R",
+    "between": [
+     "FB",
+     "GND"
+    ],
+    "value": "22k",
+    "tol": 0.02
+   },
+   {
+    "role": "C6 feed-forward across the upper resistor (75 pF at 5 V)",
+    "kind": "C",
+    "between": [
+     "FB",
+     "3V3"
+    ],
+    "value": "47p",
+    "tol": 0.5
+   },
+   {
+    "role": "C4/C5 output ceramics 22 uF",
+    "kind": "C",
+    "between": [
+     "3V3",
+     "GND"
+    ],
+    "value": "22u",
+    "tol": 0.3
+   }
+  ]
+ },
+ "U1": {
+  "part": "TPS25730DREFR",
+  "source": "SLVSGP9 Fig 9-3 p42 (TPS25730D sink example schematic); pin table p5",
+  "parts": [
+   {
+    "role": "C1 4.7 uF at VBUS",
+    "kind": "C",
+    "between": [
+     "VBUS",
+     "GND"
+    ],
+    "value": "4.7u",
+    "tol": 0.3
+   },
+   {
+    "role": "C2-C5 0.01 uF at VBUS",
+    "kind": "C",
+    "between": [
+     "VBUS",
+     "GND"
+    ],
+    "value": "10n",
+    "tol": 0.3
+   },
+   {
+    "role": "C_CC1 330 pF",
+    "kind": "C",
+    "between": [
+     "CC1",
+     "GND"
+    ],
+    "value": "330p",
+    "tol": 0.2
+   },
+   {
+    "role": "C_CC2 330 pF",
+    "kind": "C",
+    "between": [
+     "CC2",
+     "GND"
+    ],
+    "value": "330p",
+    "tol": 0.2
+   },
+   {
+    "role": "C12 10 uF at LDO_3V3",
+    "kind": "C",
+    "between": [
+     "LDO_3V3",
+     "GND"
+    ],
+    "value": "10u",
+    "tol": 0.3
+   },
+   {
+    "role": "C13 4.7 uF at LDO_1V5 (10 uF used, same part as LDO_3V3)",
+    "kind": "C",
+    "between": [
+     "LDO_1V5",
+     "GND"
+    ],
+    "value": "4.7u",
+    "min": "4.7u",
+    "max": "10u"
+   },
+   {
+    "role": "C11 10 uF at VIN_3V3",
+    "kind": "C",
+    "between": [
+     "VIN_3V3",
+     "GND"
+    ],
+    "value": "10u",
+    "tol": 0.3
+   },
+   {
+    "role": "PPHV bulk (22u, 22u, 10u in Fig 9-3; 10u ceramic + 22u electrolytic here)",
+    "kind": "C",
+    "between": [
+     "PPHV",
+     "GND"
+    ],
+    "value": "10u",
+    "tol": 0.3
+   },
+   {
+    "role": "R1 3.3k I2C SCL pull-up",
+    "kind": "R",
+    "between": [
+     "I2C_SCL",
+     "LDO_3V3"
+    ],
+    "value": "3.3k",
+    "tol": 0.1
+   },
+   {
+    "role": "R2 3.3k I2C SDA pull-up",
+    "kind": "R",
+    "between": [
+     "I2C_SDA",
+     "LDO_3V3"
+    ],
+    "value": "3.3k",
+    "tol": 0.1
+   },
+   {
+    "role": "R9 10k Reserved_26 to GND",
+    "kind": "R",
+    "between": [
+     "pin:26",
+     "GND"
+    ],
+    "value": "10k",
+    "tol": 0.1
+   },
+   {
+    "role": "R10 10k Reserved_27 to GND",
+    "kind": "R",
+    "between": [
+     "pin:27",
+     "GND"
+    ],
+    "value": "10k",
+    "tol": 0.1
+   },
+   {
+    "role": "R? 10k Reserved_36 to GND",
+    "kind": "R",
+    "between": [
+     "pin:36",
+     "GND"
+    ],
+    "value": "10k",
+    "tol": 0.1
+   }
+  ]
+ }
+}

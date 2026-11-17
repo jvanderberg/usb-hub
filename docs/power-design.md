@@ -85,3 +85,22 @@ after cable drop).
 
 The requirements' "PD sink power-good enables the buck" is replaced by this divider: the TPS25730 has no
 power-good pin (docs/power-design-pd-3v3.md).
+
+
+## Capture notes (schematic capture, 2026-11-16)
+
+Decisions taken while drawing hw/buck_5v.kicad_sch where this document was silent or the sources disagreed:
+
+- **CNFG = 41.2 k (C26978)**, not WEBENCH's 40.2 k: LM5148 Table 8-2 (p24) bins CNFG by resistor; 41.2 k is the
+  "primary, DRSS spread spectrum on" value that Fig 9-17 (p42) also uses. 40.2 k sits at a bin edge.
+- **VCCX tied to AGND** (internal VCC regulator). VCCX = VOUT would save VCC LDO loss, but "VIN must be greater than
+  the external bias" (p17) and a PD source can sag or drop out while Cout still holds 5V_BUS. Fig 9-17 (p42) allows
+  "Tie to VOUT or GND".
+- **PFM/SYNC tied to VDDA**: diode-emulation (PFM) at light load (pin table p4); the hub idles at a few hundred mA.
+- **PG: 100 k pull-up to VDDA** (p17 "100 kOhm typical to the relevant logic rail") + test pad TP31; not used by
+  logic.
+- **NC pins 1, 2, 22-24 to GND at the exposed pad** (pin table p3-4); drawn as hidden pins of the AGND/EP pin.
+- **Rcomp 5.23 k = FOJAN FRC0402F5231TS (C2933105)**: the UNI-ROYAL 5.23 k had only 4 in stock.
+- **Kelvin sense**: ISNS+ from the L30/R30 node (net 5V_ISNS), VOUT from the R30 output end (p4).
+- **Net classes**: HighCurrent = 5V_SW and 5V_ISNS, clearance 0.2 mm (the LM5148 QFN pads SW/CBOOT and
+  EN/ISNS+/VOUT are 0.22 mm apart; 0.3 mm would fail DRC at the IC). VIN and 5V_BUS are in the Power class.

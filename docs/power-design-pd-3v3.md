@@ -362,3 +362,13 @@ inside C_VBUS 1-10 uF (p10).
 Extended (loading fee each): TPS25730DREFR, ESTVS2200DRVR, PESD24VS1UL, TPS54202DDCR, FXL0630-100-M,
 CL32B106KBJNNNE (shared with LM5148), KT-0603G (probably shared with port LEDs), RVT22UF50V67RV0028 (if used).
 Everything else is Basic.
+
+
+## Capture notes (schematic capture, 2026-11-16)
+
+- **DBG_ACC (10) and PLUG_FLIP (13) open**: open-drain status outputs, Hi-Z (pin table p5); not used.
+- **TPS25730 VBUS (32, 33) and VBUS_IN (23-25) on one net** (PD_VBUS) with C1 4.7 uF + 4x 10 nF, as Fig 9-3 (p42).
+- **USB4105 D+/D- (A6/B6/A7/B7) and SBU (A8/B8) unconnected**: power-only input.
+- **PPHV/VIN**: C8 10 uF/50 V ceramic + C12 22 uF/50 V electrolytic + test pad TP1, as section 5 sizes it.
+- **Test pads TP1-TP8 are bare pads** (TestPoint_Pad_D1.5mm), not in the BOM or the position file.
+- **Red LED D6 (KT-0603R)**: its JLC footprint has pad 1 = anode, so it uses its own symbol (A = 1), not Device:LED.

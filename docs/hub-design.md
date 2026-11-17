@@ -480,3 +480,15 @@ Bench checks (first assembled board):
 | D4 | Hub reset source | TPS3809K33 supervisor (+1 Extended part) / RC (outside the hubs' rise-time rule with a 5 ms 3V3 ramp) | Supervisor |
 | D5 | Hub LEDs | none (straps only) / add one "HOST" LED on hub A SUSP_IND or HS_IND (LED + 1 k in parallel with the strap) | None per port; HOST LED optional, your call |
 | D6 | Requirements s4 lists a tentative 1V2 rail | drop it (both hubs regulate internally) | Drop |
+
+
+## Capture notes (schematic capture, 2026-11-16)
+
+- **OCS inputs typed passive in the hub symbols**: OCSn_N have a 35-90 uA internal pull-up (2517 p12) and are driven
+  only by the switches' open-drain OCB; KiCad ERC does not count open-collector pins as drivers.
+- **Hub A port 7 -> hub B upstream** is drawn as labels HUBA_DN7_DP / HUBA_DN7_DM so the pair gets the USB net class.
+- **USB2514B CRFILT / PLLFILT** caps (C68, C69) drawn on the left side with the straps (pin table p14).
+- **Crystal pinout**: X322524MOB4SI pins 1/3 = crystal, 2/4 = GND, checked symbol vs. JLC footprint with
+  fpcheck.py; the YXC datasheet itself was not read (LCSC listing only).
+- **TPD4E05U06 (U7) NC pins 6, 7, 9, 10 floating**: "Can be left floating or grounded" (TPD4E05U06 p4).
+- **HOST D+/D-** reach the hub through labels on both sides of U7 (no crossing wires); electrically identical.

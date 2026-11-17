@@ -1,0 +1,488 @@
+{
+ "values": [
+  {
+   "name": "5V_BUS output voltage (LM5148 FB divider)",
+   "value": "5.09 V (0.8 V x (1 + 53.6k/10k)); 4.98-5.18 V with VREF 795-808 mV and 1 % resistors",
+   "equation": "VOUT = VREF x (1 + RFB1/RFB2)",
+   "where": "docs/power-design.md (WEBENCH); LM5148 s8.3.2 Eq 6 p20",
+   "depends_on": [
+    {
+     "ref": "U30",
+     "part": "C7470701",
+     "param": "VREF (FB regulation)",
+     "used": "800 mV (795-808 mV)",
+     "source": "LM5148 SNVSC01 p6"
+    },
+    {
+     "ref": "R34",
+     "part": "C53398",
+     "param": "resistance",
+     "used": "53.6k 1 %",
+     "source": "BOM"
+    },
+    {
+     "ref": "R35",
+     "part": "C25744",
+     "param": "resistance",
+     "used": "10k 1 %",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "LM5148 EN/UVLO thresholds",
+   "value": "on 7.49 V (7.12-7.87 V), off 6.49 V",
+   "equation": "VON = VEN (1 + RUV1/RUV2); VOFF = VON - IHYS x RUV1",
+   "where": "docs/power-design.md 'EN / UVLO divider'",
+   "depends_on": [
+    {
+     "ref": "U30",
+     "part": "C7470701",
+     "param": "VEN rising / IHYS",
+     "used": "1.0 V (0.95-1.05) / 10 uA (8-12)",
+     "source": "LM5148 p6"
+    },
+    {
+     "ref": "R36",
+     "part": "C25741",
+     "param": "resistance",
+     "used": "100k 1 %",
+     "source": "BOM"
+    },
+    {
+     "ref": "R37",
+     "part": "C62740",
+     "param": "resistance",
+     "used": "15.4k 1 %",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "LM5148 switching frequency",
+   "value": "405.7 kHz",
+   "equation": "RT equation (s8.3.4)",
+   "where": "docs/power-design.md (WEBENCH table)",
+   "depends_on": [
+    {
+     "ref": "U30",
+     "part": "C7470701",
+     "param": "RT vs fSW equation",
+     "used": "53.6k -> 405.7 kHz",
+     "source": "WEBENCH / LM5148 s8.3.4"
+    },
+    {
+     "ref": "R31",
+     "part": "C53398",
+     "param": "resistance",
+     "used": "53.6k 1 %",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "LM5148 CNFG setting",
+   "value": "primary, DRSS spread spectrum on: 41.2k (WEBENCH listed 40.2k)",
+   "equation": "Table 8-2 resistor bins",
+   "where": "docs/power-design.md Capture notes",
+   "depends_on": [
+    {
+     "ref": "U30",
+     "part": "C7470701",
+     "param": "CNFG resistor table",
+     "used": "41.2k = primary + DRSS",
+     "source": "LM5148 Table 8-2 p24, Fig 9-17 p42"
+    },
+    {
+     "ref": "R32",
+     "part": "C26978",
+     "param": "resistance",
+     "used": "41.2k 1 %",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "5V buck peak current limit",
+   "value": "24.0 A typ (19.6-29.2 A)",
+   "equation": "IPK = VCS-TH / RS",
+   "where": "docs/power-design.md 'Current limit'",
+   "depends_on": [
+    {
+     "ref": "U30",
+     "part": "C7470701",
+     "param": "VCS-TH current-limit threshold",
+     "used": "60 mV (49-73 mV)",
+     "source": "LM5148 p8"
+    },
+    {
+     "ref": "R30",
+     "part": "C2904234",
+     "param": "resistance",
+     "used": "2.5 mOhm 1 %",
+     "source": "power-design.md parts table"
+    },
+    {
+     "ref": "L30",
+     "part": "C6753479",
+     "param": "saturation / rated current (must exceed 29.2 A)",
+     "used": "36.6 A IDC (WEBENCH)",
+     "source": "XAL1010-152 per WEBENCH; docs/datasheets/XAL1010.pdf"
+    }
+   ]
+  },
+  {
+   "name": "5V buck compensation",
+   "value": "Rcomp 5.23k, Ccomp 5.1 nF, CHF 110 pF: crossover 38.9 kHz, PM 61 deg",
+   "equation": "WEBENCH type-II design",
+   "where": "docs/power-design.md WEBENCH table",
+   "depends_on": [
+    {
+     "ref": "U30",
+     "part": "C7470701",
+     "param": "gm-EXTERNAL",
+     "used": "1200 uS",
+     "source": "LM5148 p7"
+    },
+    {
+     "ref": "L30",
+     "part": "C6753479",
+     "param": "inductance",
+     "used": "1.5 uH",
+     "source": "WEBENCH"
+    },
+    {
+     "ref": "R30",
+     "part": "C2904234",
+     "param": "resistance",
+     "used": "2.45 mOhm (2.5 fitted)",
+     "source": "WEBENCH"
+    },
+    {
+     "ref": "C36",
+     "part": "C525654",
+     "param": "capacitance (derated, x8)",
+     "used": "160 uF total derated",
+     "source": "WEBENCH"
+    },
+    {
+     "ref": "R33",
+     "part": "C2933105",
+     "param": "resistance",
+     "used": "5.23k",
+     "source": "BOM"
+    },
+    {
+     "ref": "C47",
+     "part": "C47118429",
+     "param": "capacitance",
+     "used": "5.1 nF",
+     "source": "BOM"
+    },
+    {
+     "ref": "C48",
+     "part": "C576704",
+     "param": "capacitance",
+     "used": "110 pF",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "3V3 output voltage (TPS54202 FB divider)",
+   "value": "3.305 V (3.170-3.444 V worst case)",
+   "equation": "VOUT = Vref x (1 + R14/R15)",
+   "where": "docs/power-design-pd-3v3.md 3V3 design table",
+   "depends_on": [
+    {
+     "ref": "U2",
+     "part": "C191884",
+     "param": "Vref",
+     "used": "0.596 V (0.581-0.611 V)",
+     "source": "TPS54202 p5"
+    },
+    {
+     "ref": "R14",
+     "part": "C25741",
+     "param": "resistance",
+     "used": "100k 1 %",
+     "source": "BOM"
+    },
+    {
+     "ref": "R15",
+     "part": "C25768",
+     "param": "resistance",
+     "used": "22k 1 %",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "TPS25730 ADCIN1 strap (min 9 V)",
+   "value": "DIV 0.0476 -> code 1",
+   "equation": "DIV = RDOWN / (RUP + RDOWN)",
+   "where": "docs/power-design-pd-3v3.md s1.2",
+   "depends_on": [
+    {
+     "ref": "U1",
+     "part": "C22438973",
+     "param": "ADCIN decode window code 1",
+     "used": "0.0229-0.0722",
+     "source": "TPS25730 Table 8-1 p31"
+    },
+    {
+     "ref": "R1",
+     "part": "C25764",
+     "param": "resistance",
+     "used": "200k",
+     "source": "BOM"
+    },
+    {
+     "ref": "R2",
+     "part": "C25744",
+     "param": "resistance",
+     "used": "10k",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "TPS25730 ADCIN3 strap (operating 1 A)",
+   "value": "DIV 0.0476 -> code 1",
+   "equation": "DIV = RDOWN / (RUP + RDOWN)",
+   "where": "docs/power-design-pd-3v3.md s1.2",
+   "depends_on": [
+    {
+     "ref": "U1",
+     "part": "C22438973",
+     "param": "ADCIN decode window code 1",
+     "used": "0.0229-0.0722",
+     "source": "TPS25730 Table 8-1 p31"
+    },
+    {
+     "ref": "R3",
+     "part": "C25764",
+     "param": "resistance",
+     "used": "200k",
+     "source": "BOM"
+    },
+    {
+     "ref": "R4",
+     "part": "C25744",
+     "param": "resistance",
+     "used": "10k",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "TPS25730 ADCIN4 strap (max 5 A)",
+   "value": "DIV 0.1903 -> code 3",
+   "equation": "DIV = RDOWN / (RUP + RDOWN)",
+   "where": "docs/power-design-pd-3v3.md s1.2",
+   "depends_on": [
+    {
+     "ref": "U1",
+     "part": "C22438973",
+     "param": "ADCIN decode window code 3",
+     "used": "0.1425-0.2372",
+     "source": "TPS25730 Table 8-1 p31"
+    },
+    {
+     "ref": "R5",
+     "part": "C25764",
+     "param": "resistance",
+     "used": "200k",
+     "source": "BOM"
+    },
+    {
+     "ref": "R6",
+     "part": "C25792",
+     "param": "resistance",
+     "used": "47k",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "Port current limit (SY6863 RSET), all 10 ports",
+   "value": "3.80 A nominal (3.47-4.08 A at 1.878k)",
+   "equation": "ILIM = 7100 / RSET",
+   "where": "docs/port-design.md",
+   "depends_on": [
+    {
+     "ref": "U101",
+     "part": "C2687365",
+     "param": "ILIM equation and tested point",
+     "used": "7100/RSET; 1.878k -> 3.47/3.78/4.08 A",
+     "source": "SY6863 p2, p4"
+    },
+    {
+     "ref": "R101",
+     "part": "C270633",
+     "param": "resistance",
+     "used": "1.87k 1 %",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "Hub A VBUS_DET divider",
+   "value": "2.18 V min at VBUS 4.40 V (> VIH 2.0 V); 2.75 V at 5.5 V",
+   "equation": "V = VBUS x R65 / (R64 + R65)",
+   "where": "docs/hub-design.md s5.2",
+   "depends_on": [
+    {
+     "ref": "U4",
+     "part": "C1521556",
+     "param": "VIH / abs max I/O",
+     "used": "2.0 V / 5.5 V",
+     "source": "USB2517 Table 8-2 p49, p47"
+    },
+    {
+     "ref": "R64",
+     "part": "C25741",
+     "param": "resistance",
+     "used": "100k",
+     "source": "BOM"
+    },
+    {
+     "ref": "R65",
+     "part": "C25741",
+     "param": "resistance",
+     "used": "100k",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "Hub A crystal load caps",
+   "value": "18 pF (effective CL 11.5 pF)",
+   "equation": "C = 2 CL - CS, CS = CB + CXTAL",
+   "where": "docs/hub-design.md s5.4",
+   "depends_on": [
+    {
+     "ref": "Y1",
+     "part": "C70590",
+     "param": "load capacitance CL",
+     "used": "12 pF",
+     "source": "LCSC listing (YXC datasheet not read)"
+    },
+    {
+     "ref": "U4",
+     "part": "C1521556",
+     "param": "CXTAL pin capacitance",
+     "used": "2 pF max",
+     "source": "USB2517 Table 8-3 p51"
+    },
+    {
+     "part": "board",
+     "param": "stray per pin CB",
+     "used": "3 pF",
+     "source": "assumed"
+    }
+   ]
+  },
+  {
+   "name": "Hub B crystal load caps",
+   "value": "15 pF (effective CL 12.0 pF)",
+   "equation": "C = 2 (CL - C0) - CS",
+   "where": "docs/hub-design.md s5.4",
+   "depends_on": [
+    {
+     "ref": "Y2",
+     "part": "C70590",
+     "param": "load capacitance CL",
+     "used": "12 pF",
+     "source": "LCSC listing (YXC datasheet not read)"
+    },
+    {
+     "ref": "U5",
+     "part": "C16251",
+     "param": "CXTAL pin capacitance",
+     "used": "6 pF max",
+     "source": "USB2514B Table 6-8 p42"
+    },
+    {
+     "part": "board",
+     "param": "stray per pin CB",
+     "used": "3 pF",
+     "source": "assumed"
+    }
+   ]
+  },
+  {
+   "name": "PD OK LED current",
+   "value": "1.4-2.1 mA",
+   "equation": "(5V_BUS - Vf) / R16",
+   "where": "docs/power-design-pd-3v3.md s2.3",
+   "depends_on": [
+    {
+     "ref": "D5",
+     "part": "C12624",
+     "param": "Vf green",
+     "used": "2.0-3.0 V",
+     "source": "KT-0603G LCSC listing"
+    },
+    {
+     "ref": "R16",
+     "part": "C25867",
+     "param": "resistance",
+     "used": "1.5k",
+     "source": "BOM"
+    }
+   ]
+  },
+  {
+   "name": "Low-power LED current",
+   "value": "about 1.3 mA",
+   "equation": "(3V3 - Vf) / R18",
+   "where": "docs/power-design-pd-3v3.md s2.3",
+   "depends_on": [
+    {
+     "ref": "D6",
+     "part": "C2286",
+     "param": "Vf red",
+     "used": "~2.0 V",
+     "source": "KT-0603R LCSC listing"
+    },
+    {
+     "ref": "R18",
+     "part": "C11702",
+     "param": "resistance",
+     "used": "1k",
+     "source": "BOM"
+    },
+    {
+     "ref": "Q1",
+     "part": "C15127",
+     "param": "Vgs(th) (off at Vgs = +1.8 V, on at -3.3 V)",
+     "used": "-0.4 to -1.3 V",
+     "source": "AO3401A datasheet"
+    }
+   ]
+  },
+  {
+   "name": "Port LED current (all 10 ports)",
+   "value": "1.4-2.1 mA",
+   "equation": "(VBUS - Vf) / R104",
+   "where": "docs/port-design.md",
+   "depends_on": [
+    {
+     "ref": "D102",
+     "part": "C12624",
+     "param": "Vf green",
+     "used": "2.0-3.0 V",
+     "source": "KT-0603G LCSC listing"
+    },
+    {
+     "ref": "R104",
+     "part": "C25867",
+     "param": "resistance",
+     "used": "1.5k",
+     "source": "BOM"
+    }
+   ]
+  }
+ ]
+}

@@ -44,3 +44,14 @@ Behaviour:
 
 GCT USB4105-GF-A (C3020560, 5 A VBUS). VBUS -> TVS + Schottky + caps -> TPS25730 VBUS (power-design-pd-3v3.md);
 CC1/CC2 -> TPS25730 CC1/CC2 with 330 pF C0G + PESD24VS1UL each; D+/D- not connected; shell -> GND.
+
+
+## Capture notes (schematic capture, 2026-11-16)
+
+- **RSET 1.87 k is C270633 (UNI-ROYAL 0402WGF1871TCE), an Extended part**, not Basic as the table above says.
+  It was the stocked 1.87 k found at capture; a 1.8 k would give 3.94 A nominal (away from the datasheet's tested
+  1.878 k point, SY6863 p4), so the Extended part was kept.
+- **TPD4E05U06 NC pins 6, 7, 9, 10 floating** (TPD4E05U06 p4: "Can be left floating or grounded").
+- **Port D+/D-**: the hub's DP/DM go to the ESD array; the receptacle's D+/D- join them through local labels
+  "DP"/"DM", which KiCad merges with the sheet's hierarchical labels of the same name (checked with netspec).
+- **CC2's Rp (R3)** is drawn hanging below CC2 to a VBUS label so it does not cross CC1; same circuit as R2.
