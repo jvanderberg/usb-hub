@@ -523,9 +523,11 @@ def route_hub_power(r):
     # 3V3 vias at the caps into the L3 3V3 islands; A <-> B link and the supervisor on L4
     for ref, pref in (('C50', (0, -1)), ('C51', (0, 1)), ('C52', (1, 0)), ('C57', (-1, 0)), ('C53', (0, 1)),
                       ('C54', (0, -1)), ('C55', (-1, 0)), ('C56', (0, -1)), ('C64', (0, -1)), ('C65', (0, -1)),
-                      ('C66', (-1, 0)), ('C67', (0, -1)), ('C63', (-1, 0)), ('C62', (0, -1)), ('C70', (0, -1)),
+                      ('C66', (-1, 0)), ('C63', (-1, 0)), ('C62', (0, -1)), ('C70', (0, -1)),
                       ('R75', (-1, 0))):
         near(r, ref, pad_on(r, ref, '3V3')[1], pref)
+    # C67's 3V3 via fixed below its pad: near() put it at (153.67, 156.11), in the U5 OCS4 (pin 21) lane (hub B)
+    via_at(r, ('C67', '1'), (153.32, 157.25), SIG)
     c73 = near(r, 'C73', '1', (0, -1))
     a, b = (137.4, 146.0), (149.2, 148.2)
     r.via(a, v33, *PV)

@@ -62,11 +62,12 @@ Distances are pin pad centre to the nearest pad of the part, on the same net, me
 
 | # | Rule | Status | Satisfied by | Evidence |
 |---|---|---|---|---|
-| 1 | 0.1 uF at every VDD33/VDDA pin | ok (placement) | VDDA5 C64 2.2, VDDA10 C65 2.9, VDD33-15 C66 2.7, VDD33-23 C67 1.7, VDDA29 C63 1.4, VDDA36 C62 3.5 | |
-| 2 | CRFILT / PLLFILT caps at the pins | ok (placement) | C68 2.8, C69 5.6 | C69 is in the x 63.8 column, behind the crystal traces |
-| 3 | Crystal tight to XTALIN/XTALOUT | ok (placement) | Y2 4.4 / 5.1 mm; C71/C72 at its pads | |
-| 4 | RBIAS at its pin | ok (placement) | R66 4.5 mm | |
-| 5 | ePad vias; 90 ohm pairs | ePad ok (routing); pairs open | 3 x 3 vias, 0.3 mm drill, in the ePad | Pairs: USB stage |
+| 1 | 0.1 uF at every VDD33/VDDA pin | ok (placement) | VDDA5 C64 2.2, VDDA10 C65 2.9, VDD33-15 C66 2.7, VDD33-23 C67 1.7, VDDA29 C63 1.4, VDDA36 C62 3.5 | Decoupling copper is route_plan's route_hub_power. C67's 3V3 via is fixed at (153.32, 157.25) (`via_at`) instead of near()'s (153.67, 156.11), which sat in the pin-21 OCS4 lane |
+| 2 | CRFILT / PLLFILT caps at the pins | ok (routing) | CRFILT 3.1 mm, PLLFILT 7.7 mm of 0.15 mm track, L1 only (tools/route_hub_b.py) | C69 is in the x 63.8 column, behind the crystal traces |
+| 3 | Crystal tight to XTALIN/XTALOUT | ok (routing) | XTALIN 9.0 / XTALOUT 10.2 mm net copper (pin, crystal and load cap), 0.15 mm, L1 only; GND guard pour F_GND_XTAL_B (prio 5) round Y2/C71/C72; no L4 copper of hub B under Y2 or its traces | pour_check window 145,115,185,185: 0 weak / isolated pieces |
+| 4 | RBIAS at its pin | ok (routing) | R66 5.6 mm, 0.15 mm, L1 | |
+| 5 | ePad vias; 90 ohm pairs | ok (routing), deviations noted | DN1-DN4 -> ports 7-10 on L1 over solid L2, 0.26 / 0.151 mm, 45 degree bends, no stubs. U5 pin -> port handoff (2 hop vias x 1.53 mm counted): DN1 24.902 / 24.902, DN2 21.841 / 21.841, DN3 26.439 / 26.439, DN4 46.952 / 46.952 mm (match < 0.02 mm) | Deviation from layout-plan s3 "no pair vias": the handoffs have D- on the left of travel and U5 has D+ on the left, and the 2514B has no swap strap, so each pair crosses over once (one line hops to L4 for 1.1 mm, vias 0.4 mm off the centre line, a GND via within 1 mm of each), with a serpentine on the other line matching the barrels |
+| 6 | Straps, PRTPWR / OCS_N | ok (routing) | Straps on L1 to R67 / R68 / R69 / R70; PRTPWR1-4 and OCS1-4 on L1 to 0.45/0.2 vias, then L4 lanes (0.2 mm) to the port handoffs; the L1 escapes of pins 20/21 are 0.15 mm | Pin 22 (SDA/NON_REM1) -> R69 needed R69 0.75 mm west (place_gen, x 152.15): the strap passes 0.15 mm between the pin-21 lane's chamfer and C67 / the pin-23 3V3 link. The L4 lanes cross L3 split gaps (0.15-0.2 mm, at right angles) at 8 places; slow static lines, accepted |
 
 ## SY6863 port switch (Silergy DS Fig 4), port 5 measured
 

@@ -296,7 +296,7 @@ orient('C68', 58.85, 50.9, 'Net-(U5-CRFILT)', 'D')         # CRFILT pin 14
 orient('C66', 57.6, 50.9, '3V3', 'D')                      # VDD33 pin 15
 orient('C64', 63.6, 57.0, '3V3', 'L')                      # VDDA pin 5 (between DN2 and DN3)
 orient('C67', 52.9, 56.65, '3V3', 'R')                     # VDD33 pin 23
-orient('R69', 52.9, 55.4, 'Net-(U5-SDA{slash}NON_REM1)', 'R')
+orient('R69', 52.15, 55.4, 'Net-(U5-SDA{slash}NON_REM1)', 'R')   # 0.75 mm west of the strap column (clear of C70): room for pin 22 to reach it past pins 20/21 (hub B routing)
 orient('R67', 52.9, 57.9, 'Net-(U5-SCL{slash}CFG_SEL0)', 'R')
 orient('R68', 52.9, 59.15, 'Net-(U5-HS_IND{slash}CFG_SEL1)', 'R')
 orient('R62', 50.6, 59.15, 'HUBB_VBUS_DET', 'R')
