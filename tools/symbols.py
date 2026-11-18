@@ -69,6 +69,16 @@ def build():
                           bottom=[('GND', ['2'], PI)],
                           desc='5.5 V 3 A current-limited power switch, reverse blocking, OUT 28 V, SOT-23-6',
                           datasheet=lcsc_ds('C2687365'), inherit=jlc('SY6863B3ABC'))
+    # ---- TPS259470ARPW (SLVSFC9C Table 5-1 p5-6): host-VBUS eFuse, active current limit, auto-retry.
+    # Pin-strap side on the left (EN, OVLO, then the three timing/limit pins that each hang one part to GND).
+    S['TPS259470'] = ic('TPS259470', 10.16,
+                        left=[('IN', ['5'], PI), None, ('EN/UVLO', ['1'], IN), None, ('OVLO', ['2'], IN),
+                              ('DVDT', ['7'], PA), ('ILM', ['9'], PA), ('ITIMER', ['10'], PA)],
+                        # OUT passive: 5V_BUS has two sources (the buck and this eFuse), the buck sheet flags it
+                        right=[('OUT', ['6'], PA), None, ('~{FLT}', ['4'], OC), ('AUXOFF', ['3'], OC)],
+                        bottom=[('GND', ['8'], PI)],
+                        desc='2.7-23 V 5.5 A eFuse, true reverse current blocking, adjustable OVLO, VQFN-10 2x2',
+                        datasheet=TI % 'tps25947', inherit=jlc('TPS259470ARPWR'))
     # ---- TPD4E05U06DQA (Table 4-2): channels in the receptacle's row order, GND and NC on the far side
     S['TPD4E05U06'] = ic('TPD4E05U06', 6.35,
                          left=[('D2+', ['4'], PA), ('D2-', ['5'], PA), None, ('D1+', ['1'], PA), ('D1-', ['2'], PA)],

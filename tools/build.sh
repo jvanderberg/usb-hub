@@ -16,6 +16,10 @@ python3 "$ROOT/tools/thermal_fp.py"
 for f in TPS25730DREFR ESTVS2200DRVR LM5148RGYR CSD17505Q5A USB2517-JZX USB2514B-AEZC-TR; do
     test -s "$HW/usb-hub.pretty/${f}_ThermalVias.kicad_mod"
 done
+# project footprints: JLC land patterns corrected to the datasheet's (land_fp.py)
+rm -f "$HW"/usb-hub.pretty/*_TILand.kicad_mod
+python3 "$ROOT/tools/land_fp.py"
+test -s "$HW/usb-hub.pretty/TPS259470ARPWR_TILand.kicad_mod"
 python3 "$ROOT/tools/gen_sch.py"
 "$KICAD_CLI" sch export netlist --format kicadxml -o "$HW/net.xml" "$HW/usb-hub.kicad_sch"
 test -s "$HW/net.xml"

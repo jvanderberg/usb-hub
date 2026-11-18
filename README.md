@@ -9,8 +9,8 @@ A 10-port USB-C bench hub: USB 2.0 High Speed (480 Mbps) on every port, powered 
 | | |
 |---|---|
 | Downstream | 10x USB-C, USB 2.0 HS, 5 V with a per-port current limit, reverse blocking and ESD clamp |
-| Upstream | 1x USB-C (HOST), data only |
-| Power in | 1x USB-C PD (PWR IN), 9-20 V, up to 100 W |
+| Upstream | 1x USB-C (HOST), data; never powers the host |
+| Power in | 1x USB-C PD (PWR IN), 9-20 V, up to 100 W; with no charger, runs from the host's VBUS (1.78 A limit) |
 | 5 V rail | 5.19 V, about 17 A, synchronous buck |
 | Board | 85 x 85 mm, 4 layers, all parts on top, JLCPCB economic assembly |
 | No MCU | Hub controllers and PD sink are configured by strap pins |
@@ -36,8 +36,10 @@ A 10-port USB-C bench hub: USB 2.0 High Speed (480 Mbps) on every port, powered 
 ## How it works
 
 ```
-PWR IN (USB-C PD) -> TPS25730 PD sink -> VIN 9-20 V -+-> LM5148 buck -> 5V_BUS (In2 plane) -> SY6863 switch x10 -> port VBUS
+PWR IN (USB-C PD) -> TPS25730 PD sink -> VIN 9-20 V -+-> LM5148 buck --+-> 5V_BUS (In2 plane) -> SY6863 switch x10 -> port VBUS
                                                      '-> TPS54202 buck -> 3V3 for the hub ICs
+HOST VBUS -> TPS259470 eFuse (only while the buck is off) -------------'
+5V_BUS -> SS34 -> VIN   (host mode: keeps the 3V3 buck running)
 
 HOST -> USB2517 (hub A, 7 ports) -> ports 1-6
                                  '-> USB2514B (hub B, 4 ports) -> ports 7-10
@@ -46,6 +48,10 @@ HOST -> USB2517 (hub A, 7 ports) -> ports 1-6
 - **Power.** The TPS25730 is strap-configured (no firmware) to take a PD contract between 9 and 20 V, up to 5 A.
   An LM5148 buck with external MOSFETs turns that into a 5.19 V bus, set high so a port still sees at least 4.75 V
   at 3 A. A small TPS54202 buck makes 3.3 V for the hub chips.
+- **Host-powered mode.** With no charger (or a 5 V-only one) the hub still works from the host: a TPS259470 eFuse
+  connects HOST VBUS to the 5 V bus whenever the buck's power-good is low, with a 1.78 A limit, a 25 ms soft start and
+  true reverse blocking (the hub never drives the host's VBUS). An SS34 diode feeds the 3.3 V buck from the bus.
+  Ports are powered too, within what the host port can supply.
 - **Ports.** Every port has its own SY6863 switch: current limit around 3.8 A, reverse-current blocking (an A-to-C
   charger plugged into a port can't backfeed the bus), and the fault output wired to the hub's over-current input.
   Each port advertises 3 A on CC. The total is deliberately oversubscribed: ten ports at 3 A is more than the bus can

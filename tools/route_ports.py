@@ -50,8 +50,9 @@ EXPECT = {
 EXPECT_HOST = {
     ('J', 'A4B9'): (-2.4, -2.474), ('J', 'A5'): (-1.25, -2.474), ('J', 'B5'): (1.75, -2.474), ('J', 'B4A9'): (2.4, -2.474),
     ('ESD', '1'): (-1.0, -4.466), ('ESD', '5'): (1.0, -4.466), ('TVS', '1'): (-2.605, -3.805),
-    ('C', '1'): (-4.0, -5.096), ('RTOP', '1'): (-5.3, -5.083), ('RTOP', '2'): (-5.3, -5.949),
-    ('RBOT', '1'): (-6.5, -5.083), ('RD1', '1'): (2.9, -4.783), ('RD2', '1'): (4.1, -4.783), ('TP', '1'): (-6.0, -8.216),
+    # host-powered mode (2026-11-18): C74 east of the eFuse trunk, the VBUS_DET divider west of the HOST pair
+    ('C', '1'): (-5.317, -5.516), ('RTOP', '1'): (2.25, -7.783), ('RTOP', '2'): (2.25, -8.649),
+    ('RBOT', '1'): (2.25, -9.883), ('RD1', '1'): (2.9, -4.783), ('RD2', '1'): (4.1, -4.783), ('TP', '1'): (0.7, -10.916),
 }
 
 
@@ -296,8 +297,14 @@ def host_roles(r):
     J = 'J2'
     vbus = r.net(J, 'A4B9')
     tvs = [rf for (rf, n) in sorted(r.pads) if rf.startswith('D') and r.net(rf, n) == vbus]
+    # the receptacle's cap: the HOST_VBUS cap nearest J2 (C78, the eFuse's IN cap, is routed in route_host_mode)
     caps = [rf for (rf, n) in sorted(r.pads) if rf.startswith('C') and r.net(rf, n) == vbus]
-    rtop = [rf for (rf, n) in sorted(r.pads) if rf.startswith('R') and r.net(rf, n) == vbus]
+    caps = sorted(caps, key=lambda c: math.dist(r.P(c, '1'), r.P(J, 'A4B9')))[:1]
+    # the divider top: the resistor from HOST_VBUS whose other end is the test-padded VBUS_DET node (not the eFuse's
+    # EN/UVLO divider, R79, which is routed with the eFuse in route_plan.route_host_mode)
+    tp_nets = {r.net(rf, n) for (rf, n) in r.pads if rf.startswith('TP')}
+    rtop = [rf for (rf, n) in sorted(r.pads) if rf.startswith('R') and r.net(rf, n) == vbus
+            and any(r.net(rf, m) in tp_nets for m in ('1', '2'))]
     assert len(tvs) == len(caps) == len(rtop) == 1, (tvs, caps, rtop)
     det = [r.net(rtop[0], n) for n in ('1', '2') if r.net(rtop[0], n) != vbus][0]
     rbot = two_pad_part_on(r, det, rtop[0])
@@ -343,13 +350,13 @@ def route_host(r):
 
     route_cc(r, fr, J, ESD, cc1_rd, cc2_rd, host=True)
 
-    # HOST_VBUS (detection only, no load current): A4B9 -> TVS -> C -> divider top on L1. B4A9: 0.15 mm link past the
-    # locating peg to a via under the receptacle body, then L4 toward the board edge around the start of the 3V3
-    # trunk (its via at local (-5.5, -0.17)) and back in above the shell leg to a via beside the TVS.
+    # HOST_VBUS. Host-powered mode (2026-11-18) puts up to 1.8 A on it: A4B9 (two contacts, ~1.25 A each) -> TVS
+    # pad on 0.6 mm; the 0.8 mm trunk on to the eFuse and C74 continue from the TVS pad (route_plan.route_host_mode).
+    # B4A9: 0.15 mm link past the locating peg to a via under the receptacle body, then L4 toward the board edge
+    # around the start of the 3V3 trunk (its via at local (-5.5, -0.17)) and back in above the shell leg to a via
+    # beside the TVS (ties the two pad groups; carries little of the load through that long run).
     tvs1, a4, b4 = L(TVS, '1'), L(J, 'A4B9'), L(J, 'B4A9')
-    r.track(F, 0.4, *fr.bs((TVS, '1'), (a4[0], a4[1] - 0.826), (J, 'A4B9')))
-    cpos = L(C, c_v)
-    r.track(F, 0.3, *fr.bs((TVS, '1'), (cpos[0], tvs1[1]), (C, c_v), (RTOP, rtop_v)))
+    r.track(F, 0.6, *fr.bs((TVS, '1'), (a4[0], a4[1] - 0.826), (J, 'A4B9')))
     v1 = (L(J, 'B8')[0], tvs1[1] + 0.105)
     r.via(fr.b(*v1), vbus, *SV)
     r.track(F, 0.3, *fr.bs((TVS, '1'), v1))
@@ -363,14 +370,20 @@ def route_host(r):
     # (pour_check), under the body between the peg, the A5 via and the trunk
     r.via(fr.b(a4[0] + 0.4, pad_end + 0.974), r.net(J, 'A1B12'), *SV)
 
-    # VBUS_DET divider -> TP41 -> handoff via (hub A's VBUS_DET, routed in the hub stage)
-    rt_d, rb_d, tp = L(RTOP, rtop_d), L(RBOT, rbot_d), L(TP, '1')
-    r.track(F, SIG, *fr.bs((RTOP, rtop_d), (RBOT, rbot_d)))
-    r.track(F, SIG, *fr.bs((RTOP, rtop_d), (rt_d[0], rt_d[1] - 1.05), (tp[0], rt_d[1] - 1.75), (TP, '1')))
-    dv = (tp[0], tp[1] - 0.984)
-    r.track(F, SIG, *fr.bs((TP, '1'), dv))
-    r.via(fr.b(*dv), det, *SV)
-    h['VBUS_DET'] = fr.b(*dv)
+    # VBUS_DET divider, west of the HOST pair (2026-11-18): its HOST_VBUS from the B4A9 via (hv) straight down on L4
+    # (between the 3V3 trunk at local x 1.5 and the Rd GND vias) to a via above the divider top. The divider's mid
+    # node joins hub A's L1 VBUS_DET run at local x 0.7 (board x 119.3), which also crosses TP41: no L4 crossing
+    # under the pair. Handoff: the L1 point where hub A's run ends.
+    rt_v, rt_d, rb_d, tp = L(RTOP, rtop_v), L(RTOP, rtop_d), L(RBOT, rbot_d), L(TP, '1')
+    dvt = (rt_v[0], rt_v[1] + 0.666)
+    r.track(B, SIG, *fr.bs(hv, dvt), net=vbus)
+    r.via(fr.b(*dvt), vbus, *SV)
+    r.track(F, SIG, *fr.bs(dvt, (RTOP, rtop_v)), net=vbus)
+    yj = rt_d[1] - 0.567                                  # joint between the two resistors
+    hd = (tp[0], yj)
+    r.track(F, SIG, *fr.bs((RTOP, rtop_d), (rt_d[0], yj), (RBOT, rbot_d)))
+    r.track(F, SIG, *fr.bs((rt_d[0], yj), hd), net=det)
+    h['VBUS_DET'] = fr.b(*hd)
     PORT_HANDOFF['HOST'] = h
 
 

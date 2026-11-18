@@ -484,6 +484,86 @@
      "source": "BOM"
     }
    ]
+  },
+  {
+   "name": "Host-mode eFuse U8 EN/UVLO thresholds",
+   "value": "on 3.75 V (3.70-3.83 V), off 3.41 V (3.37-3.49 V); EN 1.76 V at 5.5 V (abs max 6.5 V)",
+   "equation": "VIN(on) = VUVLO(R) x (1 + R79/R80); VIN(off) = VUVLO(F) x (1 + R79/R80)",
+   "where": "docs/power-design.md \"Host-powered mode\"; TPS25947 p9",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\")",
+   "depends_on": [
+    {"ref": "U8", "part": "C3662799", "param": "VUVLO(R) / VUVLO(F)", "used": "1.183/1.20/1.223 V, 1.076/1.09/1.116 V", "source": "TPS25947 SLVSFC9C p9"},
+    {"ref": "R79", "part": "C25741", "param": "resistance", "used": "100k 1 %", "source": "BOM"},
+    {"ref": "R80", "part": "C25792", "param": "resistance", "used": "47k 1 %", "source": "BOM"}
+   ]
+  },
+  {
+   "name": "Host-mode eFuse U8 OVLO from BUCK_PG",
+   "value": "buck regulating: OVLO = VDDA 5 V > 1.223 V max, U8 off; PG low: U8 on",
+   "equation": "OVLO = BUCK_PG (LM5148 PG open drain, R38 to VDDA) vs VOV(R) 1.20 V",
+   "where": "docs/power-design.md \"Host-powered mode\"; TPS25947 p9; LM5148 PG p17",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\")",
+   "depends_on": [
+    {"ref": "U8", "part": "C3662799", "param": "VOV(R), OVLO abs max", "used": "1.183/1.20/1.223 V; 6.5 V", "source": "TPS25947 SLVSFC9C p7, p9"},
+    {"ref": "U30", "part": "C7470701", "param": "PG open drain, VDDA", "used": "pulled low when not regulating; VDDA 5 V", "source": "LM5148 SNVSC01 p17"},
+    {"ref": "R38", "part": "C25741", "param": "resistance", "used": "100k", "source": "BOM"}
+   ]
+  },
+  {
+   "name": "Host-mode eFuse U8 current limit",
+   "value": "1.78 A (1.58-1.93 A)",
+   "equation": "ILIM = 3334 / RILM; tolerance scaled from the RILM 1.65k row (1.800/2.028/2.200 A)",
+   "where": "docs/power-design.md \"Host-powered mode\"; TPS25947 Eq 5 p30, p9",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\")",
+   "depends_on": [
+    {"ref": "U8", "part": "C3662799", "param": "ILIM equation and accuracy", "used": "3334 / RILM; 1.800/2.028/2.200 A at 1.65k", "source": "TPS25947 SLVSFC9C p9, p30"},
+    {"ref": "R81", "part": "C270633", "param": "resistance", "used": "1.87k 1 %", "source": "BOM"}
+   ]
+  },
+  {
+   "name": "Host-mode eFuse U8 output slew rate and inrush",
+   "value": "0.2 V/ms (0-5 V in 25 ms); 0.11 A into 559 uF nominal (5V_BUS 477 uF + VIN 82 uF via D41)",
+   "equation": "CdVdt (pF) = 2000 / SR (V/ms); I = C x SR",
+   "where": "docs/power-design.md \"Host-powered mode\"; TPS25947 Eq 4 p29",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\")",
+   "depends_on": [
+    {"ref": "U8", "part": "C3662799", "param": "dVdt equation", "used": "CdVdt = 2000 / SR", "source": "TPS25947 SLVSFC9C p29"},
+    {"ref": "C75", "part": "C15195", "param": "capacitance", "used": "10 nF", "source": "BOM"}
+   ]
+  },
+  {
+   "name": "Host-mode eFuse U8 overcurrent blanking time",
+   "value": "4.3 ms (2.6-7.4 ms)",
+   "equation": "tITIMER = dVITIMER x CITIMER / IITIMER",
+   "where": "docs/power-design.md \"Host-powered mode\"; TPS25947 Eq 6 p30, p10",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\")",
+   "depends_on": [
+    {"ref": "U8", "part": "C3662799", "param": "dVITIMER, IITIMER", "used": "1.286/1.51/1.741 V; 1.2/1.8/2.5 uA", "source": "TPS25947 SLVSFC9C p10"},
+    {"ref": "C76", "part": "C47118429", "param": "capacitance", "used": "5.1 nF", "source": "BOM"}
+   ]
+  },
+  {
+   "name": "Host-mode VIN feed through D41",
+   "value": "~4.5 V from a 5.0 V host, ~4.27 V from a 4.75 V host (TPS54202 UVLO rising 3.9/4.2/4.4 V: bench check 1)",
+   "equation": "VIN = VHOST - cable (0.1 ohm x 0.6 A) - U8 (28 mOhm + VFWD) - D41 VF",
+   "where": "docs/power-design.md \"Host-powered mode\"",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\"); weak-host start risk reported",
+   "depends_on": [
+    {"ref": "D41", "part": "C8678", "param": "VF at 0.5 A", "used": "~0.40 V typ", "source": "SS34 (MDD) p2 Fig 3"},
+    {"ref": "U8", "part": "C3662799", "param": "RON", "used": "28.2 mOhm typ, 45 mOhm max", "source": "TPS25947 SLVSFC9C p9"},
+    {"ref": "U2", "part": "C191884", "param": "UVLO rising", "used": "3.9/4.2/4.4 V", "source": "TPS54202 datasheet (power-design-pd-3v3.md s4)"}
+   ]
+  },
+  {
+   "name": "5V_BUS bleed for D41 reverse leakage",
+   "value": "2.4 mA at 5.19 V (12 mW); 0.6 mA leakage (100 C typ) -> 1.3 V with the buck off",
+   "equation": "I = 5V_BUS / R83; V = IR(D41) x R83",
+   "where": "docs/power-design.md \"Host-powered mode\"",
+   "approved": "2026-11-18: host-powered mode (user: \"ok, go\")",
+   "depends_on": [
+    {"ref": "D41", "part": "C8678", "param": "reverse current", "used": "0.5 mA max at 40 V 25 C; ~0.6 mA typ at 20 V 100 C", "source": "SS34 (MDD) p1, p2 Fig 2"},
+    {"ref": "R83", "part": "C25879", "param": "resistance", "used": "2.2k", "source": "BOM"}
+   ]
   }
  ]
 }

@@ -153,20 +153,21 @@ def lanes_south(r, H_):
     lane(r, 38, [CH[38], (133.9, 159.02), (133.9, 167.9), (144.0, 167.9), (144.0, 173.6), (o6[0], 173.6), o6])
 
 
-VBUS_DET_VIAS = ((120.0, 143.6), (119.3, 113.3))
+VBUS_DET_VIA = (120.0, 143.6)
 
 
 def route_vbus_det(r, H_):
-    """HUBA_VBUS_DET, U4 pin 44 -> HOST handoff via: L4 west under the top pins and north at x 130.0 (west of the
+    """HUBA_VBUS_DET, U4 pin 44 -> HOST handoff: L4 west under the top pins and north at x 130.0 (west of the
     PRT_SWP1 / BOOST0 vias), west at y 143.6 (north of the crystal), up to L1 west of the HOST pair, north beside it
-    at x 118.55 / 119.3, back to L4 east of the 3V3 trunk and east at y 113.3 to the handoff via"""
+    at x 118.55 / 119.3 over TP41 to the divider's mid-node handoff (L1, west of the pair: route_ports.route_host).
+    Until 2026-11-18 the divider sat east of the pair and this run crossed back under it on L4 at y 113.3; the
+    host-powered eFuse took that patch."""
     net = r.net(*U(44))
-    a, b = VBUS_DET_VIAS
+    a = VBUS_DET_VIA
+    hd = H_['HOST']['VBUS_DET']
     T(r, B, SIG, CH[44], (132.5, 155.25), (132.1, 154.85), (130.0, 154.85), (130.0, 144.6), (129.0, 143.6), a, net=net)
     r.via(a, net, *SV)
-    T(r, F, SIG, a, (118.55, 143.6), (118.55, 122.75), (119.3, 122.0), b, net=net)
-    r.via(b, net, *SV)
-    T(r, B, SIG, b, H_['HOST']['VBUS_DET'], net=net)
+    T(r, F, SIG, a, (118.55, 143.6), (118.55, 122.75), (hd[0], 122.75 - (hd[0] - 118.55)), hd, net=net)
 
 
 # ---------------------------------------------------------------- right column (pins 33-45)

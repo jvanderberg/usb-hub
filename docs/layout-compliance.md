@@ -102,6 +102,21 @@ The other ports are the same frame, rotated.
 | 4 | Vias under the receptacle | ok | 5 signal vias (0.45/0.2) per receptacle under the body, between the pad ends and the locating pegs; the board tents vias on both sides | The shell sits on solder mask over them |
 | 5 | Pair handoff to the USB stage | ok (routing) | Coupled pair 0.26 / 0.15 mm from just past ESD pins 10/9 (DM steps 0.09 mm in to the 0.41 mm pitch), ends 1.73 mm past the hub-side pins; `PORT_HANDOFF[k]` in `tools/route_ports.py` (and printed in the router log) | Handoffs, board-relative: port 1 DP (11.08, 20.00); port 5 DP (32.70, 73.92); port 9 DP (73.92, 43.50); HOST DP (21.00, 11.08); DM 0.41 mm beside each. EN / OCS_N: via at the switch (EN 1.13 mm above pin 4, OCS_N beside the TVS); HUBA_VBUS_DET: via 0.98 mm beyond TP41 |
 
+## TPS259470 host-VBUS eFuse U8 (TI TPS25947 s8.4.1 p62-63, land pattern p73; refs docs/layout-refs/TPS25947/), host-powered mode 2026-11-18
+
+Measured on the built board (absolute mm, pad centre to pad centre). `tools/route_plan.py` route_host_mode.
+
+| # | Rule | Status | Satisfied by | Evidence |
+|---|---|---|---|---|
+| 1 | Land pattern per the datasheet | ok (footprint) | JLC's footprint has IN / OUT 0.3 mm wide at -0.235 / +0.265, OUT 0.19 mm from pins 8/9 (DRC 0.2). `tools/land_fp.py` writes hw/usb-hub.pretty/TPS259470ARPWR_TILand with p73's strips (IN 0.3 at -0.25, OUT 0.25 at +0.25); JLC origin, rotation and pad numbers kept | DRC: 0 new items |
+| 2 | >= 0.1 uF IN-GND, closest to IN / GND, small loop | ok (routing) | C78 100 nF on the IN trunk north of U8, GND via north of its pad (C74 1 uF stays at the receptacle TVS) | C78 HOST_VBUS pad 2.1 mm from the IN strip's top end; its GND via 0.75 mm from the pad; L2 GND back to pin 8's via (4.1 mm pad to pin 8) |
+| 3 | RILM, CdVdt, CITIMER close, short GND returns, ILM away from switching | ok (routing) | West column at x 122.2: C75 (dVdt) 1.47 mm, R81 (ILM) 1.37 mm, C76 (ITIMER) 2.96 mm from their pins; each GND pad has its own via to L2 (0.77-0.78 mm); pin 8 GND via 0.72 mm. Nearest switch node to ILM: the TPS54202 SW 9.7 mm, on the far (east) side | L2 solid GND under the column |
+| 4 | EN/UVLO divider close | ok (placement) | R79 / R80 below U8, HOST_EN 0.2 mm track from pin 1 | |
+| 5 | >= 1 uF at OUT | ok (routing) | C77 1 uF at the end of the OUT column, 4.96 mm from pad 6 | |
+| 6 | Power path short, >= 2x load current | ok (routing) | IN: 0.8 mm trunk from the TVS to 0.6 mm above the strip, 0.3 into it (strip width). OUT: 0.25 mm neck (pad width, 1.2 mm long) to a 0.8 mm column with 2 vias (0.6/0.3, 1.6 mm apart so the L2 antipads do not merge) to the L3 5V_BUS plane | 1.78 A limit: 0.8 mm 1 oz carries > 3.5 A; 2 x 0.3 mm vias > 2 A |
+| 7 | IN / OUT copper for heat | accepted | Strips are entered at their ends; the 28 mOhm FET dissipates 0.09 W at 1.78 A | |
+| 8 | BUCK_PG (OVLO) route | accepted | L1 to a via east of U8, L4 south / east / south to TP31. It crosses a 0.15 mm gap between L3 islands at (132.1-132.3, 123.0) (pour_check OVER VOID): a static level that only changes when the buck starts or stops (the board already has two such 0.15-0.2 mm 3V3 crossings) | pour_check |
+
 ## Stage 2 decisions and deviations
 
 | Item | Status | Detail |

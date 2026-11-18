@@ -97,10 +97,77 @@ Decisions taken while drawing hw/buck_5v.kicad_sch where this document was silen
   the external bias" (p17) and a PD source can sag or drop out while Cout still holds 5V_BUS. Fig 9-17 (p42) allows
   "Tie to VOUT or GND".
 - **PFM/SYNC tied to VDDA**: diode-emulation (PFM) at light load (pin table p4); the hub idles at a few hundred mA.
-- **PG: 100 k pull-up to VDDA** (p17 "100 kOhm typical to the relevant logic rail") + test pad TP31; not used by
-  logic.
+- **PG: 100 k pull-up to VDDA** (p17 "100 kOhm typical to the relevant logic rail") + test pad TP31. Since
+  2026-11-18 PG (net BUCK_PG) also drives U8's OVLO pin: buck regulating = host path off ("Host-powered mode" below).
 - **NC pins 1, 2, 22-24 to GND at the exposed pad** (pin table p3-4); drawn as hidden pins of the AGND/EP pin.
 - **Rcomp 5.23 k = FOJAN FRC0402F5231TS (C2933105)**: the UNI-ROYAL 5.23 k had only 4 in stock.
 - **Kelvin sense**: ISNS+ from the L30/R30 node (net 5V_ISNS), VOUT from the R30 output end (p4).
 - **Net classes**: HighCurrent = 5V_SW and 5V_ISNS, clearance 0.2 mm (the LM5148 QFN pads SW/CBOOT and
   EN/ISNS+/VOUT are 0.22 mm apart; 0.3 mm would fail DRC at the IC). VIN and 5V_BUS are in the Power class.
+
+## Host-powered mode (U8 TPS259470ARPWR, 2026-11-18)
+
+User request 2026-11-18: with no PD brick the hub should still enumerate and pass data from the host's VBUS. U8, an
+eFuse with true reverse-current blocking, feeds HOST_VBUS onto 5V_BUS while the LM5148 is not regulating; D41 feeds
+VIN (the TPS54202 3V3 buck) back from 5V_BUS. Hub sheet (hw/hubs.kicad_sch); on the board U8 sits south-east of
+the HOST receptacle, its footprint corrected to TI's land pattern (tools/land_fp.py).
+Datasheet: docs/datasheets/TPS25947.pdf (SLVSFC9C, May 2026); lifecycle ACTIVE (ti.com, 2026-11-18).
+
+### Behaviour
+
+| Source on PWR IN | Host | VIN | LM5148 / BUCK_PG | U8 | 5V_BUS | 3V3 |
+|---|---|---|---|---|---|---|
+| none | yes | 5V_BUS - D41 (~4.5 V) | EN 0.60 V < 1.0 V: off, PG low | on | host, <= 1.78 A | TPS54202 from VIN via D41 |
+| 5 V-only brick | yes | 5 V (brick) | off (< 7.5 V), PG low | on | host, <= 1.78 A | TPS54202 from the brick |
+| 5 V-only brick | no | 5 V | off, PG low | off (no IN) | dark, "low power" LED (as before) | from the brick |
+| PD >= 9 V | either | 9-20 V | regulating, PG released (Hi-Z, 100 k to VDDA) | off: OVLO = VDDA 5 V > 1.20 V | buck 5.19 V | TPS54202 from VIN |
+| PD >= 9 V, soft start / hiccup | yes | 9-20 V | PG low | on | host assists (<= 1.78 A) until PG | TPS54202 from VIN |
+
+Hand-over: a host's VBUS may be anywhere in 4.75-5.25 V, i.e. above the buck's 5.19 V, so U8's reverse
+comparator (VREVTH -29.3 mV, p10) cannot be relied on to hand over and is only the backstop; OVLO from BUCK_PG is
+what turns U8 off (tOVLO 1.2 us, p11). In the
+OVLO state IN draws IQ(OVLO) 190 / 267 uA from the host (p9) and OUT sinks IOUTLKG(OVLO) 319 / 443 uA from 5V_BUS to
+GND (p9): nothing flows from 5V_BUS to the host. With no host attached and a brick up, U8 is unpowered and leaks
+IREVLKG(OFF) 4.86 uA typ (no max given, p10) out of OUT; if it all came out of IN, the two HOST_VBUS dividers
+(R64 + R65 200 k parallel R79 + R80 147 k = 84.7 k) sit at 0.41 V and VBUS_DET at 0.21 V: low (bench check 3).
+
+In host mode the ports are powered too (the hubs drive PRTPWR as usual), from the host's budget: the hub itself
+takes ~0.5 A at 5 V (3V3 0.635 A max via the TPS54202 at ~94 %, s4.3 of power-design-pd-3v3.md), leaving ~1.3 A of
+U8's limit for devices. A host port that supplies less (a 500 / 900 mA USB-A port, a Type-C default-power port)
+trips or sags with its own protection when devices draw more: the same accepted overload behaviour as on the brick
+(requirements s4), with the host's limiter in place of the converter's.
+
+### Values (TPS25947 SLVSFC9C; page numbers of the PDF)
+
+| Item | Equation (page) | Result | Part |
+|---|---|---|---|
+| EN/UVLO divider | VIN(on) = VUVLO(R) x (1 + R79/R80), VUVLO(R) 1.183 / 1.20 / 1.223 V, VUVLO(F) 1.076 / 1.09 / 1.116 V (p9) | 100 k / 47 k: **on 3.75 V** (3.70-3.83 V), **off 3.41 V** (3.37-3.49 V); any host >= vSafe5V min 4.75 V enables it, the ~0.4 V leakage level never does. EN abs max 6.5 V: 1.76 V at 5.5 V | R79 C25741 100 k, R80 C25792 47 k |
+| OVLO | OVLO = BUCK_PG: LM5148 PG, open drain, R38 100 k to VDDA. VOV(R) 1.20 V, VOV(F) 1.09 V (p9); OVLO abs max 6.5 V | buck regulating: 5 V on OVLO, U8 off; buck off, standby or soft start: PG low, U8 on | (R38 existing) |
+| Current limit | RILM = 3334 / ILIM (Eq 5, p30); ILIM 1.800 / 2.028 / 2.200 A at RILM 1.65 k (p9) | 1.87 k: **1.78 A** (1.58-1.93 A scaled from the p9 row). Active current limit (TPS259470x, p31), thermal shutdown at 154 C, auto-retry after 110 ms (TPS25947xA, tRST p11) | R81 C270633 1.87 k 1 % |
+| Inrush (dVdt) | CdVdt (pF) = 2000 / SR (V/ms) (Eq 4, p29) | 10 nF: **0.2 V/ms**, 0 -> 5 V in 25 ms. Load charged: 477 uF nominal on 5V_BUS + 82 uF on VIN through D41 = 559 uF -> **0.11 A** inrush from the host (well under a 500 mA port; USB inrush limit). FET energy ~ 0.11 A x 2.5 V avg x 25 ms = 7 mJ | C75 C15195 10 nF |
+| Overcurrent blanking (ITIMER) | tITIMER = dVITIMER x CITIMER / IITIMER (Eq 6, p30); dVITIMER 1.286 / 1.51 / 1.741 V, IITIMER 1.2 / 1.8 / 2.5 uA (p10) | 5.1 nF: **4.3 ms** (2.6-7.4 ms): a device's plug-in inrush through its SY6863 passes; a sustained overload is then current-limited. Pin rating 4 V (p8): 50 V part | C76 C47118429 5.1 nF |
+| Output cap | TI layout guidance (s8.4.1): >= 1 uF at OUT | C77 1 uF at the OUT column | C77 C52923 1 uF / 25 V |
+| Input cap | TI layout guidelines (p62): >= 0.1 uF closest to IN / GND | C78 100 nF on the IN trunk (C74 1 uF stays at the receptacle TVS, 7.4 mm away) | C78 C1525 100 nF / 16 V |
+| VIN feed (D41) | SS34 VF ~0.40 V at 0.5 A typ (Fig 3, SS34 p2); VR 40 V vs VIN 21 V + the 28 V TVS clamp | VIN = HOST_VBUS - cable - U8 - D41: 5.0 V host: 5.0 - 0.06 - 0.02 - 0.40 = **~4.5 V**; 4.75 V host: **~4.27 V**. Loss 0.2 W | D41 C8678 SS34 (SMA) |
+| D41 leakage bleed | IR 0.5 mA max at 40 V, 25 C (SS34 p1); typ ~1.5 uA at 20 V, 25 C and ~0.6 mA at 100 C (Fig 2) | In brick mode D41 is reverse biased by up to 15 V; the LM5148 in diode emulation cannot sink that leakage at no load. 2.2 k holds 5V_BUS: 5.19 V / 2.2 k = **2.4 mA**, 12 mW; 0.6 mA x 2.2 k = 1.3 V with the buck off | R83 C25879 2.2 k |
+
+**Risk (bench check 1): the 3V3 buck from a weak host.** The TPS54202 starts at UVLO rising 3.9 / 4.2 / 4.4 V and
+its recommended minimum is 4.5 V (power-design-pd-3v3.md s4.2); once running it regulates down to ~3.5 V in (100 %
+duty). A 5.0 V host gives ~4.5 V: starts at a typical UVLO. A host at the 4.75 V vSafe5V minimum gives ~4.27 V:
+below the 4.4 V UVLO maximum, so a worst-case part may not start and the hub stays off in host-only mode (brick
+operation is unaffected). A lower-VF Schottky gains < 0.1 V; the full fix is the TPS62933 alternative (runs to
+~3.8 V, user decision D2 in power-design-pd-3v3.md) - the user's call if the bench shows it.
+
+**LM5148 in host mode:** VIN ~4.5 V on its 100 k / 15.4 k EN divider gives EN 0.60 V: below VEN 0.95 V (off), above
+the 0.5 V shutdown level, so VCC may come up in standby (a few mA from VIN) with PG low. Either state keeps BUCK_PG
+low, which is all U8 needs (bench check 2).
+
+### Bench checks
+
+1. Host only, no brick: 3V3 starts from a 5.0 V host and from a bench supply on HOST at 4.75 V; record VIN.
+2. Host only: LM5148 EN / VCC / PG levels; BUCK_PG low; U8 on.
+3. Brick only (>= 9 V), no host: HOST_VBUS and HUBA_VBUS_DET (expect < 0.5 V); the hub does not attach.
+4. Host first, then the brick: 5V_BUS hand-over without a hub reset (BUCK_PG high, U8 off); brick removed: U8
+   takes 5V_BUS back (VIN drops to the D41 feed, 3V3 may brown out: note whether the hubs re-enumerate).
+5. Brick mode, no port load, warm board: 5V_BUS stays at 5.19 V (D41 leakage vs the R83 bleed).
+6. Host only: overload a port: U8 current-limits at ~1.78 A or the host port trips; recovery after removal.

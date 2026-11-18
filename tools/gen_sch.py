@@ -29,7 +29,7 @@ for _n in JLC.names():
     BY_LCSC[_p.get('LCSC')] = (_n, _p)
 
 VAL = {  # value shown on the sheet, per LCSC part (one part per value/package)
-    'C17168': '0R', 'C11702': '1k', 'C25867': '1.5k', 'C270633': '1.87k', 'C25890': '3.3k', 'C25905': '5.1k',
+    'C17168': '0R', 'C11702': '1k', 'C25867': '1.5k', 'C25879': '2.2k', 'C3662799': 'TPS259470ARPWR', 'C270633': '1.87k', 'C25890': '3.3k', 'C25905': '5.1k',
     'C2933105': '5.23k', 'C25744': '10k', 'C25752': '12k', 'C62740': '15.4k', 'C25768': '22k', 'C26978': '41.2k',
     'C25792': '47k', 'C53398': '53.6k', 'C11626': '54.9k','C25741': '100k', 'C25764': '200k', 'C26083': '1M', 'C2904234': '2.5m',
     'C138687': '10u/50V', 'C525654': '47u/10V', 'C2836438': '22u/50V', 'C29823': '4.7u/50V', 'C15850': '10u/25V',
@@ -61,6 +61,8 @@ FP_OVERRIDE = {
     'CSD17505Q5A': 'usb-hub:CSD17505Q5A_ThermalVias',
     'USB2517': 'usb-hub:USB2517-JZX_ThermalVias',
     'USB2514B': 'usb-hub:USB2514B-AEZC-TR_ThermalVias',
+    # JLC land pattern corrected to the datasheet's (tools/land_fp.py): IN / OUT strips per TPS25947 p73
+    'TPS259470': 'usb-hub:TPS259470ARPWR_TILand',
 }
 
 
@@ -134,6 +136,24 @@ def br_label(name):
         s.wire((x, y), (x, y + G))
         s.label(name, x, y + G, 270)
     return (7.62, d)                              # the label text runs down on the left of its wire
+
+
+def br_glabel(name, shape='input'):
+    """global label at the end of a short drop (a signal shared between sheets without a sheet pin)"""
+    def d(s, x, y):
+        s.wire((x, y), (x, y + G))
+        s.label(name, x, y + G, 270, kind='global', shape=shape)
+    return (7.62, d)
+
+
+def br_tp_glabel(ref, label, name, shape='output'):
+    """test pad on a drop that ends in a global label (one branch width: the pad points right, off the drop)"""
+    def d(s, x, y):
+        s.wire((x, y), (x, y + 2 * G))
+        tp(s, ref, x, y + G, 270, label, _ref_at=(x + 3.81, y + G + 3.81), _just='left')
+        s.tap((x, y + G))
+        s.label(name, x, y + 2 * G, 270, kind='global', shape=shape)
+    return (7.62, d)
 
 
 def br_tp(ref, label):
@@ -539,7 +559,8 @@ def buck_sheet(root):
             (U.p('9'), br_part('C', 'C44', 'C23630')),
             (U.p('8'), item(br_part('C', 'C45', 'C1525'), br_label('5V_VDDA'))),
             (U.p('16'), br_gnd()),
-            (U.p('17'), item(br_part('R', 'R38', 'C25741', VD), br_tp('TP31', 'PG')))]
+            # PG also gates the host-VBUS eFuse (hubs sheet, U8 OVLO): PG released = buck regulating = host path off
+            (U.p('17'), item(br_part('R', 'R38', 'C25741', VD), br_tp_glabel('TP31', 'PG', 'BUCK_PG')))]
     x0 = U.p('17')[0] - sum(w for _, (w, _) in rows)
     xe = x0 - 10.16
     assert xe >= 15.23, 'buck bank does not fit: xe = %s' % xe
@@ -735,6 +756,45 @@ def hubs_sheet(root):
     t = tp(s, 'TP41', nd[0] + 12.7, nd[1], 0, 'VBUS_DET')
     s.tap(t.p(1))
     s.label('HUBA_VBUS_DET', nd[0] + 20.32, nd[1], 0)
+    # --- host-powered mode (2026-11-18, power-design.md "Host-powered mode"): HOST_VBUS -> U8 eFuse -> 5V_BUS
+    # while the buck is not regulating (BUCK_PG low: no PD brick, a 5 V-only brick, or soft start); the buck's 5.19 V then reverse-blocks U8
+    # and BUCK_PG high (OVLO) turns it off. D41 feeds VIN (the 3V3 buck) from 5V_BUS; R83 bleeds D41's reverse
+    # leakage when VIN is 9-20 V (the buck cannot sink in diode emulation).
+    xk = xr + 91.44                                    # EN/UVLO divider, clear of R64 / TP41 / the VBUS_DET label
+    r79 = hang(s, 'R', 'R79', 'C25741', xk, yV, bottom=None)
+    hang(s, 'R', 'R80', 'C25792', xk, r79.p(2)[1], tap=False)
+    ne = r79.p(2)
+    s.wire(ne, (ne[0] + 7.62, ne[1]))
+    s.label('HOST_EN', ne[0] + 7.62, ne[1], 0)
+    xi = xk + 25.4 + 63.5                              # IN pin: the strap bank (63.5 wide) sits left of it
+    E8 = ic(s, 'TPS259470', 'U8', 'TPS259470ARPWR', 0, 0, 'C3662799',
+            fields={'_val_at': (xi + 2.54, yV + 31.75), '_just': 'left'})   # under the body, clear of the GND pin
+    E8.x += xi - E8.p('5')[0]
+    E8.y += yV - E8.p('5')[1]
+    assert eq(E8.p('5'), (xi, yV)), E8.p('5')
+    s.wire((xr + 45.72, yV), E8.p('5'))                # the HOST_VBUS rail continues to IN
+    f = flag(s, xk + 12.7, yV)                         # HOST_VBUS is driven from the receptacle
+    s.tap(f.p(1))
+    hang(s, 'C', 'C78', 'C1525', xk + 22.86, yV)       # 100 n at U8 IN / GND (TI layout guidelines p62)
+    stub_label(s, E8.p('1'), 'HOST_EN', side='L')
+    rows8 = [(E8.p('2'), br_glabel('BUCK_PG')),                                      # OVLO: the buck's PG
+             (E8.p('7'), br_part('C', 'C75', 'C15195')),                              # dVdt 10 n: 0.2 V/ms
+             (E8.p('9'), br_part('R', 'R81', 'C270633')),                             # ILM 1.87 k: 1.78 A
+             (E8.p('10'), br_part('C', 'C76', 'C47118429'))]                          # ITIMER 5.1 n: 4.3 ms
+    bank(s, rows8, xi - sum(w for _, (w, _) in rows8), E8.p('10')[1] + 7.62)
+    s.nc(E8.p('3'))
+    s.nc(E8.p('4'))
+    s.power('GND', *E8.p('8'))
+    xo = E8.p('6')[0]
+    s.wire(E8.p('6'), (xo + 38.1, yV))
+    hang(s, 'C', 'C77', 'C52923', xo + 7.62, yV)       # 1 uF at OUT (TI layout guidelines)
+    hang(s, 'R', 'R83', 'C25879', xo + 20.32, yV)      # 2.2 k bleed: 2.4 mA > D41 reverse leakage
+    vdio(s, 'DS', 'D41', 'C8678', xo + 30.48, yV, top='A', bottom=('pwr', 'VIN'))
+    s.wire((xo + 38.1, yV), (xo + 38.1, yV - 5.08))
+    s.power('5V_BUS', xo + 38.1, yV - 5.08)
+    s.text('Host-powered mode: U8 on while BUCK_PG is low (no PD brick / 5 V brick / soft start). UVLO 3.75 V on, '
+           '3.41 V off (100k/47k). Limit 3334/1.87k = 1.78 A. dVdt 10 nF: 0.2 V/ms. ITIMER 5.1 nF: 4.3 ms.',
+           xk - 2.54, yV + 50.8)
     # --- reset supervisor (one for both hubs)
     S_ = ic(s, 'TPS3809K33', 'U6', 'TPS3809K33DBVR', 81.28, 76.2, 'C61364',
             fields={'_val_at': (73.66, 90.17), '_just': 'left'})

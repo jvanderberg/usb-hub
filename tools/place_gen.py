@@ -145,10 +145,27 @@ f('U7', 0, -8.95, 0)
 f('D40', -2.6, -8.6, 90)
 f('R77', 2.9, -9.3, 90)                       # Rd CC1
 f('R78', 4.1, -9.3, 90)                       # Rd CC2
-f('C74', -4.0, -9.6, 90)                      # 1 uF HOST_VBUS
-f('R64', -5.3, -9.6, 90)                      # HOST_VBUS -> VBUS_DET 100k
-f('R65', -6.5, -9.6, 90)                      # VBUS_DET -> GND 100k
-f('TP41', -6.0, -12.3, 0)                     # VBUS_DET
+# host-powered mode (2026-11-18): the HOST_VBUS trunk runs from the TVS east and then south at x 124.6 into the eFuse
+# IN strip, so C74 moved east of it and the VBUS_DET divider moved west of the HOST pair (fed from the B4A9 pad's L4
+# via, joining hub A's L1 VBUS_DET run at x 119.3 with no L4 crossing under the pair)
+orient('C74', 25.75, 9.6, 'HOST_VBUS', 'L')    # 1 uF HOST_VBUS, east of the trunk
+orient('R64', 17.75, 12.3, 'HOST_VBUS', 'U')   # HOST_VBUS -> VBUS_DET 100k
+orient('R65', 17.75, 14.4, 'HUBA_VBUS_DET', 'U')   # VBUS_DET -> GND 100k
+at('TP41', 19.3, 15.0)                         # VBUS_DET, on hub A's x 119.3 run
+# U8 TPS259470 rot 180 in the free patch below the receptacle: IN strip x 124.6 (trunk from the north), OUT strip
+# x 124.1 (south to the L3 via column); DVDT / ILM / ITIMER / GND face west (the quiet HOST pair side, away from L1's
+# switch node: TI layout guidelines s8.4.1), one 0402 column at x 122.2; EN / OVLO east, EN divider below the part.
+# Outline (silk) boxes: U8 x 122.9-126.2, L1 down to y 113.6, D41 from x 128.0 - the parts sit between them.
+at('U8', 24.365, 17.0, 180)
+orient('C75', 22.2, 14.9, 'GND', 'U')          # dVdt 10 nF, DVDT pad down to pin 7
+orient('R81', 22.2, 18.2, 'Net-(U8-ILM)', 'U')     # ILM 1.87 k (pin 8's GND via sits between it and C75)
+orient('C76', 22.2, 21.0, 'Net-(U8-ITIMER)', 'U')  # ITIMER 5.1 nF
+orient('C77', 25.3, 21.9, '5V_BUS', 'L')       # 1 uF at the end of the OUT via column
+orient('C78', 25.97, 13.9, 'HOST_VBUS', 'L')   # 100 nF at IN: pad on the trunk, north of the y 114.6 branch
+orient('R79', 26.4, 19.1, 'HOST_EN', 'L')      # EN/UVLO 100 k (HOST_VBUS pad east, fed by the branch at x 127.4)
+orient('R80', 26.4, 20.3, 'HOST_EN', 'L')      # EN/UVLO 47 k
+orient('D41', 30.7, 16.2, 'VIN', 'R')          # SS34 5V_BUS -> VIN: cathode clear of C14's GND via and outline
+orient('R83', 28.5, 19.6, '5V_BUS', 'U')       # 2.2 k 5V_BUS bleed under D41's anode (C13's outline from x 129.2)
 
 # ---------------------------------------------------------------- PD input: J1 + TPS25730 (power_in)
 at('J1', 62.0, GCT_EDGE, 180)
@@ -223,7 +240,7 @@ orient('C47', 61.8, 31.0, '5V_RC', 'L')              # Ccomp
 orient('R31', 59.6, 33.55, 'Net-(U30-RT)', 'L')      # RT (below CNFG: RT reaches it on L4, CNFG on L1 above)
 orient('R32', 59.6, 32.3, 'Net-(U30-CNFG)', 'L')     # CNFG
 orient('C46', 52.9, 36.0, 'Net-(U30-CBOOT)', 'U')    # CBOOT-SW
-orient('R38', 54.15, 36.0, 'Net-(U30-PG)', 'U')      # PG pull-up
+orient('R38', 54.15, 36.0, 'BUCK_PG', 'U')      # PG pull-up
 orient('R37', 55.4, 36.8, 'Net-(U30-EN)', 'U')       # EN lower (R36/R37 0.8 down: ISNS/VOUT/PG vias under the pin row)
 orient('R36', 56.65, 36.8, 'Net-(U30-EN)', 'U')      # EN upper (VIN)
 at('TP30', 62.5, 37.5)           # 5V_BUS

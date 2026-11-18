@@ -13,6 +13,7 @@ PARTS=(
   C61364     # TPS3809K33DBVR reset supervisor
   C2687365   # SY6863B3ABC port switch
   C138714    # TPD4E05U06DQAR ESD array
+  C3662799   # TPS259470ARPWR host-VBUS eFuse (host-powered mode, 2026-11-18)
   # discretes, power
   C553150    # CSD17505Q5A high-side FET
   C202231    # CSD17573Q5B low-side FET
@@ -56,6 +57,7 @@ PARTS=(
   C17168     # 0R
   C11702     # 1k
   C25867     # 1.5k
+  C25879     # 2.2k (5V_BUS bleed: SS34 reverse leakage, host-powered mode)
   C270633    # 1.87k
   C25890     # 3.3k
   C25905     # 5.1k

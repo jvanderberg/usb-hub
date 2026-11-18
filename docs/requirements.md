@@ -17,7 +17,8 @@ certified use.
 - Timeline: no deadline
 - Project type: tool
 - Existing prototype / firmware: none
-- Host port: data only. The hub does not supply power or PD back to the host.
+- Host port: data only. The hub does not supply power or PD back to the host. With no PD brick it runs from the
+  host's VBUS instead (host-powered mode, 2026-11-18: docs/power-design.md "Host-powered mode").
 
 ## 2. Usage and environment
 
@@ -88,7 +89,8 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 | Hub A/B downstream | Ports 1-10 | USB 2.0 D+/D- | 480 Mbps | 90 ohm differential; length set by layout, match within pair |
 | Hub A/B | Port switches | PRTPWR (enable) / OCS (fault) | DC | Individual per port |
 | Hub A/B | Port LEDs | GPIO / LED pins | DC | |
-| Host VBUS | Hub VBUS_DET | Divider | DC | Host VBUS isolated from 5V_BUS |
+| Host VBUS | Hub VBUS_DET | Divider | DC | |
+| Host VBUS | 5V_BUS | U8 TPS259470 eFuse | DC | On only while the buck is not regulating (BUCK_PG low on OVLO); 1.78 A limit; reverse blocking: never backfeeds the host |
 | VIN | 5 V buck EN | UVLO divider 100k/15.4k | DC | Buck on at 7.5 V, off at 6.5 V: off on 5 V-only sources |
 | Crystal | Each hub IC | XTAL | 12/24 MHz (per IC) | Close to IC |
 
@@ -96,6 +98,8 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 
 - Must work before the main processor runs: there is no processor. The PD sink negotiates standalone; the 5 V buck
   starts when VIN passes its 7.5 V EN/UVLO divider; the hub ICs start from 3.3 V and enumerate when host VBUS is seen.
+  Without a brick, U8 turns on when HOST_VBUS passes 3.75 V and ramps 5V_BUS at 0.2 V/ms; D41 then feeds VIN and
+  the 3V3 buck starts.
 - How each is configured without it: resistor/strap configuration only.
 
 ### External connections (user-facing)
@@ -123,7 +127,10 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 - Source(s): USB-C PD input, any brick up to 100 W (20 V / 5 A, needs a 5 A e-marked cable; a 3 A cable caps a
   20 V source at 60 W). Must run on smaller bricks too: the 5 V budget follows the negotiated contract, not a fixed
   number. Lowest supported source: a PD brick offering 9 V or more. 5 V-only sources are not supported: the 5 V
-  converter stays off, ports stay dark, a "low power" LED lights.
+  converter stays off, ports stay dark, a "low power" LED lights. Host-powered mode (2026-11-18): with no brick or a
+  5 V-only one, an attached host powers the hub and its ports through U8 (1.78 A limit; the host's own port limit
+  usually binds first). The hub itself takes ~0.5 A at 5 V. Weak-host start-up of the 3V3 buck is a bench check
+  (power-design.md "Host-powered mode").
 - Downstream: every port advertises up to 3 A (Rp on CC). Oversubscribed on purpose: 10 x 15 W = 150 W of
   advertisement against at most ~90 W of 5 V. Fixed Rp (3 A) on every port, no budget controller. Per-port current
   limit ~3 A is the only enforcement. Accepted consequence (user, 2026-11-16): if total draw exceeds what the brick
@@ -132,7 +139,8 @@ HOST (USB-C, Rd, data only) --D+/D- 480M--> [hub A, MTT] --D+/D- 480M--> [hub B,
 - Charging: none
 - Protection: PD input TVS + fuse or eFuse; input current limited to the PD contract so the brick never trips;
   per-port current limit (~3 A) with reverse-current blocking (backfeed up to ~5.5 V); ESD on every connector;
-  host VBUS used for detection only.
+  host VBUS used for detection, and as the host-powered-mode feed through U8 (eFuse: 1.78 A, 0.2 V/ms inrush,
+  reverse blocking, off whenever the buck regulates).
 - Battery life target / sleep current: n/a
 
 ### Rails
@@ -268,6 +276,7 @@ Datasheets in `docs/datasheets/`. Front-runner first in each block; nothing here
 | PD input | Up to 100 W; must adapt to smaller bricks (budget follows the contract) | User | 2026-11-16 |
 | PD output | None | User | 2026-11-16 |
 | Minimum source | PD >= 9 V; 5 V-only sources unsupported (ports off, LED) | User | 2026-11-16 |
+| Host-powered mode | No brick (or 5 V-only): U8 TPS259470 eFuse feeds HOST_VBUS onto 5V_BUS while the buck is not regulating (BUCK_PG on OVLO), 1.78 A, reverse blocking; D41 SS34 feeds VIN for the 3V3 buck | User: data without a brick ("worthy change", "ok, go") | 2026-11-18 |
 | Form factor | Square board, ports on 3 sides (4/3/3), HOST + PWR IN on the back | User | 2026-11-16 |
 | Manufacturing | JLCPCB economic assembly, 5 boards fabricated and assembled, ENIG | User | 2026-11-16 |
 | Stackup | 4 layers, JLC04161H-7628, 1 oz outer / 0.5 oz inner | User | 2026-11-16 |

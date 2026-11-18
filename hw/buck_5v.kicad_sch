@@ -2493,6 +2493,12 @@
 		(uuid "840b6ac5-dd00-547f-a4ae-f159a98d476e")
 	)
 	(junction
+		(at 160.02 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27c973d1-275a-5312-8ded-16d2c5c7963d")
+	)
+	(junction
 		(at 172.72 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3356,6 +3362,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 153.67) (xy 160.02 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "565dc9dd-44c1-5042-8500-0b78956e9d44")
+	)
+	(wire
+		(pts
 			(xy 149.86 151.13) (xy 160.02 151.13)
 		)
 		(stroke
@@ -3433,6 +3449,28 @@
 			(justify right bottom)
 		)
 		(uuid "33ee1f08-3062-5b97-93a4-9bbf9063f50e")
+	)
+	(global_label "BUCK_PG"
+		(shape output)
+		(at 160.02 156.21 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "88353ce6-1802-5ad0-9f45-eaa7da0676b1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 160.02 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "usb-hub:LM5148")
@@ -9851,7 +9889,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 160.02 153.67 180)
+		(at 160.02 153.67 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9861,17 +9899,18 @@
 		(dnp no)
 		(uuid "6ad1f425-036e-5619-a2a7-46b3d324ab75")
 		(property "Reference" "TP31"
-			(at 160.02 160.02 0)
+			(at 163.83 157.48 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "PG"
-			(at 163.83 157.48 0)
+			(at 163.83 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9879,10 +9918,11 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 160.02 153.67 0)
+			(at 160.02 153.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9890,10 +9930,11 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 153.67 0)
+			(at 160.02 153.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9901,10 +9942,11 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Description" "test point"
-			(at 160.02 153.67 0)
+			(at 160.02 153.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9912,6 +9954,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Description" "Test pad PG"

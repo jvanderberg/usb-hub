@@ -487,10 +487,72 @@ def route_host_power(r):
     r.track(F, 0.3, ('U7', '3'), ('U7', '8'))
     via_at(r, ('U7', '8'), (120.0, 110.75))
     via_at(r, ('D40', '2'), (122.6, 110.15))
-    via_at(r, ('C74', '2'), (124.0, 110.75))
-    via_at(r, ('R65', '2'), (126.5, 110.8))
+    via_at(r, pad_on(r, 'C74', 'GND'), (126.9, 109.6))
+    via_at(r, pad_on(r, 'R65', 'GND'), (117.75, 115.6))
     via_at(r, ('R77', '2'), (117.1, 110.5))
     via_at(r, ('R78', '2'), (115.9, 110.5))
+
+
+def route_host_mode(r):
+    """Host-powered mode (2026-11-18, docs/power-design.md "Host-powered mode"). With no PD brick (or a 5 V-only one) the LM5148 is
+    disabled and holds BUCK_PG low, so U8 (TPS259470) feeds HOST_VBUS onto the L3 5V_BUS plane (1.78 A limit);
+    D41 then feeds VIN (the TPS54202 3V3 buck) from 5V_BUS. With the buck regulating, its 5.19 V reverse-blocks U8
+    and BUCK_PG high (OVLO) turns it off.
+    Layout per TPS25947 s8.4.1: RILM / CdVdt / CITIMER at their pins with short GND returns, ILM away from switch
+    nodes (west side, L1's SW pad is east), 1 uF at OUT. The IN / OUT strips are entered at their ends at strip width
+    (0.3): JLC's land pattern leaves 0.2 mm to the other strip and the corner-pad legs."""
+    gnd = net_of(r, 'J1', '1')
+    hv, bus = r.net('U8', '5'), r.net('U8', '6')
+    # HOST_VBUS trunk: TVS pad -> east -> south at x 124.6 -> IN strip top end
+    r.track(F, 0.8, ('D40', '1'), (124.6, 107.889), (124.6, 115.2))
+    r.track(F, 0.3, (124.6, 115.2), ('U8', '5'), net=hv)
+    r.track(F, 0.5, pad_on(r, 'C74', 'HOST_VBUS'), (124.6, 109.6))
+    # C78 100 nF IN decoupling (TPS25947 p62: closest to IN / GND): HOST_VBUS pad on the trunk, GND via north of it
+    r.track(F, 0.5, (124.6, 113.9), pad_on(r, 'C78', 'HOST_VBUS'), net=hv)
+    via_at(r, pad_on(r, 'C78', 'GND'), (126.39, 113.15))
+    # EN/UVLO divider (100 k / 47 k) below U8: HOST_VBUS branch east at y 114.6 and down at x 127.1 (west of D41's
+    # anode) into R79's pad from above
+    r.track(F, SIG, (124.6, 114.6), (127.1, 114.6), (127.1, 119.1), pad_on(r, 'R79', 'HOST_VBUS'), net=hv)
+    en = r.net('U8', '1')
+    r.track(F, SIG, ('U8', '1'), (125.28, 118.6), pad_on(r, 'R79', 'HOST_EN'), pad_on(r, 'R80', 'HOST_EN'), net=en)
+    via_at(r, pad_on(r, 'R80', 'GND'), (127.6, 120.3))
+    # OUT: strip bottom end -> 0.25 neck clear of the pin-10 / pin-1 legs -> 0.8 column with two vias to L3 (1.6 mm
+    # apart so their L2 antipads stay separate: no slot in the GND plane; 2 x 0.3 mm drill for the 1.78 A limit) ->
+    # 0.5 into C77 (clear of its GND pad); C77's GND via straight below its pad
+    r.track(F, 0.25, ('U8', '6'), (124.1, 119.0), net=bus)
+    r.track(F, 0.8, (124.1, 119.0), (124.1, 121.9), net=bus)
+    r.track(F, 0.5, (124.1, 121.9), pad_on(r, 'C77', '5V_BUS'), net=bus)
+    for y in (119.5, 121.1):
+        r.via((124.1, y), bus, *PV)
+    via_at(r, pad_on(r, 'C77', 'GND'), (125.72, 122.75))
+    # GND via for hub A's HOST pair hop at (121.2, 117.7): its own candidate spots are under R81 / the ILM track
+    r.via((121.75, 117.0), gnd, *SV)
+    # west column: dVdt (pin 7), GND (pin 8), ILM (pin 9), ITIMER (pin 10)
+    r.track(F, SIG, pad_on(r, 'C75', 'DVDT'), (122.75, 116.1), ('U8', '7'))
+    via_at(r, pad_on(r, 'C75', 'GND'), (122.2, 113.7))
+    r.track(F, GW, ('U8', '8'), (122.75, 116.65), net=gnd)
+    r.via((122.75, 116.65), gnd, *SV)
+    r.track(F, SIG, ('U8', '9'), (122.75, 117.225), pad_on(r, 'R81', 'ILM'))
+    via_at(r, pad_on(r, 'R81', 'GND'), (122.2, 119.4))
+    r.track(F, SIG, ('U8', '10'), (123.0, 118.3), (123.0, 120.2), pad_on(r, 'C76', 'ITIMER'))
+    via_at(r, pad_on(r, 'C76', 'GND'), (122.2, 122.2))
+    # D41 (SS34): anode on 5V_BUS (two vias to L3), cathode on the F_VIN_U2 pour and C14; R83 bleed under the anode
+    vin = r.net('D41', '1')
+    r.track(F, 0.6, ('D41', '1'), pad_on(r, 'C14', 'VIN'), net=vin)
+    for x in (128.3, 129.3):
+        r.via((x, 118.3), bus, *PV)
+        r.track(F, 0.5, ('D41', '2'), (x, 118.3), net=bus)
+    r.track(F, 0.3, pad_on(r, 'R83', '5V_BUS'), (128.3, 118.3), net=bus)
+    via_at(r, pad_on(r, 'R83', 'GND'), (128.5, 120.8))
+    # BUCK_PG: U8 OVLO -> via -> L4 south, east at y 123.0 (south of C13's GND vias and the VIN vias), south at
+    # x 141.6 (east of the 5V_BUS via field), then east at y 139.6 (below the buck's L4 VIN run) to a via at TP31
+    pg = r.net('U8', '2')
+    va, vb = (126.45, 117.225), (153.2, 139.6)
+    r.track(F, SIG, ('U8', '2'), va, net=pg)
+    r.via(va, pg, *SV)
+    r.track(B, SIG, va, (126.45, 123.0), (141.6, 123.0), (141.6, 139.6), vb, net=pg)
+    r.via(vb, pg, *SV)
+    r.track(F, SIG, vb, ('TP31', '1'), net=pg)
 
 
 def near(r, ref, num, prefer):
@@ -561,6 +623,7 @@ def route_power(r):
     for k in PORTS:
         route_port_power(r, k)
     route_host_power(r)
+    route_host_mode(r)
     route_hub_power(r)
 
 
